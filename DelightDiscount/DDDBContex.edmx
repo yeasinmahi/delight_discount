@@ -26,9 +26,52 @@
           <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LocationName" Type="varchar" MaxLength="500" />
         </EntityType>
+        <EntityType Name="tbl_UserAccount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="varchar" MaxLength="50" />
+          <Property Name="CID" Type="varchar" MaxLength="50" />
+          <Property Name="DatDate" Type="date" />
+          <Property Name="TranType" Type="int" />
+          <Property Name="TranCID" Type="varchar" MaxLength="50" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="DebitCredit" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_UserInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AutoUserID" Type="varchar" MaxLength="50" />
+          <Property Name="CID" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="UseName" Type="varchar" MaxLength="50" />
+          <Property Name="FullName" Type="varchar" MaxLength="100" />
+          <Property Name="PresentAddress" Type="varchar" MaxLength="500" />
+          <Property Name="ParmanentAddress" Type="varchar" MaxLength="500" />
+          <Property Name="EmailAddress" Type="varchar" MaxLength="50" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="NomineeName" Type="varchar" MaxLength="50" />
+          <Property Name="Relation" Type="varchar" MaxLength="50" />
+          <Property Name="NomineeMobile" Type="varchar" MaxLength="50" />
+          <Property Name="ReferenceCid" Type="varchar" MaxLength="50" />
+          <Property Name="JoinDate" Type="date" />
+          <Property Name="SpotInCome" Type="float" />
+          <Property Name="LevelIncome" Type="float" />
+          <Property Name="AutoIncome" Type="float" />
+          <Property Name="CurrentLevel" Type="int" />
+          <Property Name="IsActive" Type="varchar" MaxLength="1" />
+          <Property Name="UserPic" Type="varbinary(max)" />
+          <Property Name="EntryBy" Type="varchar" MaxLength="50" />
+          <Property Name="EntryDate" Type="date" />
+        </EntityType>
         <EntityContainer Name="DDDBModelStoreContainer">
           <EntitySet Name="tbl_ShopInfo" EntityType="Self.tbl_ShopInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_ShopLocation" EntityType="Self.tbl_ShopLocation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_UserAccount" EntityType="Self.tbl_UserAccount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_UserInfo" EntityType="Self.tbl_UserInfo" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -51,6 +94,8 @@
         <EntityContainer Name="DDDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tbl_ShopInfo" EntityType="Self.tbl_ShopInfo" />
           <EntitySet Name="tbl_ShopLocation" EntityType="DDDBModel.tbl_ShopLocation" />
+          <EntitySet Name="tbl_UserAccount" EntityType="DDDBModel.tbl_UserAccount" />
+          <EntitySet Name="tbl_UserInfo" EntityType="DDDBModel.tbl_UserInfo" />
         </EntityContainer>
         <EntityType Name="tbl_ShopLocation">
           <Key>
@@ -58,6 +103,47 @@
           </Key>
           <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="LocationName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_UserAccount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DatDate" Type="DateTime" Precision="0" />
+          <Property Name="TranType" Type="Int32" />
+          <Property Name="TranCID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="DebitCredit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_UserInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AutoUserID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UseName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PresentAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ParmanentAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NomineeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Relation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NomineeMobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReferenceCid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="JoinDate" Type="DateTime" Precision="0" />
+          <Property Name="SpotInCome" Type="Double" />
+          <Property Name="LevelIncome" Type="Double" />
+          <Property Name="AutoIncome" Type="Double" />
+          <Property Name="CurrentLevel" Type="Int32" />
+          <Property Name="IsActive" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="UserPic" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="EntryBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EntryDate" Type="DateTime" Precision="0" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -84,6 +170,49 @@
             <EntityTypeMapping TypeName="DDDBModel.tbl_ShopLocation">
               <MappingFragment StoreEntitySet="tbl_ShopLocation">
                 <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_UserAccount">
+            <EntityTypeMapping TypeName="DDDBModel.tbl_UserAccount">
+              <MappingFragment StoreEntitySet="tbl_UserAccount">
+                <ScalarProperty Name="DebitCredit" ColumnName="DebitCredit" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TranCID" ColumnName="TranCID" />
+                <ScalarProperty Name="TranType" ColumnName="TranType" />
+                <ScalarProperty Name="DatDate" ColumnName="DatDate" />
+                <ScalarProperty Name="CID" ColumnName="CID" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_UserInfo">
+            <EntityTypeMapping TypeName="DDDBModel.tbl_UserInfo">
+              <MappingFragment StoreEntitySet="tbl_UserInfo">
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
+                <ScalarProperty Name="UserPic" ColumnName="UserPic" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CurrentLevel" ColumnName="CurrentLevel" />
+                <ScalarProperty Name="AutoIncome" ColumnName="AutoIncome" />
+                <ScalarProperty Name="LevelIncome" ColumnName="LevelIncome" />
+                <ScalarProperty Name="SpotInCome" ColumnName="SpotInCome" />
+                <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
+                <ScalarProperty Name="ReferenceCid" ColumnName="ReferenceCid" />
+                <ScalarProperty Name="NomineeMobile" ColumnName="NomineeMobile" />
+                <ScalarProperty Name="Relation" ColumnName="Relation" />
+                <ScalarProperty Name="NomineeName" ColumnName="NomineeName" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="ParmanentAddress" ColumnName="ParmanentAddress" />
+                <ScalarProperty Name="PresentAddress" ColumnName="PresentAddress" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="UseName" ColumnName="UseName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="CID" ColumnName="CID" />
+                <ScalarProperty Name="AutoUserID" ColumnName="AutoUserID" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

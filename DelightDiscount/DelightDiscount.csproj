@@ -333,6 +333,12 @@
     <Compile Include="tbl_ShopLocation.cs">
       <DependentUpon>DDDBContex.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbl_UserAccount.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_UserInfo.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
     <Compile Include="UI\RegistrationUI.aspx.cs">
       <DependentUpon>RegistrationUI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -139,12 +139,12 @@ namespace DelightDiscount.UI {
         protected global::System.Web.UI.WebControls.Button saveButton;
         
         /// <summary>
-        /// shopLiterel control.
+        /// userLiterel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal shopLiterel;
+        protected global::System.Web.UI.WebControls.Literal userLiterel;
     }
 }

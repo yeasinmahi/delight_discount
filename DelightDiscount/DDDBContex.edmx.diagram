@@ -7,6 +7,8 @@
       <Diagram DiagramId="21774650bc73456daf4d9587e363bbbe" Name="Diagram1">
         <EntityTypeShape EntityType="DDDBModel.tbl_ShopInfo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DDDBModel.tbl_ShopLocation" Width="1.5" PointX="2.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DDDBModel.tbl_UserAccount" Width="1.5" PointX="0.75" PointY="3.625" />
+        <EntityTypeShape EntityType="DDDBModel.tbl_UserInfo" Width="1.5" PointX="2.375" PointY="2.25" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

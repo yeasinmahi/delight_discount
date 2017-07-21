@@ -1,6 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistrationUI.aspx.cs" Inherits="DelightDiscount.UI.RegistrationUI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    
+    <script>
+        $(document).ready(function () {
+            $("#MainContent_joinDateText").datepicker({
+                autoclose: true,
+                todayHighlight: true,
+                format: "dd/mm/yyyy"
+            });
+        })
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="col-sm-12">
@@ -76,19 +86,20 @@
                                 <label>ReferenceName<span style="color: red">*</span></label>
                                 <input type="text" runat="server" class="form-control input-sm" id="referenceNameText" />
                             </div>
-                            <div class=" col-sm-6">
+                            <div class=" col-sm-4">
                                 <label>Joining Date<span style="color: red">*</span></label>
                                 <input type="text" runat="server" class="form-control input-sm" id="joinDateText" />
                             </div>
-                            <div class="col-sm-6">
+                           
+                            <div class="col-sm-4">
                                 <br />
-                                <asp:Button ID="saveButton" runat="server" class="btn btn-success" Text="Save" />
+                                <asp:Button ID="saveButton" runat="server" class="btn btn-success" Text="Save" OnClick="saveButton_Click" />
                             </div>
                         </fieldset>
 
                         <div class="col-sm-12">
                             <br />
-                            <asp:Literal ID="shopLiterel" runat="server" Text="_"> </asp:Literal>
+                            <asp:Literal ID="userLiterel" runat="server" Text="_"> </asp:Literal>
                             <br />
                         </div>
 
