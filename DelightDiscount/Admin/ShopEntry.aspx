@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ShopEntry.aspx.cs" Inherits="DelightDiscount.UI.ShopEntry" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ShopEntry.aspx.cs" Inherits="DelightDiscount.Admin.ShopEntry" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <style>
         .myButtonTopMargin {

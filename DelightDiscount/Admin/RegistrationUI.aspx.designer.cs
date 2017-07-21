@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DelightDiscount.UI {
+namespace DelightDiscount.Admin {
     
     
     public partial class RegistrationUI {

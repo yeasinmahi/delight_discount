@@ -178,6 +178,7 @@
     <Content Include="FrontSection\js\jquery.min.js" />
     <Content Include="FrontSection\LogIn.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Background-4.jpg" />
     <Content Include="Images\img.jpg" />
     <Content Include="Images\user.png" />
     <Content Include="packages.config" />
@@ -186,6 +187,7 @@
     <Content Include="Scripts\fastclick.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\nprogress.js" />
+    <Content Include="UI\LoginUI.aspx" />
     <Content Include="UI\RegistrationUI.aspx" />
     <Content Include="UI\ShopEntry.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -338,6 +340,13 @@
     </Compile>
     <Compile Include="tbl_UserInfo.cs">
       <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginUI.aspx.cs">
+      <DependentUpon>LoginUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\LoginUI.aspx.designer.cs">
+      <DependentUpon>LoginUI.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\RegistrationUI.aspx.cs">
       <DependentUpon>RegistrationUI.aspx</DependentUpon>

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
-namespace DelightDiscount.UI
+namespace DelightDiscount.Admin
 {
     public partial class LoginUI : System.Web.UI.Page
     {

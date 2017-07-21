@@ -1,10 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginUI.aspx.cs" Inherits="DelightDiscount.UI.LoginUI" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginUI.aspx.cs" Inherits="DelightDiscount.Admin.LoginUI" %>
 
 <html lang="en">
 <head runat="server">
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/bootstrap.min.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pay Expert</title>
+    <title>Delight Discount</title>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
@@ -18,7 +20,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Pay Expert</a>
+                    <a class="navbar-brand" runat="server" href="~/">Delight Discount</a>
                 </div>
             </div>
         </div>
@@ -29,7 +31,7 @@
                         <div class="form-group col-sm-12">
                             <div class="row text-center" style="width: 400px; margin: 0 auto; margin-top: 15%; background: rgba(255,255,255,.4); border-radius: 25px 0;">
                                 <div class="col-lg-12">
-                                    <h3>Welcome to Shihab Enterprise.</h3>
+                                    <h3>Welcome to Delight Discount.</h3>
                                 </div>
                                 <div class="col-sm-12">
                                     <div style="width: 280px; margin: 0 auto; padding: 20px 0;">
