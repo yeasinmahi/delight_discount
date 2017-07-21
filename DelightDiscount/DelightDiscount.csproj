@@ -187,9 +187,9 @@
     <Content Include="Scripts\fastclick.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\nprogress.js" />
-    <Content Include="UI\LoginUI.aspx" />
-    <Content Include="UI\RegistrationUI.aspx" />
-    <Content Include="UI\ShopEntry.aspx" />
+    <Content Include="Admin\LoginUI.aspx" />
+    <Content Include="Admin\RegistrationUI.aspx" />
+    <Content Include="Admin\ShopEntry.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -341,25 +341,25 @@
     <Compile Include="tbl_UserInfo.cs">
       <DependentUpon>DDDBContex.tt</DependentUpon>
     </Compile>
-    <Compile Include="UI\LoginUI.aspx.cs">
+    <Compile Include="Admin\LoginUI.aspx.cs">
       <DependentUpon>LoginUI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UI\LoginUI.aspx.designer.cs">
+    <Compile Include="Admin\LoginUI.aspx.designer.cs">
       <DependentUpon>LoginUI.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UI\RegistrationUI.aspx.cs">
+    <Compile Include="Admin\RegistrationUI.aspx.cs">
       <DependentUpon>RegistrationUI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UI\RegistrationUI.aspx.designer.cs">
+    <Compile Include="Admin\RegistrationUI.aspx.designer.cs">
       <DependentUpon>RegistrationUI.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UI\ShopEntry.aspx.cs">
+    <Compile Include="Admin\ShopEntry.aspx.cs">
       <DependentUpon>ShopEntry.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UI\ShopEntry.aspx.designer.cs">
+    <Compile Include="Admin\ShopEntry.aspx.designer.cs">
       <DependentUpon>ShopEntry.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
