@@ -1,0 +1,293 @@
+﻿#leftmenu {
+    width: 240px;
+    background-color: white;
+    height: 440px;
+    -webkit-box-shadow: -5px 5px 10px 0px #8f8f8f;
+    -moz-box-shadow: -5px 5px 10px 0px #8f8f8f;
+    box-shadow: -5px 5px 10px 0px #8f8f8f;
+}
+
+    #leftmenu ul {
+        padding: 5px 7px;
+        list-style: none;
+    }
+
+        #leftmenu ul li {
+            padding-bottom: 5px;
+            overflow: hidden;
+        }
+
+            #leftmenu ul li img {
+                float: left;
+                width: 24px;
+                height: 24px;
+                vertical-align: middle;
+                padding-right: 7px;
+            }
+
+            #leftmenu ul li a {
+                float: left;
+                text-decoration: none;
+                padding-top: 6px;
+                color: #000;
+            }
+
+                #leftmenu ul li a:hover {
+                    color: #0056a1;
+                }
+
+            #leftmenu ul li .fa {
+                float: left;
+                margin: 5px 6px 1px 3px;
+                font-size: 19px;
+                width: 25px;
+            }
+
+                #leftmenu ul li .fa.fa0, .cathead .fa.fa0, .catsub a .fa.fa0 {
+                    color: #ff00f0;
+                }
+
+                #leftmenu ul li .fa.fa1, .cathead .fa.fa1, .catsub a .fa.fa1 {
+                    color: #a200ff;
+                }
+
+                #leftmenu ul li .fa.fa2, .cathead .fa.fa2, .catsub a .fa.fa2 {
+                    color: #783efd;
+                }
+
+                #leftmenu ul li .fa.fa3, .cathead .fa.fa3, .catsub a .fa.fa3 {
+                    color: #5b91f2;
+                }
+
+                #leftmenu ul li .fa.fa4, .cathead .fa.fa4, .catsub a .fa.fa4 {
+                    color: #ff00ae;
+                }
+
+                #leftmenu ul li .fa.fa5, .cathead .fa.fa5, .catsub a .fa.fa5 {
+                    color: #00b300;
+                }
+
+                #leftmenu ul li .fa.fa6, .cathead .fa.fa6, .catsub a .fa.fa6 {
+                    color: #0062C9;
+                }
+
+                #leftmenu ul li .fa.fa7, .cathead .fa.fa7, .catsub a .fa.fa7 {
+                    color: #E91E63;
+                }
+
+                #leftmenu ul li .fa.fa8, .cathead .fa.fa8, .catsub a .fa.fa8 {
+                    color: #ff0500;
+                }
+
+                #leftmenu ul li .fa.fa9, .cathead .fa.fa9, .catsub a .fa.fa9 {
+                    color: #f15cf1;
+                }
+
+.cathead .fa {
+    float: left;
+    margin: 7px 6px 1px 11px;
+    font-size: 50px;
+    width: 58px;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+.catsub a .fa {
+    margin: 1px 5px 1px 0px;
+    width: 17px;
+}
+
+#mainslider {
+    position: relative;
+    width: 670px;
+}
+
+#recent {
+    width: 290px;
+    -webkit-box-shadow: 5px 5px 10px 0px #8f8f8f;
+    -moz-box-shadow: 5px 5px 10px 0px #8f8f8f;
+    box-shadow: 5px 5px 10px 0px #8f8f8f;
+}
+
+    #recent .recent {
+        position: relative;
+    }
+
+        #recent .recent img {
+            height: 144px;
+            width: 100%;
+        }
+
+        #recent .recent h5 {
+            background: #ededed;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            margin: 0px;
+            border: 1px solid #0056a1;
+            border-radius: 3px;
+            padding: 2px 4px;
+            -webkit-box-shadow: 0px 0px 7px 0px #000;
+            -moz-box-shadow: 0px 0px 7px 0px #000;
+            box-shadow: 0px 0px 7px 0px #000;
+            font-weight: bold;
+        }
+
+.category {
+    border-top: 2px solid #c1c1c1;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 20px;
+}
+
+    .category .catmenu {
+        width: 215px;
+        margin: 10px 0;
+    }
+
+    .category .cathead {
+        font-size: 18px;
+        margin: 2px;
+        background-color: #1590bf;
+        height: 68px;
+        border-radius: 7px;
+        -webkit-box-shadow: 0px 0px 10px 0px black;
+        -moz-box-shadow: 0px 0px 10px 0px black;
+        box-shadow: 0px 0px 10px 0px black;
+    }
+
+        .category .cathead a {
+            text-decoration: none;
+            padding: 12px;
+            color: #fff;
+            display: block;
+        }
+
+            .category .cathead a:hover {
+                text-shadow: 0 0 5px #444;
+            }
+
+    .category .catsub {
+        background-color: #ecfaf2;
+        min-height: 372px;
+        border-radius: 7px;
+        margin: 2px;
+        -webkit-box-shadow: 0px 0px 10px 0px black;
+        -moz-box-shadow: 0px 0px 10px 0px black;
+        box-shadow: 0px 0px 10px 0px black;
+    }
+
+        .category .catsub a {
+            padding: 6px 12px;
+            color: #222;
+            display: block;
+            text-decoration: none;
+        }
+
+            .category .catsub a:hover {
+                color: #0056a1;
+            }
+
+    .category .catprod {
+        width: 964px;
+        margin: 5px 10px;
+        background: #fff;
+        border-radius: 5px;
+    }
+
+        .category .catprod .proditem {
+            width: 145px;
+            -webkit-box-shadow: 0 8px 6px -6px #999;
+            -moz-box-shadow: 0 8px 6px -6px #999;
+            box-shadow: 0 8px 6px -6px #999;
+            margin: 5px 7px;
+            border: 1px solid #d8d8d8;
+            border-radius: 7px;
+            position: relative;
+        }
+
+            .category .catprod .proditem:hover {
+                -webkit-box-shadow: 0 0 10px 1px #777;
+                -moz-box-shadow: 0 0 10px 1px #777;
+                box-shadow: 0 0 10px 1px #777;
+            }
+
+                .category .catprod .proditem:hover .a2ca {
+                    display: block;
+                }
+
+            .category .catprod .proditem img {
+                width: 140px;
+                padding: 10px 10px 6px 10px;
+                height: 171px;
+            }
+
+            .category .catprod .proditem .a2ca {
+                background-color: #eeeeee;
+                border-radius: 7px;
+            }
+
+                .category .catprod .proditem .a2ca strong {
+                    text-align: center;
+                    margin: 0px 2px;
+                    display: block;
+                    color: #000;
+                    min-height: 107px;
+                    text-shadow: 1px 1px 2px #9e9e9e;
+                    padding-top: 5px;
+                }
+
+                    .category .catprod .proditem .a2ca strong h3 {
+                        height: 60px;
+                        overflow: hidden;
+                        margin-bottom: 10px;
+                    }
+
+                    .category .catprod .proditem .a2ca strong h5 {
+                        padding: 1px 0px;
+                    }
+
+                .category .catprod .proditem .a2ca dfn {
+                    padding: 5px 2px;
+                    text-align: center;
+                    display: block;
+                    border-bottom: 1px solid #c1c1c1;
+                    border-top: 1px solid #c1c1c1;
+                    color: #6d440a;
+                }
+
+                    .category .catprod .proditem .a2ca dfn .icocart {
+                        width: 30px;
+                        cursor: pointer;
+                        color: white;
+                    }
+
+                        .category .catprod .proditem .a2ca dfn .icocart .fa {
+                            width: 30px;
+                            cursor: pointer;
+                            color: white;
+                            margin-top: 5px;
+                            text-shadow: 1px 1px 2px #000;
+                        }
+
+                    .category .catprod .proditem .a2ca dfn .icocartq {
+                        width: 81px;
+                        text-align: center;
+                        color: #fdd670;
+                        font-size: 25px;
+                        text-shadow: 1px 1px 2px #000;
+                    }
+
+                .category .catprod .proditem .a2ca div {
+                    font: bold 16px "Courier New";
+                }
+
+                .category .catprod .proditem .a2ca a {
+                    display: block;
+                    text-align: center;
+                    font-size: 14px;
+                    color: #006e80;
+                    font-weight: bold;
+                    padding: 5px;
+                }

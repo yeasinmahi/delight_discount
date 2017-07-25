@@ -146,6 +146,105 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\nprogress.css" />
     <Content Include="Default.aspx" />
+    <Content Include="ecommerce\Category.aspx" />
+    <Content Include="ecommerce\css\custom.css" />
+    <Content Include="ecommerce\css\details.css" />
+    <Content Include="ecommerce\css\fontawesome-stars-o.css" />
+    <Content Include="ecommerce\css\home.css" />
+    <Content Include="ecommerce\css\main.css" />
+    <Content Include="ecommerce\css\nav.css" />
+    <Content Include="ecommerce\css\slicebox.css" />
+    <Content Include="ecommerce\css\slick.css" />
+    <Content Include="ecommerce\Default.aspx" />
+    <Content Include="ecommerce\images\amex.png" />
+    <Content Include="ecommerce\images\arrowdown.gif" />
+    <Content Include="ecommerce\images\bangla.png" />
+    <Content Include="ecommerce\images\bkash.png" />
+    <Content Include="ecommerce\images\dbbl.png" />
+    <Content Include="ecommerce\images\dcash.png" />
+    <Content Include="ecommerce\images\left-arrow.png" />
+    <Content Include="ecommerce\images\master.png" />
+    <Content Include="ecommerce\images\mcash.png" />
+    <Content Include="ecommerce\images\mycash.png" />
+    <Content Include="ecommerce\images\nav.png" />
+    <Content Include="ecommerce\images\options.png" />
+    <Content Include="ecommerce\images\qcash.png" />
+    <Content Include="ecommerce\images\right-arrow.png" />
+    <Content Include="ecommerce\images\shadow.png" />
+    <Content Include="ecommerce\images\visa.png" />
+    <Content Include="ecommerce\img\choosing-a-commercial-rea-estate-broker.jpg" />
+    <Content Include="ecommerce\img\cLogo\01.png" />
+    <Content Include="ecommerce\img\cLogo\02.png" />
+    <Content Include="ecommerce\img\cLogo\03.png" />
+    <Content Include="ecommerce\img\cLogo\04.png" />
+    <Content Include="ecommerce\img\cLogo\05.png" />
+    <Content Include="ecommerce\img\cLogo\06.png" />
+    <Content Include="ecommerce\img\cLogo\07.png" />
+    <Content Include="ecommerce\img\cLogo\08.png" />
+    <Content Include="ecommerce\img\cLogo\09.png" />
+    <Content Include="ecommerce\img\cLogo\10.png" />
+    <Content Include="ecommerce\img\cLogo\11.png" />
+    <Content Include="ecommerce\img\cLogo\12.png" />
+    <Content Include="ecommerce\img\cLogo\baderbrau.png" />
+    <Content Include="ecommerce\img\cLogo\emirates.png" />
+    <Content Include="ecommerce\img\cLogo\fred-perry.png" />
+    <Content Include="ecommerce\img\cLogo\inspiring.png" />
+    <Content Include="ecommerce\img\cLogo\national-geographic.png" />
+    <Content Include="ecommerce\img\coaching-web.jpg" />
+    <Content Include="ecommerce\img\CommercialIcon.png" />
+    <Content Include="ecommerce\img\logo.png" />
+    <Content Include="ecommerce\img\ss.jpg" />
+    <Content Include="ecommerce\js\cart.js" />
+    <Content Include="ecommerce\js\common.js" />
+    <Content Include="ecommerce\js\jquery.barrating.min.js" />
+    <Content Include="ecommerce\js\jquery.elevatezoom.js" />
+    <Content Include="ecommerce\js\jquery.slicebox.js" />
+    <Content Include="ecommerce\js\modernizr.custom.js" />
+    <Content Include="ecommerce\js\slick.js" />
+    <Content Include="ecommerce\Product.aspx" />
+    <Content Include="ecommerce\ServicePartner.aspx" />
+    <Content Include="ecommerce\ups\p\Consumer &amp; Daily Needs\Dettol Antiseptic Liquid 500ml - Price 140.00 - Code DD012.jpg" />
+    <Content Include="ecommerce\ups\p\Consumer &amp; Daily Needs\Diploma Full Cream Milk Powder 500gm - Price 2850.00 - Code DD013.jpg" />
+    <Content Include="ecommerce\ups\p\Consumer &amp; Daily Needs\Fresh Refined Ssugar 1kg - Price 75.00 - Code DD015.jpg" />
+    <Content Include="ecommerce\ups\p\Consumer &amp; Daily Needs\Fresh Soyabean Oil 5ltr - Price 505.00 - Code DD014.jpg" />
+    <Content Include="ecommerce\ups\p\Consumer &amp; Daily Needs\Ifad Instant Noodles 8pcs - Price 125.00 - Code DD017.jpg" />
+    <Content Include="ecommerce\ups\p\Consumer &amp; Daily Needs\Ispahani Mirzapore Tea 400gm Price 160.00 - Code DD011.jpg" />
+    <Content Include="ecommerce\ups\p\Consumer &amp; Daily Needs\Nestle Nescafe Classic Instant Coffee Jar 100gm - Price - 2800.00 - Code DD016.jpg" />
+    <Content Include="ecommerce\ups\p\Cosmetic &amp; Beauty Care\Dove Shampoo%28Thailand%29 375ml - Price 270.00 - Code DD021.jpg" />
+    <Content Include="ecommerce\ups\p\Cosmetic &amp; Beauty Care\Himsagar Oil 350ml - Price175.00 - Code DD022.jpg" />
+    <Content Include="ecommerce\ups\p\Cosmetic &amp; Beauty Care\Makup Box Price 700.00 - Code DD023.jpg" />
+    <Content Include="ecommerce\ups\p\Cosmetic &amp; Beauty Care\Mushroom Toothpaste - Price 150.00 - Code DD024.jpg" />
+    <Content Include="ecommerce\ups\p\Cosmetic &amp; Beauty Care\Neem Face Wash 150ml - Price 1760.00 - Code DD025.jpg" />
+    <Content Include="ecommerce\ups\p\Cosmetic &amp; Beauty Care\Ponds Beauty White 250ml - Price 400.00 - Code DD026.jpg" />
+    <Content Include="ecommerce\ups\p\Electric &amp; Electronic\Charger Light - Price 850.00 - Code DD015.jpg" />
+    <Content Include="ecommerce\ups\p\Electric &amp; Electronic\Chemical Cleaner - Price 3500.00 - Code DD012.jpg" />
+    <Content Include="ecommerce\ups\p\Electric &amp; Electronic\Electric Cettle - Price 450.00 - Code DD011.jpg" />
+    <Content Include="ecommerce\ups\p\Electric &amp; Electronic\Electric Lunch Box - Price 750.00 - Code DD013.jpg" />
+    <Content Include="ecommerce\ups\p\Electric &amp; Electronic\Energy Blub - Price 300.00 - Code DD016.jpg" />
+    <Content Include="ecommerce\ups\p\Electric &amp; Electronic\Iron Mechine - Price 750.00 - Code DD014.jpg" />
+    <Content Include="ecommerce\ups\p\Electric &amp; Electronic\Mobile-Power-Bank 10000mhp - Price 450.00 - Code DD017.jpg" />
+    <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian Dress - Price 1500.00 - Code 042.jpeg" />
+    <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian Dress - Price 2000.00 - Code 041.jpg" />
+    <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian Dress - Price 2500.00 - Code 043.jpg" />
+    <Content Include="ecommerce\ups\p\Gents Gallery\Belt - Price 650.00 - Price 300.00 - Code DD051.jpg" />
+    <Content Include="ecommerce\ups\p\Gents Gallery\Gents Wallet - Price 950.00 - Code DD052.jpg" />
+    <Content Include="ecommerce\ups\p\Gents Gallery\Money Bag - Price 350.00 - Code DD053.jpg" />
+    <Content Include="ecommerce\ups\p\Gents Gallery\Travel Bag - Price 1500.00 - Code DD054.jpg" />
+    <Content Include="ecommerce\ups\p\Health &amp; Nutrition\Chaban Prash - Price 300.00 - Code DD061.jpg" />
+    <Content Include="ecommerce\ups\p\Health &amp; Nutrition\Herbalife 250gr - Price 500.00 - Code DD062.jpg" />
+    <Content Include="ecommerce\ups\p\Health &amp; Nutrition\Kalozira Oil 250ml - Price 400.00 - Code DD063.jpg" />
+    <Content Include="ecommerce\ups\p\Health &amp; Nutrition\Soya Protein - Price 450.00 - Code DD064.jpg" />
+    <Content Include="ecommerce\ups\p\Health &amp; Nutrition\Toxin Cleanser - Price 650.00 - Code DD065.jpg" />
+    <Content Include="ecommerce\ups\r\1.jpg" />
+    <Content Include="ecommerce\ups\r\2.jpg" />
+    <Content Include="ecommerce\ups\r\3.jpg" />
+    <Content Include="ecommerce\ups\s\1.jpg" />
+    <Content Include="ecommerce\ups\s\15.jpg" />
+    <Content Include="ecommerce\ups\s\16.jpg" />
+    <Content Include="ecommerce\ups\s\2.jpg" />
+    <Content Include="ecommerce\ups\s\3.jpg" />
+    <Content Include="ecommerce\ups\s\4.jpg" />
+    <Content Include="ecommerce\ups\s\5.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -299,12 +398,42 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="FrontSection\BalanceTransfer.aspx.cs">
       <DependentUpon>BalanceTransfer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FrontSection\BalanceTransfer.aspx.designer.cs">
       <DependentUpon>BalanceTransfer.aspx</DependentUpon>
+</Compile>
+    <Compile Include="ecommerce\Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ecommerce\Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ecommerce\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ecommerce\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ecommerce\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ecommerce\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ecommerce\ServicePartner.aspx.cs">
+      <DependentUpon>ServicePartner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ecommerce\ServicePartner.aspx.designer.cs">
+      <DependentUpon>ServicePartner.aspx</DependentUpon>
+
     </Compile>
     <Compile Include="FrontSection\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -389,6 +518,8 @@
   <ItemGroup>
     <Folder Include="Account\" />
     <Folder Include="App_Data\" />
+    <Folder Include="ecommerce\ups\p\Electric &amp; Electroni\" />
+    <Folder Include="ecommerce\ups\p\Health &amp; Nutritio\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
