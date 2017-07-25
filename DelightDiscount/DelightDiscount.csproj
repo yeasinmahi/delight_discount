@@ -149,6 +149,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="FrontSection\BalanceTransfer.aspx" />
     <Content Include="FrontSection\css\bootstrap.min.css" />
     <Content Include="FrontSection\css\font-awesome.css" />
     <Content Include="FrontSection\Default.aspx" />
@@ -177,6 +178,7 @@
     <Content Include="FrontSection\js\bootstrap.min.js" />
     <Content Include="FrontSection\js\jquery.min.js" />
     <Content Include="FrontSection\LogIn.aspx" />
+    <Content Include="FrontSection\Profile.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Background-4.jpg" />
     <Content Include="Images\img.jpg" />
@@ -297,6 +299,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FrontSection\BalanceTransfer.aspx.cs">
+      <DependentUpon>BalanceTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontSection\BalanceTransfer.aspx.designer.cs">
+      <DependentUpon>BalanceTransfer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FrontSection\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -310,6 +319,13 @@
     </Compile>
     <Compile Include="FrontSection\LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSection\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontSection\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
