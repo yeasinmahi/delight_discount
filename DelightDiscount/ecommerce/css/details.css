@@ -1,0 +1,152 @@
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    width: 80%;
+    color: #434343;
+    background-color: #F2F2F2;
+    float: left;
+}
+
+.mainimage {
+    width: 300px;
+}
+
+    .mainimage img {
+        width: 100%;
+        border: 1px solid #006e80;
+        border-radius: 6px;
+        box-shadow: 0px 0px 10px #263526;
+        margin-top: 10px;
+    }
+
+.detwrap {
+    border: 1px solid #006e80;
+    padding: 15px;
+}
+
+#details1 {
+    margin-top: 10px;
+    width: 700px;
+}
+
+    #details1 .price {
+        color: #f15a2b;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    #details1 dfn {
+        padding: 5px 2px;
+        text-align: center;
+        display: block;
+        border-bottom: 1px solid #006e80;
+        border-top: 1px solid #006e80;
+        color: #6d440a;
+        width: 200px;
+    }
+
+        #details1 dfn .icocart {
+            width: 30px;
+            cursor: pointer;
+            color: white;
+        }
+
+    #details1 .icocart .fa {
+        width: 30px;
+        cursor: pointer;
+        color: white;
+        margin-top: 5px;
+        text-shadow: 1px 1px 2px #000;
+    }
+
+    #details1 dfn .icocartq {
+        width: 135px;
+        text-align: center;
+        color: #fdd670;
+        font-size: 38px;
+        text-shadow: 1px 1px 2px #000;
+    }
+
+    #details1 dfn div {
+        font: bold 24px "Courier New";
+    }
+
+    #details1 address {
+        padding: 5px 2px;
+        text-align: center;
+        display: block;
+        border-bottom: 1px solid #006e80;
+        border-top: 1px solid #006e80;
+        color: #6d440a;
+        width: 200px;
+    }
+
+        #details1 address div {
+            line-height: 26px;
+        }
+
+.subtitle {
+    background-color: #316882;
+    padding: 7px 10px;
+    font-size: 21px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#details2 {
+    width: 700px;
+}
+
+#salutation {
+    color: #00d411;
+    line-height: 3px;
+    display: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+
+.ratingd {
+    position: relative;
+    margin-left: 10px;
+    color: #555;
+}
+
+    .ratingd:hover dfn {
+        display: block;
+    }
+
+    .ratingd dfn {
+        background-color: #ededed;
+        border: 1px solid #006e80;
+        border-radius: 6px;
+        box-shadow: 0px 0px 10px #263526;
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        width: 300px;
+        padding: 15px;
+        display: none;
+    }
+
+        .ratingd dfn div {
+            margin-top: 5px;
+            text-align: left;
+        }
+
+            .ratingd dfn div .fa {
+                text-align: left;
+            }
+
+            .ratingd dfn div span {
+                display: inline-block;
+                border: 1px solid #006e80;
+                height: 15px;
+                width: 215px;
+            }
+
+                .ratingd dfn div span del {
+                    display: inline-block;
+                    background-color: #006e80;
+                    height: 16px;
+                }
