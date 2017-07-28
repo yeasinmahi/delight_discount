@@ -119,9 +119,18 @@
                                 <li class="visible-xs"><a href="ServicePartner.aspx" class="menuBtn">Service Partners</a></li>
                                 <li class="visible-xs"><a href="#" class="menuBtn">Populer Packages</a></li>
                                 <li class="visible-xs"><a href="#" class="menuBtn">Contact</a></li>
-
+                                
                                 <%--<li><a href="Login.aspx" class="menuBtn">Sign Up</a></li>--%>
-                                <li><a href="Login.aspx" class="menuBtn">Sign In</a></li>
+                                <li runat="server" id="signIn"><a href="Login.aspx" class="menuBtn">Sign In</a></li>
+
+                                <li runat="server" id="user" class="hidden">
+                                    <a class="dropdown-toggle menuBtn" data-toggle="dropdown" runat="server" href="#"><img src="img/logo.png" class="img img-circle" height="30px" width="30px"/>  <b runat="server" id="userName">Name</b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a runat="server" href="#">Profile</a></li>
+                                        <li><a runat="server" href="#">Account</a></li>
+                                        <li><a runat="server" href="#">Sign out</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                         <!-- /.navbar-collapse -->

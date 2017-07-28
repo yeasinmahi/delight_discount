@@ -11,7 +11,18 @@ namespace DelightDiscount
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["op"] != null)
+            {
+                tbl_UserInfo userInfo = (tbl_UserInfo) Session["op"];
+                userName.InnerText = userInfo.FullName;
+                signIn.Attributes.Add("class","hidden");
+                user.Attributes.Remove("class");
+            }
+            else
+            {
+                signIn.Attributes.Remove("class");
+                user.Attributes.Add("class", "hidden");
+            }
         }
     }
 }
