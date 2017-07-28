@@ -11,7 +11,7 @@ namespace DelightDiscount
 {
 
 
-    public partial class Default
+    public partial class Category
     {
     }
 }
