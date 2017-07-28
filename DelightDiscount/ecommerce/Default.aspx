@@ -49,34 +49,31 @@
         <li>
             <img src='ups/s/1.jpg' alt='' />
             <div class='sb-description'>
-                <h3>পবিত্র ঈদুল ফিতর এর শুভেচ্ছা </h3>
-                <h5>পবিত্র ঈদুল ফিতর এর শুভেচ্ছা </h5>
+                <h3>We All Are Together</h3>
+                <h5>A,B,C,D </h5>
             </div>
         </li>
         <li>
             <img src='ups/s/2.jpg' alt='' />
             <div class='sb-description'>
-                <h3>Desh Masala Package</h3>
+                <h3>A Cultural Program</h3>
                 <h5>
-                    Holud
-                    Morich
-                    Dhania
-                    Jira
+                    Dance
                 </h5>
             </div>
         </li>
         <li>
             <img src='ups/s/3.jpg' alt='' />
             <div class='sb-description'>
-                <h3>Desh Bazar</h3>
-                <h5>Desh Bazar</h5>
+                <h3>Picnic</h3>
+                <h5>With Family</h5>
             </div>
         </li>
         <li>
             <img src='ups/s/4.jpg' alt='' />
             <div class='sb-description'>
-                <h3>Toxin Cleanser</h3>
-                <h5>Toxin Remover Patch</h5>
+                <h3>Unofficial Meating</h3>
+                <h5>With marketing Executive</h5>
             </div>
         </li>
         <%--<li>
