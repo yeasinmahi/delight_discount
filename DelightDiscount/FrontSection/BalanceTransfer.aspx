@@ -104,7 +104,7 @@
                            
                             <div class="col-sm-4">
                                 <br />
-                                <asp:Button ID="saveButton" runat="server" class="btn btn-success" Text="Save"  />
+                                <asp:Button ID="saveButton" runat="server" class="btn btn-success" Text="Save" OnClick="saveButton_Click"  />
                             </div>
                         </fieldset>
 

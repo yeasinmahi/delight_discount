@@ -195,10 +195,15 @@
     <Content Include="ecommerce\img\cLogo\11.png" />
     <Content Include="ecommerce\img\cLogo\12.png" />
     <Content Include="ecommerce\img\cLogo\baderbrau.png" />
+    <Content Include="ecommerce\img\cLogo\Bismillah Hotel And Restuarant.jpg" />
     <Content Include="ecommerce\img\cLogo\emirates.png" />
     <Content Include="ecommerce\img\cLogo\fred-perry.png" />
     <Content Include="ecommerce\img\cLogo\inspiring.png" />
     <Content Include="ecommerce\img\cLogo\national-geographic.png" />
+    <Content Include="ecommerce\img\cLogo\Robel King Pool, 37A, Donia, Jatrabari.jpg" />
+    <Content Include="ecommerce\img\cLogo\SR Accounting &amp; Maths Zone, Kutubkhali, Jatrabari.png" />
+    <Content Include="ecommerce\img\cLogo\SR Smart Shop, 101, Donia, Jatrabari.png" />
+    <Content Include="ecommerce\img\cLogo\the-snacks-bar-located.jpg" />
     <Content Include="ecommerce\img\coaching-web.jpg" />
     <Content Include="ecommerce\img\CommercialIcon.png" />
     <Content Include="ecommerce\img\logo.png" />
@@ -285,7 +290,6 @@
     <Content Include="FrontSection\img\logo.png" />
     <Content Include="FrontSection\js\bootstrap.min.js" />
     <Content Include="FrontSection\js\jquery.min.js" />
-    <Content Include="FrontSection\LogIn.aspx" />
     <Content Include="FrontSection\Profile.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Background-4.jpg" />
@@ -311,6 +315,7 @@
     <Content Include="img\cLogo\national-geographic.png" />
     <Content Include="img\coaching-web.jpg" />
     <Content Include="img\CommercialIcon.png" />
+    <Content Include="img\ddlogo.png" />
     <Content Include="img\logo - Copy.png" />
     <Content Include="img\logo.png" />
     <Content Include="img\ss.jpg" />
@@ -322,7 +327,7 @@
     <Content Include="js\modernizr.custom.js" />
     <Content Include="js\slick.js" />
     <Content Include="LogIn.aspx" />
-    <Content Include="MDefault.aspx" />
+    <Content Include="SPDhaka.aspx" />
     <Content Include="packages.config" />
     <Content Include="Product.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -333,6 +338,7 @@
     <Content Include="Admin\LoginUI.aspx" />
     <Content Include="Admin\RegistrationUI.aspx" />
     <Content Include="Admin\ShopEntry.aspx" />
+    <Content Include="SPJoypurhat.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -489,13 +495,6 @@
     <Compile Include="FrontSection\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FrontSection\LogIn.aspx.cs">
-      <DependentUpon>LogIn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrontSection\LogIn.aspx.designer.cs">
-      <DependentUpon>LogIn.aspx</DependentUpon>
-    </Compile>
     <Compile Include="FrontSection\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -513,12 +512,12 @@
     <Compile Include="LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MDefault.aspx.cs">
-      <DependentUpon>MDefault.aspx</DependentUpon>
+    <Compile Include="SPDhaka.aspx.cs">
+      <DependentUpon>SPDhaka.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MDefault.aspx.designer.cs">
-      <DependentUpon>MDefault.aspx</DependentUpon>
+    <Compile Include="SPDhaka.aspx.designer.cs">
+      <DependentUpon>SPDhaka.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
@@ -541,6 +540,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SPJoypurhat.aspx.cs">
+      <DependentUpon>SPJoypurhat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SPJoypurhat.aspx.designer.cs">
+      <DependentUpon>SPJoypurhat.aspx</DependentUpon>
     </Compile>
     <Compile Include="tbl_ShopInfo.cs">
       <DependentUpon>DDDBContex.tt</DependentUpon>

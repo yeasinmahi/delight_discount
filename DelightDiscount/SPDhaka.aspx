@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Mobile.Master" AutoEventWireup="true" CodeBehind="~/MDefault.aspx.cs" Inherits="DelightDiscount.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Mobile.Master" AutoEventWireup="true" CodeBehind="~/SPDhaka.aspx.cs" Inherits="DelightDiscount.SPDhaka" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta name="viewport" content="width=device-width" />
-    <title>Home</title>
+    <title>Service Partnar</title>
 
     <style>
         .serviceBtnDiv {
@@ -135,13 +135,14 @@
                     <div class="col-sm-6 col-md-3">
                         <div class="serviceBtnDiv">
                             <div class="step1">
-                                <img class="img img-responsive img-thumbnail center-block" src="img/cLogo/01.png"/>
+                                <img class="img img-responsive img-thumbnail center-block" src="ecommerce/img/cLogo/01.png"/>
                             </div>
+                            
                             <div class="step2">
                                 <div class="">
-                                    <h3 class="comName"> Company Name </h3>
+                                    <h3 class="comName">Robel King Pool</h3>
                                     <p class="comAdd">
-                                        H#12, R# 15, Nighty.<br/>
+                                        37A, Donia, Jatrabari.<br/>
                                         Dhaka, Bangladesh.
                                     </p>
                                 </div>
@@ -151,13 +152,13 @@
                     <div class="col-sm-6 col-md-3">
                         <div class="serviceBtnDiv">
                             <div class="step1">
-                                <img class="img img-responsive img-thumbnail center-block" src="img/cLogo/02.png"/>
+                                <img class="img img-responsive img-thumbnail center-block" src="ecommerce/img/cLogo/02.png"/>
                             </div>
                             <div class="step2">
                                 <div class="">
-                                    <h3 class="comName"> Company Name </h3>
+                                    <h3 class="comName"> SR Accounting & Maths Zone </h3>
                                     <p class="comAdd">
-                                        H#12, R# 15, Nighty.<br/>
+                                       Kutubkhali, Jatrabari.<br/>
                                         Dhaka, Bangladesh.
                                     </p>
                                 </div>
@@ -167,13 +168,13 @@
                     <div class="col-sm-6 col-md-3">
                         <div class="serviceBtnDiv">
                             <div class="step1">
-                                <img class="img img-responsive img-thumbnail center-block" src="img/cLogo/03.png"/>
+                                <img class="img img-responsive img-thumbnail center-block" src="ecommerce/img/cLogo/03.png"/>
                             </div>
                             <div class="step2">
                                 <div class="">
-                                    <h3 class="comName"> Company Name </h3>
+                                    <h3 class="comName">SR Smart Shop</h3>
                                     <p class="comAdd">
-                                        H#12, R# 15, Nighty.<br/>
+                                        101, Donia, Jatrabari.<br/>
                                         Dhaka, Bangladesh.
                                     </p>
                                 </div>

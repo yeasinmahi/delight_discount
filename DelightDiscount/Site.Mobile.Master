@@ -1,62 +1,72 @@
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Mobile.master.cs" Inherits="DelightDiscount.Site_Mobile" %>
+
 <%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    
+
     <meta name="viewport" content="width=device-width" />
     <title></title>
-    
+
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
-    
+
     <script src="../Scripts/jquery.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
 
 
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
-    
+
     <style>
         * {
-            font-family: monospace
+            font-family: monospace;
         }
+
         body {
             width: 100%;
             overflow-x: hidden;
         }
+
         .menu .navbar.navbar-fixed-top {
             background: #0099d4;
         }
-        .menu .navbar.navbar-fixed-top.hidden-xs {
-            width: 590px;
-            margin: 0 auto;
-            top: 20px;
-            z-index: 9999;
-            background: transparent;
-            border: none;
-            font-size: large;
-            letter-spacing: 1px;
+
+            .menu .navbar.navbar-fixed-top.hidden-xs {
+                width: 590px;
+                margin: 0 auto;
+                top: 20px;
+                z-index: 9999;
+                background: transparent;
+                border: none;
+                font-size: large;
+                letter-spacing: 1px;
+            }
+
+                .menu .navbar.navbar-fixed-top.hidden-xs * {
+                    font-family: Trebuchet MS;
+                }
+
+                .menu .navbar.navbar-fixed-top.hidden-xs .container {
+                    max-width: 100%;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+        .logo {
+            height: 50px;
+            width: auto;
+            margin-top: -15px;
         }
-        .menu .navbar.navbar-fixed-top.hidden-xs *{
-            font-family: Trebuchet MS;
+
+        #menuCollapseBtn span {
+            background: #ededed;
         }
-        .menu .navbar.navbar-fixed-top.hidden-xs .container {
-            max-width: 100%;
-            padding-left: 0;
-            padding-right: 0;
-        }
-         .logo {
-             height: 50px;
-             width: auto;
-             margin-top: -15px;
-         }
-         #menuCollapseBtn span {
-             background: #ededed;
-         }
+
         .menuBtn {
             color: #ededed;
         }
+
         .menuBtn2 {
             color: #ededed !important;
             -ms-transition: all 0.3s;
@@ -66,26 +76,27 @@
             background: #316882;
         }
 
-        .menuBtn2:focus {
-            color: #316882 !important;
-        }
+            .menuBtn2:focus {
+                color: #316882 !important;
+            }
 
-        .menuBtn2:hover {
-            background: #95d1de !important;
-            color: #444 !important;
-            -ms-transition: all 0.4s;
-            -o-transition: all 0.4s;
-            -webkit-transition: all 0.4s;
-            transition: all 0.4s;
-            /*box-shadow: 0 0 15px 1px #ededed;*/
-        }
+            .menuBtn2:hover {
+                background: #95d1de !important;
+                color: #444 !important;
+                -ms-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                -webkit-transition: all 0.4s;
+                transition: all 0.4s;
+                /*box-shadow: 0 0 15px 1px #ededed;*/
+            }
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1">
         <div class="container-fluid">
             <div class="menu">
                 <nav class="navbar navbar-fixed-top">
+                   
                     <div class="container">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
@@ -96,14 +107,15 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand" href="Default.aspx">
-                                <img class="img img-responsive logo" src="img/logo.png"/>
+                                <img class="img img-responsive logo" src="img/ddlogo.png" />
                             </a>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="menuCollapse">
-                            
+
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="visible-xs"><a href="Default.aspx" class="menuBtn">Home</a></li>
+
                                 <li class="visible-xs"><a href="ServicePartner.aspx" class="menuBtn">Service Partners</a></li>
                                 <li class="visible-xs"><a href="#" class="menuBtn">Populer Packages</a></li>
                                 <li class="visible-xs"><a href="#" class="menuBtn">Contact</a></li>
@@ -111,38 +123,47 @@
                                 <%--<li><a href="Login.aspx" class="menuBtn">Sign Up</a></li>--%>
                                 <li><a href="Login.aspx" class="menuBtn">Sign In</a></li>
                             </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </div><!-- /.container-fluid -->
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
                 </nav>
                 <nav class="navbar navbar-fixed-top hidden-xs">
                     <div class="container">
-                        
+
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse">
-                            
+
                             <ul class="nav navbar-nav navbar-center center-block">
-                                
+
                                 <li class="hidden-xs"><a href="Default.aspx" class="menuBtn2">Home</a></li>
-                                <li class="hidden-xs"><a href="ServicePartner.aspx" class="menuBtn2">Service Partners</a></li>
+                                <li>
+                                    <a class="dropdown-toggle menuBtn2" data-toggle="dropdown" runat="server" href="#">Service Partners</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a runat="server" href="SPDhaka.aspx">Dhaka Zone</a></li>
+                                        <li><a runat="server" href="SPJoypurhat.aspx">Joypurhat Zone</a></li>
+                                    </ul>
+                                </li>
                                 <li class="hidden-xs"><a href="#" class="menuBtn2">Populer Packages</a></li>
                                 <li class="hidden-xs"><a href="#" class="menuBtn2">Contact</a></li>
 
                             </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </div><!-- /.container-fluid -->
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
                 </nav>
             </div>
         </div>
-        
+
     </form>
 
     <div class="body-content" id="mainDiv" style="padding-top: 80px;">
         <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
-            
         </asp:ContentPlaceHolder>
         <div class="clearfix"></div>
     </div>
-    
+
 
 </body>
 </html>

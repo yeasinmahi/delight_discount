@@ -10,7 +10,7 @@
         <div class="wrapper">
             <div id="logo" class="fl">
                 <a id="ctl00_HyperLink8" href="Default.aspx">
-                    <img id="ctl00_Image1" alt="Logo" src="img/logo.png" style="height: 80px; border-width: 0px;" /></a>
+                    <img id="ctl00_Image1" alt="Logo" src="img/ddlogo.png" style="height: 80px; border-width: 0px;" /></a>
             </div>
             <div id="search" class="fl">
                 <div id="search-box">
@@ -25,7 +25,7 @@
                     </script>
                     <div id="submit" class="fl"><i class="fa fa-search" onclick="_chksrc()"></i></div>
                 </div>
-                <marquee dir="ltr" behavior="alternate" scrollamount="3" class="contact">Please contact us for product purchase at +88 01952200800</marquee>
+                <marquee dir="ltr" behavior="alternate" scrollamount="3" class="contact">Please contact us for product purchase at +88 01939987950</marquee>
             </div>
             <div id="cartarea" class="fr" onclick="location.replace('/Cart.aspx');">
                 <i class="fa fa-shopping-bag"></i>

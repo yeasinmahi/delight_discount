@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DelightDiscount.FrontSection
+namespace DelightDiscount
 {
 
 
-    public partial class LogIn
+    public partial class SPJoypurhat
     {
     }
 }
