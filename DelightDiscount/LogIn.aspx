@@ -29,11 +29,11 @@
             <div class="container-fluid text-center" style="width: 350px; margin: 0 auto; margin-top: 80px; background: #ffffff; background: rgba(255, 255, 255, 0.8); border-radius: 10px;">
                 <div class="form-group">
                     <div class="">
-                        <form id="miniforgot" action="" style="display: none" class="loginPannel form-group">
+                        <div id="miniforgot" style="display: none" class="loginPannel form-group">
                             <div class="title text-primary">Enter your e-mail address below and we'll send you an e-mail message containing your new password.</div>
                             <ul class="list-group">
                                 <li class="inputbox list-group-item">
-                                    <input type="email" name="minilogin_username" class="username inputchang form-control" placeholder="Enter your email" required="required" />
+                                    <input type="email" name="minilogin_username" class="username inputchang form-control" placeholder="Enter your email"/>
                                 </li>
                                 <li class="submit list-group-item">
                                     <input type="submit" class="sendNow_button form-control btn btn-primary" value="Send Now" onclick="findForgottenPwd(this);" />
@@ -42,11 +42,11 @@
                                     <a href="javascript:void(0)" class="backToLogin_button" onclick="$('.loginPannel').hide(300);$('#minilogin').show(300);">&laquo; Back to Login</a>
                                 </li>
                             </ul>
-                        </form>
+                        </div>
 
 
 
-                        <form action="" id="minilogin" class="loginPannel form-group" runat="server">
+                        <div id="minilogin" class="loginPannel form-group">
                             <div class="title text-primary">Log in with your Email</div>
                             <ul class="list-group">
                                 <li class="inputbox list-group-item">
@@ -67,7 +67,7 @@
                                     
                                 </li>
                             </ul>
-                        </form>
+                       </div>
                     </div>
 
                 </div>

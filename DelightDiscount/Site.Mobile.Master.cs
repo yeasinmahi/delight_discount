@@ -24,5 +24,15 @@ namespace DelightDiscount
                 user.Attributes.Add("class", "hidden");
             }
         }
+
+        protected void OnServerClick(object sender, EventArgs e)
+        {
+            if (Session["op"] != null)
+            {
+                Session["op"] = null;
+                signIn.Attributes.Remove("class");
+                user.Attributes.Add("class", "hidden");
+            }
+        }
     }
 }
