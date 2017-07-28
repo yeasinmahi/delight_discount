@@ -146,6 +146,14 @@
     <Content Include="Content\custom.min.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\nprogress.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\details.css" />
+    <Content Include="css\fontawesome-stars-o.css" />
+    <Content Include="css\home.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\nav.css" />
+    <Content Include="css\slicebox.css" />
+    <Content Include="css\slick.css" />
     <Content Include="Default.aspx" />
     <Content Include="ecommerce\Category.aspx" />
     <Content Include="ecommerce\css\custom.css" />
@@ -283,6 +291,36 @@
     <Content Include="Images\Background-4.jpg" />
     <Content Include="Images\img.jpg" />
     <Content Include="Images\user.png" />
+    <Content Include="img\choosing-a-commercial-rea-estate-broker.jpg" />
+    <Content Include="img\cLogo\01.png" />
+    <Content Include="img\cLogo\02.png" />
+    <Content Include="img\cLogo\03.png" />
+    <Content Include="img\cLogo\04.png" />
+    <Content Include="img\cLogo\05.png" />
+    <Content Include="img\cLogo\06.png" />
+    <Content Include="img\cLogo\07.png" />
+    <Content Include="img\cLogo\08.png" />
+    <Content Include="img\cLogo\09.png" />
+    <Content Include="img\cLogo\10.png" />
+    <Content Include="img\cLogo\11.png" />
+    <Content Include="img\cLogo\12.png" />
+    <Content Include="img\cLogo\baderbrau.png" />
+    <Content Include="img\cLogo\emirates.png" />
+    <Content Include="img\cLogo\fred-perry.png" />
+    <Content Include="img\cLogo\inspiring.png" />
+    <Content Include="img\cLogo\national-geographic.png" />
+    <Content Include="img\coaching-web.jpg" />
+    <Content Include="img\CommercialIcon.png" />
+    <Content Include="img\logo - Copy.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\ss.jpg" />
+    <Content Include="js\cart.js" />
+    <Content Include="js\common.js" />
+    <Content Include="js\jquery.barrating.min.js" />
+    <Content Include="js\jquery.elevatezoom.js" />
+    <Content Include="js\jquery.slicebox.js" />
+    <Content Include="js\modernizr.custom.js" />
+    <Content Include="js\slick.js" />
     <Content Include="LogIn.aspx" />
     <Content Include="MDefault.aspx" />
     <Content Include="packages.config" />
@@ -375,6 +413,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Category.aspx.cs">
       <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Category.aspx.designer.cs">
       <DependentUpon>Category.aspx</DependentUpon>
@@ -469,18 +508,21 @@
     </Compile>
     <Compile Include="LogIn.aspx.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="MDefault.aspx.cs">
       <DependentUpon>MDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MDefault.aspx.designer.cs">
       <DependentUpon>MDefault.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>

@@ -48,125 +48,123 @@
 
             </div>
             <div id="mainslider" class="fl">
-                <ul id="ctl00_ContentPlaceHolder1_mn_slider" class="sb-slider">
-                    <li>
-                        <img src='ups/s/15.jpg' alt='' />
-                        <div class='sb-description'>
-                            <h3>পবিত্র ঈদুল ফিতর এর শুভেচ্ছা </h3>
-                            <h5>পবিত্র ঈদুল ফিতর এর শুভেচ্ছা </h5>
-                        </div>
-                    </li>
-                    <li>
-                        <img src='ups/s/1.jpg' alt='' />
-                        <div class='sb-description'>
-                            <h3>Desh Masala Package</h3>
-                            <h5>Holud
-                    Morich
-                    Dhania
-                    Jira
-                            </h5>
-                        </div>
-                    </li>
-                    <li>
-                        <img src='ups/s/16.jpg' alt='' />
-                        <div class='sb-description'>
-                            <h3>Desh Bazar</h3>
-                            <h5>Desh Bazar</h5>
-                        </div>
-                    </li>
-                    <li>
-                        <img src='ups/s/2.jpg' alt='' />
-                        <div class='sb-description'>
-                            <h3>Toxin Cleanser</h3>
-                            <h5>Toxin Remover Patch</h5>
-                        </div>
-                    </li>
-                    <li>
-                        <img src='ups/s/4.jpg' alt='' />
-                        <div class='sb-description'>
-                            <h3>Rangapori</h3>
-                            <h5>Shampo</h5>
-                        </div>
-                    </li>
-                    <li>
-                        <img src='ups/s/5.jpg' alt='' />
-                        <div class='sb-description'>
-                            <h3>Rangapori</h3>
-                            <h5>Rangapori</h5>
-                        </div>
-                    </li>
-                </ul>
-                <div id="shadow" class="shadow"></div>
-                <div id="nav-arrows" class="nav-arrows">
-                    <a href="#">Next</a>
-                    <a href="#">Previous</a>
-                </div>
-                <div id="nav-options" class="nav-options">
-                    <span id="navPlay">Play</span>
-                    <span id="navPause">Pause</span>
-                </div>
-                <link rel="stylesheet" type="text/css" href="css/slicebox.css" />
-                <link rel="stylesheet" type="text/css" href="css/custom.css" />
-                <script type="text/javascript" src="js/modernizr.custom.js"></script>
-                <script type="text/javascript" src="js/jquery.slicebox.js"></script>
-                <script type="text/javascript">
-                    $(function () {
-                        var Page = (function () {
-                            var $navArrows = $('#nav-arrows').hide(),
-                                $navOptions = $('#nav-options').hide(),
-                                $shadow = $('#shadow').hide(),
-                                slicebox = $('#ctl00_ContentPlaceHolder1_mn_slider').slicebox({
-                                    onReady: function () {
-                                        $navArrows.show();
-                                        $navOptions.show();
-                                        $shadow.show();
-                                        slicebox.play();
-                                    },
-                                    orientation: 'r',
-                                    cuboidsRandom: true
-                                }),
-
-                                init = function () {
-                                    initEvents();
-                                },
-                                initEvents = function () {
-                                    $navArrows.children(':first').on('click', function () {
-                                        slicebox.next();
-                                        return false;
-                                    });
-                                    $navArrows.children(':last').on('click', function () {
-                                        slicebox.previous();
-                                        return false;
-                                    });
-                                    $('#navPlay').on('click', function () {
-                                        slicebox.play();
-                                        return false;
-                                    });
-
-                                    $('#navPause').on('click', function () {
-                                        slicebox.pause();
-                                        return false;
-                                    });
-                                };
-
-                            return { init: init };
-                        })();
-                        Page.init();
-                    });
-                </script>
+    <ul id="ctl00_ContentPlaceHolder1_mn_slider" class="sb-slider">
+        <li>
+            <img src='ecommerce/ups/s/1.jpg' alt='' />
+            <div class='sb-description'>
+                <h3>We All Are Together</h3>
+                <h5>A,B,C,D </h5>
             </div>
+        </li>
+        <li>
+            <img src='ecommerce/ups/s/2.jpg' alt='' />
+            <div class='sb-description'>
+                <h3>A Cultural Program</h3>
+                <h5>
+                    Award Giving Ceremony
+                </h5>
+            </div>
+        </li>
+        <li>
+            <img src='ecommerce/ups/s/3.jpg' alt='' />
+            <div class='sb-description'>
+                <h3>Picnic</h3>
+                <h5>With Family</h5>
+            </div>
+        </li>
+        <li>
+            <img src='ecommerce/ups/s/4.jpg' alt='' />
+            <div class='sb-description'>
+                <h3>Unofficial Meating</h3>
+                <h5>With marketing Executive</h5>
+            </div>
+        </li>
+        <%--<li>
+            <img src='ups/s/4.jpg' alt='' />
+            <div class='sb-description'>
+                <h3>Rangapori</h3>
+                <h5>Shampo</h5>
+            </div>
+        </li>
+        <li>
+            <img src='ups/s/5.jpg' alt='' />
+            <div class='sb-description'>
+                <h3>Rangapori</h3>
+                <h5>Rangapori</h5>
+            </div>
+        </li>--%>
+    </ul>
+    <div id="shadow" class="shadow"></div>
+    <div id="nav-arrows" class="nav-arrows">
+        <a href="#">Next</a>
+        <a href="#">Previous</a>
+    </div>
+    <div id="nav-options" class="nav-options">
+        <span id="navPlay">Play</span>
+        <span id="navPause">Pause</span>
+    </div>
+    <link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="js/jquery.slicebox.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var Page = (function () {
+                var $navArrows = $('#nav-arrows').hide(),
+                    $navOptions = $('#nav-options').hide(),
+                    $shadow = $('#shadow').hide(),
+                    slicebox = $('#ctl00_ContentPlaceHolder1_mn_slider').slicebox({
+                        onReady: function () {
+                            $navArrows.show();
+                            $navOptions.show();
+                            $shadow.show();
+                            slicebox.play();
+                        },
+                        orientation: 'r',
+                        cuboidsRandom: true
+                    }),
+
+                    init = function () {
+                        initEvents();
+                    },
+                    initEvents = function () {
+                        $navArrows.children(':first').on('click', function () {
+                            slicebox.next();
+                            return false;
+                        });
+                        $navArrows.children(':last').on('click', function () {
+                            slicebox.previous();
+                            return false;
+                        });
+                        $('#navPlay').on('click', function () {
+                            slicebox.play();
+                            return false;
+                        });
+
+                        $('#navPause').on('click', function () {
+                            slicebox.pause();
+                            return false;
+                        });
+                    };
+
+                return { init: init };
+            })();
+            Page.init();
+        });
+    </script>
+</div>
             <div id="recent" class="fl">
                 <div id="ctl00_ContentPlaceHolder1_mn_recent">
                     <div class='recent'>
-                        <img src='ups/r/1.jpg' alt='' />
+                        <img src='ecommerce/ups/r/1.jpg' alt='' />
                         <h5>Cosmetics</h5>
                     </div>
                     <div class='recent'>
-                        <img src='ups/r/2.jpg' alt='' />
+                        <img src='ecommerce/ups/r/2.jpg' alt='' />
                         <h5>Garments</h5>
                     </div>
                     <div class='recent'>
-                        <img src='ups/r/3.jpg' alt='' />
+                        <img src='ecommerce/ups/r/3.jpg' alt='' />
                         <h5>Leather Goods</h5>
                     </div>
                 </div>
@@ -194,12 +192,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Desh Party Sharee</h3>
-                                    <h5>Price: 3890.00</h5>
-                                    <h5>Deal Code: DF211</h5>
+                                    <h3>Indian Dress</h3>
+                                    <h5>Price: 1500.00</h5>
+                                    <h5>Deal Code: DD042</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Garments & Fashion/Indian Dress - Price 1500.00 - Code 042.jpeg' alt='' />
+                            <img src='ecommerce/ups/p/Garments & Fashion/Indian Dress - Price 1500.00 - Code 042.jpeg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -214,12 +212,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Desh Special Three pcs</h3>
-                                    <h5>Price: 2790.00</h5>
-                                    <h5>Deal Code: DF217</h5>
+                                    <h3>Indian Dress</h3>
+                                    <h5>Price: 2000.00</h5>
+                                    <h5>Deal Code: DD041</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Garments & Fashion/Indian Dress - Price 2000.00 - Code 041.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Garments & Fashion/Indian Dress - Price 2000.00 - Code 041.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -234,12 +232,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Desh Spcial Shirt Pcs</h3>
-                                    <h5>Price: 1090.00</h5>
-                                    <h5>Deal Code: DF218</h5>
+                                    <h3>Indian Dress</h3>
+                                    <h5>Price: 2500.00</h5>
+                                    <h5>Deal Code: DD043</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Garments & Fashion/Indian Dress - Price 2500.00 - Code 043.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Garments & Fashion/Indian Dress - Price 2500.00 - Code 043.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -263,12 +261,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Ranga Pori Gents</h3>
-                                    <h5>Price: 595.00</h5>
-                                    <h5>Deal Code: DB401</h5>
+                                    <h4>Dove Shampoo(Thai) 375ml</h4>
+                                    <h5>Price: 270.00</h5>
+                                    <h5>Deal Code: DD021</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Cosmetic & Beauty Care/Dove Shampoo(Thailand) 375ml - Price 270.00 - Code DD021.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Dove Shampoo(Thailand) 375ml - Price 270.00 - Code DD021.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -283,12 +281,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Neem Face Wash</h3>
-                                    <h5>Price: 170.00</h5>
-                                    <h5>Deal Code: DB404</h5>
+                                    <h4>Himsagar Oil 350ml</h4>
+                                    <h5>Price: 175.00</h5>
+                                    <h5>Deal Code: DD022</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Cosmetic & Beauty Care/Himsagar Oil 350ml - Price175.00 - Code DD022.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Himsagar Oil 350ml - Price175.00 - Code DD022.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -303,12 +301,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Skin Care</h3>
-                                    <h5>Price: 0.00</h5>
-                                    <h5>Deal Code: DB407</h5>
+                                    <h4>Makup Box</h4>
+                                    <h5>Price: 700.00</h5>
+                                    <h5>Deal Code: DD023</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Cosmetic & Beauty Care/Makup Box Price 700.00 - Code DD023.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Makup Box Price 700.00 - Code DD023.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -323,12 +321,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Herbal Hair Oil</h3>
-                                    <h5>Price: 0.00</h5>
-                                    <h5>Deal Code: DB406</h5>
+                                    <h4>Mashroom Toothpaste</h4>
+                                    <h5>Price: 150.00</h5>
+                                    <h5>Deal Code: DD024</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Cosmetic & Beauty Care/Mushroom Toothpaste - Price 150.00 - Code DD024.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Mushroom Toothpaste - Price 150.00 - Code DD024.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -343,12 +341,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Rangpori Fair Look</h3>
-                                    <h5>Price: 0.00</h5>
-                                    <h5>Deal Code: DB405</h5>
+                                    <h4>Neem Face Wash</h4>
+                                    <h5>Price: 150.00</h5>
+                                    <h5>Deal Code: DD025</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Cosmetic & Beauty Care/Neem Face Wash 150ml - Price 1760.00 - Code DD025.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Neem Face Wash 150ml - Price 1760.00 - Code DD025.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -363,12 +361,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Hair Care</h3>
-                                    <h5>Price: 0.00</h5>
-                                    <h5>Deal Code: 403</h5>
+                                    <h4>Ponds Beauty White 250ml</h4>
+                                    <h5>Price: 400.00</h5>
+                                    <h5>Deal Code: DD026</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Cosmetic & Beauty Care/Ponds Beauty White 250ml - Price 400.00 - Code DD026.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Ponds Beauty White 250ml - Price 400.00 - Code DD026.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -382,13 +380,13 @@
                         </div>
                         <div class='proditem'>
                             <div class='a2ca'>
-                                <strong>
-                                    <h3>Ranga Pori Gents</h3>
-                                    <h5>Price: 595.00</h5>
-                                    <h5>Deal Code: DB401</h5>
+                               <strong>
+                                    <h4>Dove Shampoo(Thai) 375ml</h4>
+                                    <h5>Price: 270.00</h5>
+                                    <h5>Deal Code: DD021</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Cosmetic & Beauty Care/Dove Shampoo(Thailand) 375ml - Price 270.00 - Code DD021.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Dove Shampoo(Thailand) 375ml - Price 270.00 - Code DD021.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -403,12 +401,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Neem Face Wash</h3>
-                                    <h5>Price: 170.00</h5>
-                                    <h5>Deal Code: DB404</h5>
+                                    <h4>Himsagar Oil 350ml</h4>
+                                    <h5>Price: 175.00</h5>
+                                    <h5>Deal Code: DD022</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Cosmetic & Beauty Care/Himsagar Oil 350ml - Price175.00 - Code DD022.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Himsagar Oil 350ml - Price175.00 - Code DD022.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -423,12 +421,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Skin Care</h3>
-                                    <h5>Price: 0.00</h5>
-                                    <h5>Deal Code: DB407</h5>
+                                    <h4>Makup Box</h4>
+                                    <h5>Price: 700.00</h5>
+                                    <h5>Deal Code: DD023</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Cosmetic & Beauty Care/Makup Box Price 700.00 - Code DD023.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Makup Box Price 700.00 - Code DD023.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -443,12 +441,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Herbal Hair Oil</h3>
-                                    <h5>Price: 0.00</h5>
-                                    <h5>Deal Code: DB406</h5>
+                                    <h4>Mashroom Toothpaste</h4>
+                                    <h5>Price: 150.00</h5>
+                                    <h5>Deal Code: DD024</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Cosmetic & Beauty Care/Mushroom Toothpaste - Price 150.00 - Code DD024.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Mushroom Toothpaste - Price 150.00 - Code DD024.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -463,12 +461,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Rangpori Fair Look</h3>
-                                    <h5>Price: 0.00</h5>
-                                    <h5>Deal Code: DB405</h5>
+                                    <h4>Neem Face Wash</h4>
+                                    <h5>Price: 150.00</h5>
+                                    <h5>Deal Code: DD025</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Cosmetic & Beauty Care/Neem Face Wash 150ml - Price 1760.00 - Code DD025.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Neem Face Wash 150ml - Price 1760.00 - Code DD025.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -483,12 +481,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Hair Care</h3>
-                                    <h5>Price: 0.00</h5>
-                                    <h5>Deal Code: 403</h5>
+                                    <h4>Ponds Beauty White 250ml</h4>
+                                    <h5>Price: 400.00</h5>
+                                    <h5>Deal Code: DD026</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Cosmetic & Beauty Care/Ponds Beauty White 250ml - Price 400.00 - Code DD026.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Ponds Beauty White 250ml - Price 400.00 - Code DD026.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -512,12 +510,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Family Needs</h3>
-                                    <h5>Price: 1650.00</h5>
-                                    <h5>Deal Code: DC102</h5>
+                                    <h4>Ifad Instant  Noodles- 8pcs  </h4>
+                                    <h5>Price: 125.00</h5>
+                                    <h5>Deal Code: DD017</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Ifad Instant Noodles 8pcs - Price 125.00 - Code DD017.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Ifad Instant Noodles 8pcs - Price 125.00 - Code DD017.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -532,12 +530,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Mediplus Toothpaste</h3>
-                                    <h5>Price: 0.00</h5>
-                                    <h5>Deal Code: DC105</h5>
+                                    <h4>Dettol Antiseptic Liquid 500ml</h4>
+                                    <h5>Price: 140.00</h5>
+                                    <h5>Deal Code: DD012</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Dettol Antiseptic Liquid 500ml - Price 140.00 - Code DD012.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Dettol Antiseptic Liquid 500ml - Price 140.00 - Code DD012.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -552,12 +550,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Parfiume & Body Spry</h3>
-                                    <h5>Price: 1690.00</h5>
-                                    <h5>Deal Code: DC111</h5>
+                                    <h4>Diploma Full Cream Milk Powder 500gm</h4>
+                                    <h5>Price: 280.00</h5>
+                                    <h5>Deal Code: DD013</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Diploma Full Cream Milk Powder 500gm - Price 2850.00 - Code DD013.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Diploma Full Cream Milk Powder 500gm - Price 2850.00 - Code DD013.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -572,12 +570,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Parfume</h3>
-                                    <h5>Price: 1690.00</h5>
-                                    <h5>Deal Code: DC</h5>
+                                    <h4>Fresh Refined Sugar 1kg - Price 75.00</h4>
+                                    <h5>Price: 75.00</h5>
+                                    <h5>Deal Code: DD015</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Fresh Refined Ssugar 1kg - Price 75.00 - Code DD015.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Fresh Refined Ssugar 1kg - Price 75.00 - Code DD015.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -592,12 +590,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Desh Masala</h3>
-                                    <h5>Price: 0.00</h5>
-                                    <h5>Deal Code: DC00000</h5>
+                                    <h4>Fresh Soyabean Oil 5ltr  </h4>
+                                    <h5>Price: 505.00</h5>
+                                    <h5>Deal Code: DD014</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Fresh Soyabean Oil 5ltr - Price 505.00 - Code DD014.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Fresh Soyabean Oil 5ltr - Price 505.00 - Code DD014.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -612,12 +610,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Daily Needs</h3>
-                                    <h5>Price: 1650.00</h5>
-                                    <h5>Deal Code: DC00</h5>
+                                    <h4>Ispahani Mirzapore Tea 400gm</h4>
+                                    <h5>Price: 160.00</h5>
+                                    <h5>Deal Code: DD11</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Ifad Instant Noodles 8pcs - Price 125.00 - Code DD017.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Ispahani Mirzapore Tea 400gm Price 160.00 - Code DD011.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -632,12 +630,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Colgate Toothpaste</h3>
-                                    <h5>Price: 0.00</h5>
-                                    <h5>Deal Code: DC0</h5>
+                                    <h4>Nestle Nescafe Classic Coffee Jar 100gm</h4>
+                                    <h5>Price: 2800.00</h5>
+                                    <h5>Deal Code: DD016</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Ispahani Mirzapore Tea 400gm Price 160.00 - Code DD011.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Nestle Nescafe Classic Instant Coffee Jar 100gm - Price - 2800.00 - Code DD016.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -649,7 +647,7 @@
                                 <a href='Product.aspx?pid=44' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
                             </div>
                         </div>
-                        <div class='proditem'>
+<%--                        <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
                                     <h3>Oral-B Tooth Brash</h3>
@@ -657,7 +655,7 @@
                                     <h5>Deal Code: DC000</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Nestle Nescafe Classic Instant Coffee Jar 100gm - Price - 2800.00 - Code DD016.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Nestle Nescafe Classic Instant Coffee Jar 100gm - Price - 2800.00 - Code DD016.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -677,7 +675,7 @@
                                     <h5>Deal Code: DC100</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Dettol Antiseptic Liquid 500ml - Price 140.00 - Code DD012.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Dettol Antiseptic Liquid 500ml - Price 140.00 - Code DD012.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -697,7 +695,7 @@
                                     <h5>Deal Code: DC102</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Ifad Instant Noodles 8pcs - Price 125.00 - Code DD017.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Ifad Instant Noodles 8pcs - Price 125.00 - Code DD017.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -717,7 +715,7 @@
                                     <h5>Deal Code: DC105</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Dettol Antiseptic Liquid 500ml - Price 140.00 - Code DD012.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Dettol Antiseptic Liquid 500ml - Price 140.00 - Code DD012.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -737,7 +735,7 @@
                                     <h5>Deal Code: DC111</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Diploma Full Cream Milk Powder 500gm - Price 2850.00 - Code DD013.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Diploma Full Cream Milk Powder 500gm - Price 2850.00 - Code DD013.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -757,7 +755,7 @@
                                     <h5>Deal Code: DC</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Fresh Refined Ssugar 1kg - Price 75.00 - Code DD015.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Fresh Refined Ssugar 1kg - Price 75.00 - Code DD015.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -772,12 +770,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Desh Masala</h3>
+                                    <h3>Delight Masala</h3>
                                     <h5>Price: 0.00</h5>
                                     <h5>Deal Code: DC00000</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Fresh Soyabean Oil 5ltr - Price 505.00 - Code DD014.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Fresh Soyabean Oil 5ltr - Price 505.00 - Code DD014.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -797,7 +795,7 @@
                                     <h5>Deal Code: DC00</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Ifad Instant Noodles 8pcs - Price 125.00 - Code DD017.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Ifad Instant Noodles 8pcs - Price 125.00 - Code DD017.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -817,7 +815,7 @@
                                     <h5>Deal Code: DC0</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Ispahani Mirzapore Tea 400gm Price 160.00 - Code DD011.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Ispahani Mirzapore Tea 400gm Price 160.00 - Code DD011.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -837,7 +835,7 @@
                                     <h5>Deal Code: DC000</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Nestle Nescafe Classic Instant Coffee Jar 100gm - Price - 2800.00 - Code DD016.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Nestle Nescafe Classic Instant Coffee Jar 100gm - Price - 2800.00 - Code DD016.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -857,7 +855,7 @@
                                     <h5>Deal Code: DC100</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Consumer & Daily Needs/Dettol Antiseptic Liquid 500ml - Price 140.00 - Code DD012.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Dettol Antiseptic Liquid 500ml - Price 140.00 - Code DD012.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -868,7 +866,7 @@
                                 </dfn>
                                 <a href='Product.aspx?pid=42' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
                             </div>
-                        </div>
+                        </div>--%>
                     </div>
                     <div class='cb'></div>
                 </div>
@@ -886,7 +884,7 @@
                                     <h5>Deal Code: DH326</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Health & Nutrition/Chaban Prash - Price 300.00 - Code DD061.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Health & Nutrition/Chaban Prash - Price 300.00 - Code DD061.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -906,7 +904,7 @@
                                     <h5>Deal Code: DH326</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Health & Nutrition/Herbalife 250gr - Price 500.00 - Code DD062.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Health & Nutrition/Herbalife 250gr - Price 500.00 - Code DD062.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -926,7 +924,7 @@
                                     <h5>Deal Code: DH318</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Health & Nutrition/Kalozira Oil 250ml - Price 400.00 - Code DD063.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Health & Nutrition/Kalozira Oil 250ml - Price 400.00 - Code DD063.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -946,7 +944,7 @@
                                     <h5>Deal Code: DH324</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Health & Nutrition/Soya Protein - Price 450.00 - Code DD064.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Health & Nutrition/Soya Protein - Price 450.00 - Code DD064.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -966,7 +964,7 @@
                                     <h5>Deal Code: DH323</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Health & Nutrition/Toxin Cleanser - Price 650.00 - Code DD065.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Health & Nutrition/Toxin Cleanser - Price 650.00 - Code DD065.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -987,7 +985,7 @@
                                     <h5>Deal Code: DH326</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Health & Nutrition/Chaban Prash - Price 300.00 - Code DD061.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Health & Nutrition/Chaban Prash - Price 300.00 - Code DD061.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1007,7 +1005,7 @@
                                     <h5>Deal Code: DH326</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Health & Nutrition/Herbalife 250gr - Price 500.00 - Code DD062.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Health & Nutrition/Herbalife 250gr - Price 500.00 - Code DD062.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1027,7 +1025,7 @@
                                     <h5>Deal Code: DH318</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Health & Nutrition/Kalozira Oil 250ml - Price 400.00 - Code DD063.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Health & Nutrition/Kalozira Oil 250ml - Price 400.00 - Code DD063.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1047,7 +1045,7 @@
                                     <h5>Deal Code: DH324</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Health & Nutrition/Soya Protein - Price 450.00 - Code DD064.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Health & Nutrition/Soya Protein - Price 450.00 - Code DD064.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1067,7 +1065,7 @@
                                     <h5>Deal Code: DH323</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Health & Nutrition/Toxin Cleanser - Price 650.00 - Code DD065.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Health & Nutrition/Toxin Cleanser - Price 650.00 - Code DD065.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1097,7 +1095,7 @@
                                     <h5>Deal Code: DG1001</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Gents Gallery/Belt - Price 650.00 - Price 300.00 - Code DD051.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Gents Gallery/Belt - Price 650.00 - Price 300.00 - Code DD051.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1117,7 +1115,7 @@
                                     <h5>Deal Code: DG1004</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Gents Gallery/Gents Wallet - Price 950.00 - Code DD052.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Gents Gallery/Gents Wallet - Price 950.00 - Code DD052.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1137,7 +1135,7 @@
                                     <h5>Deal Code: DG1003</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Gents Gallery/Money Bag - Price 350.00 - Code DD053.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Gents Gallery/Money Bag - Price 350.00 - Code DD053.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1152,12 +1150,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Desh Money Bag</h3>
+                                    <h3>Delight Money Bag</h3>
                                     <h5>Price: 950.00</h5>
                                     <h5>Deal Code: 000000</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Gents Gallery/Travel Bag - Price 1500.00 - Code DD054.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Gents Gallery/Travel Bag - Price 1500.00 - Code DD054.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1178,7 +1176,7 @@
                                     <h5>Deal Code: DG1001</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Gents Gallery/Belt - Price 650.00 - Price 300.00 - Code DD051.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Gents Gallery/Belt - Price 650.00 - Price 300.00 - Code DD051.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1198,7 +1196,7 @@
                                     <h5>Deal Code: DG1004</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Gents Gallery/Gents Wallet - Price 950.00 - Code DD052.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Gents Gallery/Gents Wallet - Price 950.00 - Code DD052.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1218,7 +1216,7 @@
                                     <h5>Deal Code: DG1003</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Gents Gallery/Money Bag - Price 350.00 - Code DD053.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Gents Gallery/Money Bag - Price 350.00 - Code DD053.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1233,12 +1231,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Desh Money Bag</h3>
+                                    <h3>Delight Money Bag</h3>
                                     <h5>Price: 950.00</h5>
                                     <h5>Deal Code: 000000</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Gents Gallery/Travel Bag - Price 1500.00 - Code DD054.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Gents Gallery/Travel Bag - Price 1500.00 - Code DD054.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1268,7 +1266,7 @@
                                     <h5>Deal Code: DH302</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Charger Light - Price 850.00 - Code DD015.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Charger Light - Price 850.00 - Code DD015.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1288,7 +1286,7 @@
                                     <h5>Deal Code: DH306</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Chemical Cleaner - Price 3500.00 - Code DD012.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Chemical Cleaner - Price 3500.00 - Code DD012.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1308,7 +1306,7 @@
                                     <h5>Deal Code: DA504</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Electric Cettle - Price 450.00 - Code DD011.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Electric Cettle - Price 450.00 - Code DD011.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1328,7 +1326,7 @@
                                     <h5>Deal Code: DA506</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Electric Lunch Box - Price 750.00 - Code DD013.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Electric Lunch Box - Price 750.00 - Code DD013.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1348,7 +1346,7 @@
                                     <h5>Deal Code: DE702</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Energy Blub - Price 300.00 - Code DD016.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Energy Blub - Price 300.00 - Code DD016.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1368,7 +1366,7 @@
                                     <h5>Deal Code: DE700</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Iron MechineCode DD014.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Iron MechineCode DD014.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1388,7 +1386,7 @@
                                     <h5>Deal Code: DA501</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Mobile-Power-Bank 10000mhp - Price 450.00 - Code DD017.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Mobile-Power-Bank 10000mhp - Price 450.00 - Code DD017.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1408,7 +1406,7 @@
                                     <h5>Deal Code: DH302</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Charger Light - Price 850.00 - Code DD015.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Charger Light - Price 850.00 - Code DD015.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1428,7 +1426,7 @@
                                     <h5>Deal Code: DH306</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Chemical Cleaner - Price 3500.00 - Code DD012.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Chemical Cleaner - Price 3500.00 - Code DD012.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1448,7 +1446,7 @@
                                     <h5>Deal Code: DA504</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Electric Cettle - Price 450.00 - Code DD011.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Electric Cettle - Price 450.00 - Code DD011.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1468,7 +1466,7 @@
                                     <h5>Deal Code: DA506</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Electric Lunch Box - Price 750.00 - Code DD013.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Electric Lunch Box - Price 750.00 - Code DD013.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1488,7 +1486,7 @@
                                     <h5>Deal Code: DE702</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Energy Blub - Price 300.00 - Code DD016.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Energy Blub - Price 300.00 - Code DD016.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1508,7 +1506,7 @@
                                     <h5>Deal Code: DE700</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Iron MechineCode DD014.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Iron MechineCode DD014.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1528,7 +1526,7 @@
                                     <h5>Deal Code: DA501</h5>
                                 </strong>
                             </div>
-                            <img src='ups/p/Electric & Electronic/Mobile-Power-Bank 10000mhp - Price 450.00 - Code DD017.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Electric & Electronic/Mobile-Power-Bank 10000mhp - Price 450.00 - Code DD017.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1553,43 +1551,43 @@
         <div class="wrapper">
             <div id="footerl" class="fl">
                 <div class="text fl">
-                    <span class="texth fl">DESH</span>
+                    <span class="texth fl">Delight</span>
                     <div class="textopt fl">
                         <a id="ctl00_HyperLink1" href="Default.aspx">Home</a>|
                     <a id="ctl00_HyperLink12" href="su/Login.aspx" target="_blank">Login</a>|
                     <a id="ctl00_HyperLink2" href="About.aspx">About Us</a>|
                     <a id="ctl00_HyperLink3" href="FAQ.aspx">FAQ</a>|
                     <a id="ctl00_HyperLink9" href="Contact.aspx">Contact Us</a>|
-                    <a id="ctl00_HyperLink4" href="http://www.deshltd.com">How to buy</a>
+                    <a id="ctl00_HyperLink4" href="http://www.Delightltd.com">How to buy</a>
                     </div>
                 </div>
                 <div class="text fl">
                     <span class="texth fl">Payment</span>
                     <div class="textopt fl">
-                        <a id="ctl00_HyperLink5" href="http://www.deshltd.com">Replacement policy</a>|
-                    <a id="ctl00_HyperLink6" href="http://www.deshltd.com">Refund policy</a>
+                        <a id="ctl00_HyperLink5" href="http://www.Delightltd.com">Replacement policy</a>|
+                    <a id="ctl00_HyperLink6" href="http://www.Delightltd.com">Refund policy</a>
                     </div>
                 </div>
                 <div class="text fl">
                     <span class="texth fl">How to pay</span>
                     <div class="textopt fl">
-                        <a href="http://www.deshltd.com">
+                        <a href="http://www.Delightltd.com">
                             <img id="ctl00_Image8" alt="dcash" src="Images/dcash.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.deshltd.com">
+                        </a><a href="http://www.Delightltd.com">
                             <img id="ctl00_Image9" alt="bkash" src="Images/bkash.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.deshltd.com">
+                        </a><a href="http://www.Delightltd.com">
                             <img id="ctl00_Image10" alt="dbbl" src="Images/dbbl.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.deshltd.com">
+                        </a><a href="http://www.Delightltd.com">
                             <img id="ctl00_Image11" alt="mcash" src="Images/mcash.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.deshltd.com">
+                        </a><a href="http://www.Delightltd.com">
                             <img id="ctl00_Image12" alt="mycash" src="Images/mycash.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.deshltd.com">
+                        </a><a href="http://www.Delightltd.com">
                             <img id="ctl00_Image13" alt="qcash" src="Images/qcash.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.deshltd.com">
+                        </a><a href="http://www.Delightltd.com">
                             <img id="ctl00_Image14" alt="visa" src="Images/visa.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.deshltd.com">
+                        </a><a href="http://www.Delightltd.com">
                             <img id="ctl00_Image15" alt="master" src="Images/master.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.deshltd.com">
+                        </a><a href="http://www.Delightltd.com">
                             <img id="ctl00_Image16" alt="amex" src="Images/amex.png" style="border-width: 0px; height: 34px" />
                         </a>
                     </div>
@@ -1603,13 +1601,13 @@
                 </div>
                 <div class="textopt">
                     <span class="fl">Email: </span>
-                    <span class="fl">info@deshecommerce.com</span>
+                    <span class="fl">info@Delightecommerce.com</span>
                 </div>
                 <div class="textopt">
-                    <a href="http://www.facebook.com/deshltd" target="_blank"><i class="fa fa-facebook-square"></i></a>
-                    <a href="http://twitter.com/DESH E-COMMERCE LTD" target="_blank"><i class="fa fa-twitter-square"></i></a>
-                    <a href="http://plus.google.com/u/0/deshltd/posts" target="_blank"><i class="fa fa-google-plus-square"></i></a>
-                    <a href="http://www.linkedin.com/company/DESH E-COMMERCE LTD" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="http://www.facebook.com/Delightltd" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="http://twitter.com/Delight E-COMMERCE LTD" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                    <a href="http://plus.google.com/u/0/Delightltd/posts" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+                    <a href="http://www.linkedin.com/company/Delight E-COMMERCE LTD" target="_blank"><i class="fa fa-linkedin-square"></i></a>
                 </div>
                 <div id="visitoronline">
                 </div>
