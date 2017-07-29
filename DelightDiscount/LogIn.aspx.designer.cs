@@ -13,15 +13,6 @@ namespace DelightDiscount {
     public partial class LogIn {
         
         /// <summary>
-        /// minilogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm minilogin;
-        
-        /// <summary>
         /// emailText control.
         /// </summary>
         /// <remarks>

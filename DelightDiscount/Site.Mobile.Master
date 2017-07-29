@@ -17,7 +17,11 @@
 
 
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
-
+    <script>
+        $('#form1').validate({
+            ignore: ".hidden"
+        });
+    </script>
     <style>
         * {
             font-family: monospace;
@@ -92,11 +96,11 @@
     </style>
 </head>
 <body>
-    <form id="form1">
+    <form id="form1" runat="server">
         <div class="container-fluid">
             <div class="menu">
                 <nav class="navbar navbar-fixed-top">
-                   
+
                     <div class="container">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
@@ -121,7 +125,18 @@
                                 <li class="visible-xs"><a href="#" class="menuBtn">Contact</a></li>
 
                                 <%--<li><a href="Login.aspx" class="menuBtn">Sign Up</a></li>--%>
-                                <li><a href="Login.aspx" class="menuBtn">Sign In</a></li>
+                                <li runat="server" id="signIn"><a href="Login.aspx" class="menuBtn">Sign In</a></li>
+
+                                <li runat="server" id="user" class="hidden">
+                                    <a class="dropdown-toggle menuBtn" data-toggle="dropdown" runat="server" href="#">
+                                        <img src="img/logo.png" class="img img-circle" height="30px" width="30px" />
+                                        <b runat="server" id="userName">Name</b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a runat="server" href="#">Profile</a></li>
+                                        <li><a runat="server" href="#">Account</a></li>
+                                        <li><a id="signOut" runat="server" onserverclick="OnServerClick" onclick="__doPostBack('signOut','')">Sign out</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                         <!-- /.navbar-collapse -->
@@ -156,14 +171,14 @@
             </div>
         </div>
 
+
+
+        <div class="body-content" id="mainDiv" style="padding-top: 80px;">
+            <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="clearfix"></div>
+        </div>
     </form>
-
-    <div class="body-content" id="mainDiv" style="padding-top: 80px;">
-        <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
-        </asp:ContentPlaceHolder>
-        <div class="clearfix"></div>
-    </div>
-
-
+    
 </body>
 </html>
