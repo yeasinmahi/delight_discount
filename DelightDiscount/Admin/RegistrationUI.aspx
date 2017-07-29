@@ -2,6 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     
+    <link href="../Content/bootstrap-datepicker.min.css" rel="stylesheet" />
+    
     <script>
         $(document).ready(function () {
             $("#MainContent_joinDateText").datepicker({
@@ -109,4 +111,6 @@
             </div>
         </div>
     </div>
+    <script src="../Scripts/jquery-2.2.3.min.js"></script>
+    <script src="../Scripts/bootstrap-datepicker.min.js"></script>
 </asp:Content>

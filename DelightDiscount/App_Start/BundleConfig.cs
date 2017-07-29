@@ -31,11 +31,13 @@ namespace DelightDiscount
             bundles.Add(new ScriptBundle("~/bundles/myBundle").Include(
                       "~/Scripts/jquery.min.js",
                       "~/Scripts/bootstrap.min.js",
+                      "~/Scripts/bootstrap-datepicker.min.js",
                       "~/Scripts/fastclick.js",
                       "~/Scripts/nprogress.js",
                       "~/Scripts/custom.min.js"));
             bundles.Add(new StyleBundle("~/Content/myCss").Include(
                       "~/Content/bootstrap.min.css",
+                      "~/Content/bootstrap-datepicker.min.css",
                       "~/Content/font-awesome.min.css",
                       "~/Content/nprogress.css",
                       "~/Content/custom.min.css"));
