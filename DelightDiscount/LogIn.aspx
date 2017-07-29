@@ -36,7 +36,7 @@
                                     <input type="email" name="minilogin_username" class="username inputchang form-control" placeholder="Enter your email"/>
                                 </li>
                                 <li class="submit list-group-item">
-                                    <input type="submit" class="sendNow_button form-control btn btn-primary" value="Send Now" onclick="findForgottenPwd(this);" />
+                                    <input type="submit" class="sendNow_button form-control btn btn-primary" value="Send Now" runat="server" OnServerClick="ForgotPasswordSentClick" />
                                 </li>
                                 <li class="forgot list-group-item">
                                     <a href="javascript:void(0)" class="backToLogin_button" onclick="$('.loginPannel').hide(300);$('#minilogin').show(300);">&laquo; Back to Login</a>
