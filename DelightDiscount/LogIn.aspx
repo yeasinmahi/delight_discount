@@ -34,6 +34,7 @@
                             <ul class="list-group">
                                 <li class="inputbox list-group-item">
                                     <input type="email" name="minilogin_username" class="username inputchang form-control" placeholder="Enter your email"/>
+
                                 </li>
                                 <li class="submit list-group-item">
                                     <input type="submit" class="sendNow_button form-control btn btn-primary" value="Send Now" runat="server" OnServerClick="ForgotPasswordSentClick" />
@@ -47,10 +48,11 @@
 
 
                         <div id="minilogin" class="loginPannel form-group">
-                            <div class="title text-primary">Log in with your Email</div>
+                            <div class="title text-primary">Log in with your CID</div>
                             <ul class="list-group">
                                 <li class="inputbox list-group-item">
-                                    <input type="email" name="email" runat="server" placeholder="Enter your Email." rule="email" class="username validate form-control" value="" required="required" style="color: #333333;" id="emailText" />
+                                    <%--<input type="text" name="email" runat="server" placeholder="Enter your CID."  class=" form-control" value="" required="required" style="color: #333333;" id="emailText" />--%>
+                                    <input type="text" runat="server" class="form-control input-sm" required="required" style="color: #333333;" id="emailText" placeholder="Enter your CID."/>
                                 </li>
                                 <li class="inputbox list-group-item">
                                     <input type="password" name="pwd" placeholder="Enter password." class="userpwd validate form-control" required="required" value="" runat="server" id="passwordText" />

@@ -18,7 +18,7 @@
                 minlength: "Length Must Be 7 Digit",
                 maxlength: "Length Can Not More Than 7 Digit"
             },
-            //ctl00$MainContent$loanAmount: "Enter Loan Amount",
+            ctl00$MainContent$userNameText: "Enter Your UserName",
             //ctl00$MainContent$installmentAmount: "Insallment Amount Is Required",
             //ctl00$MainContent$dateTextBox: "Select a Date",
             //ctl00$MainContent$loanPurpose: "Enter Loan Purpose",

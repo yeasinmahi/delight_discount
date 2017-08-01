@@ -146,6 +146,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\custom.min.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\MyCss\rejistration.css" />
     <Content Include="Content\nprogress.css" />
     <Content Include="css\custom.css" />
     <Content Include="css\details.css" />

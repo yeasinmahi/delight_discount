@@ -21,7 +21,7 @@ namespace DelightDiscount
             string password = passwordText.Value;
             if (userId.Trim()!="" && password.Trim()!="")
             {
-                var isExist = db.tbl_UserInfo.FirstOrDefault(c => c.EmailAddress == userId && c.Password == password);
+                var isExist = db.tbl_UserInfo.FirstOrDefault(c => c.CID == userId && c.Password == password);
                 if (isExist!=null)
                 {
                     Session["op"] = isExist;
@@ -29,13 +29,13 @@ namespace DelightDiscount
                 }
                 else
                 {
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Invalid Email or Password!')", true);
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Invalid CID or Password!')", true);
                     
                 }
             }
             else
             {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please insert valid Email and Password!')", true);
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please insert valid CID and Password!')", true);
             }
         }
 
