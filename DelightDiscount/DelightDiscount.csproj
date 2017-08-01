@@ -291,7 +291,6 @@
     <Content Include="FrontSection\img\logo.png" />
     <Content Include="FrontSection\js\bootstrap.min.js" />
     <Content Include="FrontSection\js\jquery.min.js" />
-    <Content Include="FrontSection\Profile.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Background-4.jpg" />
     <Content Include="Images\img.jpg" />
@@ -328,6 +327,7 @@
     <Content Include="js\modernizr.custom.js" />
     <Content Include="js\slick.js" />
     <Content Include="LogIn.aspx" />
+    <Content Include="Profile.aspx" />
     <Content Include="Scripts\bootstrap-datepicker.min.js" />
     <Content Include="Scripts\jquery-2.2.3.min.js" />
     <Content Include="SPDhaka.aspx" />
@@ -498,13 +498,6 @@
     <Compile Include="FrontSection\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FrontSection\Profile.aspx.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrontSection\Profile.aspx.designer.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -514,6 +507,13 @@
     </Compile>
     <Compile Include="LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="SPDhaka.aspx.cs">
       <DependentUpon>SPDhaka.aspx</DependentUpon>
@@ -551,6 +551,9 @@
     <Compile Include="SPJoypurhat.aspx.designer.cs">
       <DependentUpon>SPJoypurhat.aspx</DependentUpon>
     </Compile>
+    <Compile Include="tbl_Operator.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_ShopInfo.cs">
       <DependentUpon>DDDBContex.tt</DependentUpon>
     </Compile>
@@ -583,6 +586,9 @@
     </Compile>
     <Compile Include="Admin\ShopEntry.aspx.designer.cs">
       <DependentUpon>ShopEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_UserSpotTrack.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

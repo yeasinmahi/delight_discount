@@ -10,8 +10,8 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
-<body style="background-image: url('../images/Background-4.jpg'); width: 99vw; height: 100vh; overflow: hidden;">
-    <form runat="server" style="width: 100vw; height: 100vh; background: rgba(255,255,255,0.6)">
+<body style="background-image: url('../images/Background-4.jpg'); width: 99vw; height: 100vh; background-repeat: no-repeat; -ms-background-size: cover; background-size: cover;overflow: hidden">
+    <form runat="server" style="width: 100vw; height: 100vh; ">
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -29,7 +29,7 @@
                 <section id="loginForm">
                     <div class="form-horizontal">
                         <div class="form-group col-sm-12">
-                            <div class="row text-center" style="width: 400px; margin: 0 auto; margin-top: 15%; background: rgba(255,255,255,.4); border-radius: 25px 0;">
+                            <div class="row text-center" style="width: 400px; margin: 0 auto; margin-top: 15%; background: rgba(255,255,255,.6); border-radius: 25px 0;">
                                 <div class="col-lg-12">
                                     <h3>Welcome to Delight Discount.</h3>
                                 </div>

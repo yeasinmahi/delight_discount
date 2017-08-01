@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistrationUI.aspx.cs" Inherits="DelightDiscount.Admin.RegistrationUI" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    
+
     <link href="../Content/bootstrap-datepicker.min.css" rel="stylesheet" />
-    
+
     <script>
         $(document).ready(function () {
             $("#MainContent_joinDateText").datepicker({
@@ -79,31 +79,43 @@
                         <fieldset style="margin-top: 10px">
                             <legend><b>Business Information
                             </b></legend>
-                            <div class=" col-sm-6">
-                                <label>Reference CID</label>
+                            <div class="form-group">
+                                <div class=" col-sm-2">
+                                    <label>Reference CID</label>
 
-                                <input type="text" runat="server" class="form-control input-sm" id="referenceCidText" />
+                                    <input type="text" runat="server" class="form-control input-sm" id="referenceCidText" />
+                                </div>
+                                <div class="col-sm-1">
+                                    <br />
+                                    <asp:Button ID="checkButton" runat="server" class="btn btn-success" Text="Check" OnClick="checkButton_Click" />
+                                </div>
+                                <div class=" col-sm-3">
+                                    <label>Placement CID & Position</label>
+                                    <asp:DropDownList ID="placementDropDownList" runat="server" CssClass="form-control input-sm"></asp:DropDownList>
+                                </div>
+                                <div class=" col-sm-3">
+                                    <label>Joining Date<span style="color: red">*</span></label>
+                                    <input type="text" runat="server" class="form-control input-sm" id="joinDateText" />
+                                </div>
+                                <div class=" col-sm-3">
+                                    <label>ReferenceName</label><br />
+                                    <label runat="server" id="refNameLabel" style=""></label>
+                                    <%--<input type="text" runat="server" class="form-control input-sm" id="referenceNameText" />--%>
+                                </div>
                             </div>
-                            <div class=" col-sm-6">
-                                <label>ReferenceName<span style="color: red">*</span></label>
-                                <input type="text" runat="server" class="form-control input-sm" id="referenceNameText" />
-                            </div>
-                            <div class=" col-sm-4">
-                                <label>Joining Date<span style="color: red">*</span></label>
-                                <input type="text" runat="server" class="form-control input-sm" id="joinDateText" />
-                            </div>
-                           
+
                             <div class="col-sm-4">
                                 <br />
                                 <asp:Button ID="saveButton" runat="server" class="btn btn-success" Text="Save" OnClick="saveButton_Click" />
                             </div>
+                            <div class="col-sm-8">
+                                <br />
+                                <asp:Literal ID="userLiterel" runat="server" Text="_"> </asp:Literal>
+                                <br />
+                            </div>
                         </fieldset>
 
-                        <div class="col-sm-12">
-                            <br />
-                            <asp:Literal ID="userLiterel" runat="server" Text="_"> </asp:Literal>
-                            <br />
-                        </div>
+
 
                     </div>
 

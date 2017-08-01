@@ -129,10 +129,10 @@
 
                                 <li runat="server" id="user" class="hidden">
                                     <a class="dropdown-toggle menuBtn" data-toggle="dropdown" runat="server" href="#">
-                                        <img src="img/logo.png" class="img img-circle" height="30px" width="30px" />
+                                        <img src="img/ddlogo.png" class="img img-circle" height="30px" width="30px" />
                                         <b runat="server" id="userName">Name</b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a runat="server" href="#">Profile</a></li>
+                                        <li><a runat="server" href="Profile.aspx">Profile</a></li>
                                         <li><a runat="server" href="#">Account</a></li>
                                         <li><a id="signOut" runat="server" onserverclick="OnServerClick" onclick="__doPostBack('signOut','')">Sign out</a></li>
                                     </ul>

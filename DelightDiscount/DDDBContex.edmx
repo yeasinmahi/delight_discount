@@ -5,6 +5,20 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DDDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_Operator">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="varchar" MaxLength="50" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="CID" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="500" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Type" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="1" />
+        </EntityType>
         <EntityType Name="tbl_ShopInfo">
           <Key>
             <PropertyRef Name="Id" />
@@ -67,11 +81,25 @@
           <Property Name="EntryBy" Type="varchar" MaxLength="50" />
           <Property Name="EntryDate" Type="date" />
         </EntityType>
+        <EntityType Name="tbl_UserSpotTrack">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CID" Type="varchar" MaxLength="50" />
+          <Property Name="PID" Type="varchar" MaxLength="50" />
+          <Property Name="SID" Type="varchar" MaxLength="50" />
+          <Property Name="IsAvailable" Type="varchar" MaxLength="1" />
+          <Property Name="UCID" Type="varchar" MaxLength="50" />
+          <Property Name="SlTrk" Type="int" />
+        </EntityType>
         <EntityContainer Name="DDDBModelStoreContainer">
+          <EntitySet Name="tbl_Operator" EntityType="Self.tbl_Operator" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_ShopInfo" EntityType="Self.tbl_ShopInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_ShopLocation" EntityType="Self.tbl_ShopLocation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_UserAccount" EntityType="Self.tbl_UserAccount" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_UserInfo" EntityType="Self.tbl_UserInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_UserSpotTrack" EntityType="Self.tbl_UserSpotTrack" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -96,6 +124,8 @@
           <EntitySet Name="tbl_ShopLocation" EntityType="DDDBModel.tbl_ShopLocation" />
           <EntitySet Name="tbl_UserAccount" EntityType="DDDBModel.tbl_UserAccount" />
           <EntitySet Name="tbl_UserInfo" EntityType="DDDBModel.tbl_UserInfo" />
+          <EntitySet Name="tbl_Operator" EntityType="DDDBModel.tbl_Operator" />
+          <EntitySet Name="tbl_UserSpotTrack" EntityType="DDDBModel.tbl_UserSpotTrack" />
         </EntityContainer>
         <EntityType Name="tbl_ShopLocation">
           <Key>
@@ -144,6 +174,32 @@
           <Property Name="UserPic" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="EntryBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EntryDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="tbl_Operator">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_UserSpotTrack">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsAvailable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="UCID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SlTrk" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -213,6 +269,34 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="CID" ColumnName="CID" />
                 <ScalarProperty Name="AutoUserID" ColumnName="AutoUserID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Operator">
+            <EntityTypeMapping TypeName="DDDBModel.tbl_Operator">
+              <MappingFragment StoreEntitySet="tbl_Operator">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="CID" ColumnName="CID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_UserSpotTrack">
+            <EntityTypeMapping TypeName="DDDBModel.tbl_UserSpotTrack">
+              <MappingFragment StoreEntitySet="tbl_UserSpotTrack">
+                <ScalarProperty Name="SlTrk" ColumnName="SlTrk" />
+                <ScalarProperty Name="UCID" ColumnName="UCID" />
+                <ScalarProperty Name="IsAvailable" ColumnName="IsAvailable" />
+                <ScalarProperty Name="SID" ColumnName="SID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="CID" ColumnName="CID" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

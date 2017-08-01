@@ -29,5 +29,7 @@ namespace DelightDiscount
         public virtual DbSet<tbl_ShopLocation> tbl_ShopLocation { get; set; }
         public virtual DbSet<tbl_UserAccount> tbl_UserAccount { get; set; }
         public virtual DbSet<tbl_UserInfo> tbl_UserInfo { get; set; }
+        public virtual DbSet<tbl_Operator> tbl_Operator { get; set; }
+        public virtual DbSet<tbl_UserSpotTrack> tbl_UserSpotTrack { get; set; }
     }
 }

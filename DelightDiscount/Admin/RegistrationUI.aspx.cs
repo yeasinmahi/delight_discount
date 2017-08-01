@@ -49,6 +49,33 @@ namespace DelightDiscount.Admin
             db.tbl_UserInfo.Add(userInfo);
             db.SaveChanges();
 
+            //Insert into User Spot
+            int sl = Convert.ToInt32(placementDropDownList.SelectedItem.Text.Substring(8));
+            var isAvailable =
+                db.tbl_UserSpotTrack.FirstOrDefault(
+                    z =>
+                        z.CID == placementDropDownList.SelectedItem.Text.Substring(0, 7) &&
+                        z.SlTrk ==sl &&
+                        z.IsAvailable == "Y");
+            if (isAvailable!=null)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    tbl_UserSpotTrack spotTrack = new tbl_UserSpotTrack();
+                    spotTrack.CID = cidText.Value;
+                    spotTrack.PID = placementDropDownList.SelectedValue;
+                    spotTrack.SID = placementDropDownList.SelectedValue + "" + i;
+                    spotTrack.IsAvailable = "Y";
+                    spotTrack.SlTrk = i + 1;
+                    db.tbl_UserSpotTrack.Add(spotTrack);
+                    db.SaveChanges();
+                }
+                isAvailable.IsAvailable = "N";
+                isAvailable.UCID = cidText.Value;
+                db.SaveChanges();
+            }
+            
+
             tbl_UserAccount account=new tbl_UserAccount();
             var getUserId = db.tbl_UserInfo.FirstOrDefault(c => c.CID == referenceCidText.Value);
             if (getUserId!=null)
@@ -99,6 +126,35 @@ namespace DelightDiscount.Admin
                 res.Append(valid[rnd.Next(valid.Length)]);
             }
             return res.ToString();
+        }
+
+        protected void checkButton_Click(object sender, EventArgs e)
+        {
+            if (referenceCidText.Value.Trim() != "")
+            {
+                var getName = db.tbl_UserInfo.FirstOrDefault(c => c.CID == referenceCidText.Value.Trim());
+                if (getName!=null)
+                {
+                    refNameLabel.InnerText = getName.FullName;
+                    var getRefIdSpot = db.tbl_UserSpotTrack.FirstOrDefault(c => c.CID == referenceCidText.Value.Trim());
+                    if (getRefIdSpot != null)
+                    {
+                        int pidLength = getRefIdSpot.PID.Length;
+                        var getAllPlacement = (from z in db.tbl_UserSpotTrack
+                            where z.PID.Substring(0, pidLength) == getRefIdSpot.PID && z.IsAvailable == "Y"
+                            select new {display=z.CID+"-"+z.SlTrk,value=z.SID}).ToList();
+                        placementDropDownList.DataSource = getAllPlacement;
+                        placementDropDownList.DataTextField = "display";
+                        placementDropDownList.DataValueField = "value";
+                        placementDropDownList.DataBind();
+                    }
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Invalid Reference CID!')", true);
+                    
+                }
+            }
         }
     }
 }

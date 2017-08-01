@@ -112,13 +112,22 @@ namespace DelightDiscount.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlInputText referenceCidText;
         
         /// <summary>
-        /// referenceNameText control.
+        /// checkButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText referenceNameText;
+        protected global::System.Web.UI.WebControls.Button checkButton;
+        
+        /// <summary>
+        /// placementDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList placementDropDownList;
         
         /// <summary>
         /// joinDateText control.
@@ -128,6 +137,15 @@ namespace DelightDiscount.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText joinDateText;
+        
+        /// <summary>
+        /// refNameLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl refNameLabel;
         
         /// <summary>
         /// saveButton control.
