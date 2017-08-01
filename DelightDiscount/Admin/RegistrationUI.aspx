@@ -30,8 +30,8 @@
                                 <h2>Personal Information</h2>
                             </b></legend>
                             <div class=" col-sm-3">
-                                <label>CID<span style="color: red">*</span></label>
-                                <input type="text" runat="server" class="form-control input-sm" id="cidText" />
+                                <label for="cidText">CID<span style="color: red">*</span></label>
+                                <input type="text" runat="server" class="form-control input-sm" id="cidText" placeholder="DD00001"/>
                             </div>
                             <div class=" col-sm-3">
                                 <label>User Name<span style="color: red">*</span></label>
@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="col-sm-1">
                                     <br />
-                                    <asp:Button ID="checkButton" runat="server" class="btn btn-success" Text="Check" OnClick="checkButton_Click" />
+                                    <asp:Button ID="checkButton" runat="server" class="btn btn-primary" Text="Check" OnClick="checkButton_Click" />
                                 </div>
                                 <div class=" col-sm-3">
                                     <label>Placement CID & Position</label>
@@ -123,6 +123,9 @@
             </div>
         </div>
     </div>
-    <script src="../Scripts/jquery-2.2.3.min.js"></script>
-    <script src="../Scripts/bootstrap-datepicker.min.js"></script>
+
+</asp:Content>
+<asp:Content  ContentPlaceHolderID="ScriptContentPlaceHolder" runat="server" >
+    <script src="../Scripts/jquery.validate.min.js"></script>
+    <script src="../Scripts/MyScripts/registration.js"></script>
 </asp:Content>
