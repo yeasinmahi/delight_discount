@@ -35,7 +35,7 @@
                             <li class="form-group list-group-item">
                                 <div class="row">
                                     <div class="col-lg-12" style="text-align: left;">
-                                        <asp:Image ID="userImage" runat="server" Width="150px" Height="150px"/>
+                                       <img src='Images/img.jpg' alt='' style="height: 100px; width: 100px" />
 
                                     </div>
                                     

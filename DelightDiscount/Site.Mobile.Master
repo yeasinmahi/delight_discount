@@ -120,7 +120,14 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="visible-xs"><a href="Default.aspx" class="menuBtn">Home</a></li>
 
-                                <li class="visible-xs"><a href="ServicePartner.aspx" class="menuBtn">Service Partners</a></li>
+                                <%--<li class="visible-xs"><a href="ServicePartner.aspx" class="menuBtn">Service Partners</a></li>--%>
+                                 <li class="visible-xs">
+                                    <a class="dropdown-toggle menuBtn2" data-toggle="dropdown" runat="server" href="#">Service Partners</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a runat="server" href="SPDhaka.aspx">Dhaka Zone</a></li>
+                                        <li><a runat="server" href="SPJoypurhat.aspx">Joypurhat Zone</a></li>
+                                    </ul>
+                                </li>
                                 <li class="visible-xs"><a href="#" class="menuBtn">Populer Packages</a></li>
                                 <li class="visible-xs"><a href="#" class="menuBtn">Contact</a></li>
 

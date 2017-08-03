@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Mobile.Master" AutoEventWireup="true" CodeBehind="AccountsInfo.aspx.cs" Inherits="DelightDiscount.AccountsInfo" %>
+﻿<%@ Page Title="Accounts Information" Language="C#" MasterPageFile="~/Site.Mobile.Master" AutoEventWireup="true" CodeBehind="AccountsInfo.aspx.cs" Inherits="DelightDiscount.AccountsInfo" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <style>
@@ -82,7 +82,7 @@
                         <div class=" col-sm-12">
                             <div class=" col-sm-12" style="text-align: center;padding: 5px">
                                 <%--<label runat="server" id="parentCid"></label>--%>
-                                <asp:Button ID="parentCidButton" runat="server" CssClass="btn btn-warning" Text=""/>
+                                <asp:Button ID="parentCidButton" runat="server" CssClass="btn btn-warning" Text="" OnClick="parentCidButton_Click"/>
                             </div>
                             <div class=" col-sm-1">
                             </div>

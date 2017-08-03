@@ -26,71 +26,80 @@ namespace DelightDiscount.Admin
             string autoUseId = GenarateUserId();
             string password = CreatePassword();
             DateTime date = DateTime.ParseExact(joinDateText.Value, "dd/MM/yyyy", null);
-            tbl_UserInfo userInfo=new tbl_UserInfo();
-
-            userInfo.AutoUserID = autoUseId;
-            userInfo.CID = cidText.Value.Trim();
-            userInfo.Password = password;
-            userInfo.UseName = userNameText.Value.Trim();
-            userInfo.FullName = nameText.Value;
-            userInfo.PresentAddress = presentAddressTextarea.Value;
-            userInfo.ParmanentAddress = parmanentAddressTextarea.Value;
-            userInfo.EmailAddress = emailText.Value;
-            userInfo.Mobile = mobileText.Value;
-            userInfo.NomineeName = nomineeNameText.Value;
-            userInfo.Relation = relationText.Value;
-            userInfo.NomineeMobile = nomineePhoneText.Value;
-            userInfo.ReferenceCid = referenceCidText.Value.Trim();
-            userInfo.JoinDate = date;
-            userInfo.CurrentLevel = 1;
-            userInfo.IsActive = "Y";
-            userInfo.EntryBy = "Session";
-            userInfo.EntryDate = DateTime.Now.Date;
-            db.tbl_UserInfo.Add(userInfo);
-            db.SaveChanges();
-
-            //Insert into User Spot
-            int sl = Convert.ToInt32(placementDropDownList.SelectedItem.Text.Substring(8));
-            var isAvailable =
-                db.tbl_UserSpotTrack.FirstOrDefault(
-                    z =>
-                        z.CID == placementDropDownList.SelectedItem.Text.Substring(0, 7) &&
-                        z.SlTrk ==sl &&
-                        z.IsAvailable == "Y");
-            if (isAvailable!=null)
+            var checkCid = db.tbl_UserInfo.FirstOrDefault(z => z.CID == cidText.Value.Trim());
+            if (checkCid!=null)
             {
-                for (int i = 0; i < 10; i++)
+                tbl_UserInfo userInfo = new tbl_UserInfo();
+
+                userInfo.AutoUserID = autoUseId;
+                userInfo.CID = cidText.Value.Trim();
+                userInfo.Password = password;
+                userInfo.UseName = userNameText.Value.Trim();
+                userInfo.FullName = nameText.Value;
+                userInfo.PresentAddress = presentAddressTextarea.Value;
+                userInfo.ParmanentAddress = parmanentAddressTextarea.Value;
+                userInfo.EmailAddress = emailText.Value;
+                userInfo.Mobile = mobileText.Value;
+                userInfo.NomineeName = nomineeNameText.Value;
+                userInfo.Relation = relationText.Value;
+                userInfo.NomineeMobile = nomineePhoneText.Value;
+                userInfo.ReferenceCid = referenceCidText.Value.Trim();
+                userInfo.JoinDate = date;
+                userInfo.CurrentLevel = 1;
+                userInfo.IsActive = "Y";
+                userInfo.EntryBy = "Session";
+                userInfo.EntryDate = DateTime.Now.Date;
+                db.tbl_UserInfo.Add(userInfo);
+                db.SaveChanges();
+
+                //Insert into User Spot
+                int sl = Convert.ToInt32(placementDropDownList.SelectedItem.Text.Substring(8));
+                var isAvailable =
+                    db.tbl_UserSpotTrack.FirstOrDefault(
+                        z =>
+                            z.CID == placementDropDownList.SelectedItem.Text.Substring(0, 7) &&
+                            z.SlTrk == sl &&
+                            z.IsAvailable == "Y");
+                if (isAvailable != null)
                 {
-                    tbl_UserSpotTrack spotTrack = new tbl_UserSpotTrack();
-                    spotTrack.CID = cidText.Value;
-                    spotTrack.PID = placementDropDownList.SelectedValue;
-                    spotTrack.SID = placementDropDownList.SelectedValue + "" + i;
-                    spotTrack.IsAvailable = "Y";
-                    spotTrack.SlTrk = i + 1;
-                    db.tbl_UserSpotTrack.Add(spotTrack);
+                    for (int i = 0; i < 10; i++)
+                    {
+                        tbl_UserSpotTrack spotTrack = new tbl_UserSpotTrack();
+                        spotTrack.CID = cidText.Value;
+                        spotTrack.PID = placementDropDownList.SelectedValue;
+                        spotTrack.SID = placementDropDownList.SelectedValue + "" + i;
+                        spotTrack.IsAvailable = "Y";
+                        spotTrack.SlTrk = i + 1;
+                        db.tbl_UserSpotTrack.Add(spotTrack);
+                        db.SaveChanges();
+                    }
+                    isAvailable.IsAvailable = "N";
+                    isAvailable.UCID = cidText.Value;
                     db.SaveChanges();
                 }
-                isAvailable.IsAvailable = "N";
-                isAvailable.UCID = cidText.Value;
-                db.SaveChanges();
+
+
+                tbl_UserAccount account = new tbl_UserAccount();
+                var getUserId = db.tbl_UserInfo.FirstOrDefault(c => c.CID == referenceCidText.Value);
+                if (getUserId != null)
+                {
+                    account.UserId = getUserId.AutoUserID;
+                    account.CID = referenceCidText.Value;
+                    account.DatDate = date;
+                    account.TranType = 1;
+                    account.TranCID = cidText.Value;
+                    account.Amount = 25;//25%
+                    account.DebitCredit = "Debit";
+                    db.tbl_UserAccount.Add(account);
+                    db.SaveChanges();
+                }
+                userLiterel.Text = "Save Successfully";
+            }
+            else
+            {
+                userLiterel.Text = "This CID Number Already Exist!";
             }
             
-
-            tbl_UserAccount account=new tbl_UserAccount();
-            var getUserId = db.tbl_UserInfo.FirstOrDefault(c => c.CID == referenceCidText.Value);
-            if (getUserId!=null)
-            {
-                account.UserId = getUserId.AutoUserID;
-                account.CID = referenceCidText.Value;
-                account.DatDate = date;
-                account.TranType = 1;
-                account.TranCID = cidText.Value;
-                account.Amount = 25;//25%
-                account.DebitCredit = "Debit";
-                db.tbl_UserAccount.Add(account);
-                db.SaveChanges();
-            }
-            userLiterel.Text = "Save Successfully";
         }
         //Generate AutoUserId
         private string GenarateUserId()

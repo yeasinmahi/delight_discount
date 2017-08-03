@@ -13,9 +13,14 @@ namespace DelightDiscount
         private string treeCid;
         protected void Page_Load(object sender, EventArgs e)
         {
+            tbl_UserInfo userInfo = (tbl_UserInfo)Session["op"];
+            if (userInfo==null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             if (!IsPostBack)
             {
-                tbl_UserInfo userInfo = (tbl_UserInfo)Session["op"];
+                
                 string cid = userInfo.CID;
                 treeCid = cid;
                 cidLabel.InnerText = cid;
@@ -168,6 +173,18 @@ namespace DelightDiscount
             {
                 string cid = child10cid.Text;
                 GetTreeData(cid);
+            }
+        }
+
+        protected void parentCidButton_Click(object sender, EventArgs e)
+        {
+            if (parentCidButton.Text.Length == 7)
+            {
+                var getCid = db.tbl_UserSpotTrack.FirstOrDefault(z => z.UCID == parentCidButton.Text);
+                if (getCid!=null)
+                {
+                    GetTreeData(getCid.CID);
+                }
             }
         }
     }

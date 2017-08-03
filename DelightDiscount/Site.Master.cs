@@ -67,7 +67,29 @@ namespace DelightDiscount
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["opAdmin"] != null)
+            {
+                tbl_Operator oOperator = (tbl_Operator)Session["opAdmin"];
+                userName.InnerText = oOperator.Name;
+                signIn.Attributes.Add("class", "hidden");
+                user.Attributes.Remove("class");
+            }
+            else
+            {
+                signIn.Attributes.Remove("class");
+                user.Attributes.Add("class", "hidden");
+                Response.Redirect("~/Admin/LoginUI.aspx");
+            }
+        }
+        protected void OnServerClick(object sender, EventArgs e)
+        {
+            if (Session["opAdmin"] != null)
+            {
+                Session["opAdmin"] = null;
+                signIn.Attributes.Remove("class");
+                user.Attributes.Add("class", "hidden");
+                Response.Redirect("~/Admin/LoginUI.aspx");
+            }
         }
     }
 }
