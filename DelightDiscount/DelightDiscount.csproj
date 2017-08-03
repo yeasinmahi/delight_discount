@@ -139,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AccountsInfo.aspx" />
     <Content Include="Category.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\animate.min.css" />
@@ -239,6 +240,16 @@
     <Content Include="ecommerce\ups\p\Electric &amp; Electronic\Energy Blub - Price 300.00 - Code DD016.jpg" />
     <Content Include="ecommerce\ups\p\Electric &amp; Electronic\Iron Mechine - Price 750.00 - Code DD014.jpg" />
     <Content Include="ecommerce\ups\p\Electric &amp; Electronic\Mobile-Power-Bank 10000mhp - Price 450.00 - Code DD017.jpg" />
+    <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian AC Cotton, Price- 950, Deal Code-DD111.JPG" />
+    <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian AC Cotton, Price- 950, Deal Code-DD112.JPG" />
+    <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian AC Cotton, Price- 950, Deal Code-DD113.JPG" />
+    <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian AC Cotton, Price- 950, Deal Code-DD114.JPG" />
+    <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian AC Cotton, Price- 950, Deal Code-DD115.JPG" />
+    <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian AC Cotton, Price- 950, Deal Code-DD116.JPG" />
+    <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian AC Cotton, Price- 950, Deal Code-DD117.JPG" />
+    <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian AC Cotton, Price- 950, Deal Code-DD118.JPG" />
+    <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian AC Cotton, Price- 950, Deal Code-DD119.JPG" />
+    <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian AC Cotton, Price- 950, Deal Code-DD120.JPG" />
     <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian Dress - Price 1500.00 - Code 042.jpeg" />
     <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian Dress - Price 2000.00 - Code 041.jpg" />
     <Content Include="ecommerce\ups\p\Garments &amp; Fashion\Indian Dress - Price 2500.00 - Code 043.jpg" />
@@ -415,6 +426,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountsInfo.aspx.cs">
+      <DependentUpon>AccountsInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountsInfo.aspx.designer.cs">
+      <DependentUpon>AccountsInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="About.aspx.cs">

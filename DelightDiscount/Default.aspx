@@ -185,19 +185,19 @@
             <div id="ctl00_ContentPlaceHolder1_categories">
                 <div class='category' id="1">
                     <div class='catmenu fl'>
-                        <div class='cathead'><i class='fa fa-modx fa1' aria-hidden='true'></i><a href='Category.aspx?cat=18' target='_blank'>Garments & Fashion</a></div>
-                        <div class='catsub'><a href='Category.aspx?cat=18&sub=4' target='_blank'><i class='fa fa-heart fa0' aria-hidden='true'></i>Shirt</a><a href='Category.aspx?cat=18&sub=13' target='_blank'><i class='fa fa-inbox fa0' aria-hidden='true'></i>Pants</a><a href='Category.aspx?cat=18&sub=14' target='_blank'><i class='fa fa-angellist fa3' aria-hidden='true'></i>Gents Collections</a><a href='Category.aspx?cat=18&sub=15' target='_blank'><i class='fa fa-address-book-o fa8' aria-hidden='true'></i>Kids Collections</a><a href='Category.aspx?cat=18&sub=30' target='_blank'><i class='fa fa-diamond fa7' aria-hidden='true'></i>Ledies Collection</a></div>
+                        <div class='cathead'><i class='fa fa-modx fa1' aria-hidden='true'></i><a <%--href='Category.aspx?cat=1'--%> <%--target='_blank'--%>>Garments & Fashion</a></div>
+                        <%--<div class='catsub'><a href='Category.aspx?cat=1&sub=4' target='_blank'><i class='fa fa-heart fa0' aria-hidden='true'></i>Shirt</a><a href='Category.aspx?cat=1&sub=13' target='_blank'><i class='fa fa-inbox fa0' aria-hidden='true'></i>Pants</a><a href='Category.aspx?cat=1&sub=14' target='_blank'><i class='fa fa-angellist fa3' aria-hidden='true'></i>Gents Collections</a><a href='Category.aspx?cat=1&sub=15' target='_blank'><i class='fa fa-address-book-o fa8' aria-hidden='true'></i>Kids Collections</a><a href='Category.aspx?cat=1&sub=30' target='_blank'><i class='fa fa-diamond fa7' aria-hidden='true'></i>Ledies Collection</a></div>--%>
                     </div>
                     <div class='catprod fl'>
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Indian Dress</h3>
-                                    <h5>Price: 1500.00</h5>
-                                    <h5>Deal Code: DD042</h5>
+                                    <h4>Indian AC Cotton</h4>
+                                    <h5>Price: 950.00</h5>
+                                    <h5>Deal Code: DD111</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Garments & Fashion/Indian Dress - Price 1500.00 - Code 042.jpeg' alt='' />
+                            <img src='ecommerce/ups/p/Garments & Fashion/Indian AC Cotton, Price- 950, Deal Code-DD111.JPG' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -211,13 +211,13 @@
                         </div>
                         <div class='proditem'>
                             <div class='a2ca'>
-                                <strong>
-                                    <h3>Indian Dress</h3>
-                                    <h5>Price: 2000.00</h5>
-                                    <h5>Deal Code: DD041</h5>
+                               <strong>
+                                    <h4>Indian AC Cotton</h4>
+                                    <h5>Price: 950.00</h5>
+                                    <h5>Deal Code: DD112</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Garments & Fashion/Indian Dress - Price 2000.00 - Code 041.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Garments & Fashion/Indian AC Cotton, Price- 950, Deal Code-DD112.JPG' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -231,13 +231,13 @@
                         </div>
                         <div class='proditem'>
                             <div class='a2ca'>
-                                <strong>
-                                    <h3>Indian Dress</h3>
-                                    <h5>Price: 2500.00</h5>
-                                    <h5>Deal Code: DD043</h5>
+                               <strong>
+                                    <h4>Indian AC Cotton</h4>
+                                    <h5>Price: 950.00</h5>
+                                    <h5>Deal Code: DD113</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Garments & Fashion/Indian Dress - Price 2500.00 - Code 043.jpg' alt='' />
+                            <img src='ecommerce/ups/p/Garments & Fashion/Indian AC Cotton, Price- 950, Deal Code-DD113.JPG' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -247,6 +247,146 @@
                                     <div class='cb'><i class='fa fa-shopping-basket'></i></div>
                                 </dfn>
                                 <a href='Product.aspx?pid=41' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
+                            </div>
+                        </div>
+                        <div class='proditem'>
+                            <div class='a2ca'>
+                               <strong>
+                                    <h4>Indian AC Cotton</h4>
+                                    <h5>Price: 950.00</h5>
+                                    <h5>Deal Code: DD114</h5>
+                                </strong>
+                            </div>
+                            <img src='ecommerce/ups/p/Garments & Fashion/Indian AC Cotton, Price- 950, Deal Code-DD114.JPG' alt='' />
+                            <div class='a2ca'>
+                                <dfn>
+                                    <div>Add To Shopping Bag</div>
+                                    <div class='fl icocart' onclick='_a2c(41-1)' title='Remove From Shopping Bag'><i class='fa fa-minus-square'></i></div>
+                                    <div class='fl icocartq' id='cartqty114'>0</div>
+                                    <div class='fr icocart' onclick='_a2c(411)' title='Add To Shopping Bag'><i class='fa fa-plus-square'></i></div>
+                                    <div class='cb'><i class='fa fa-shopping-basket'></i></div>
+                                </dfn>
+                                <a href='Product.aspx?pid=114' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
+                            </div>
+                        </div>
+                        <div class='proditem'>
+                            <div class='a2ca'>
+                               <strong>
+                                    <h4>Indian AC Cotton</h4>
+                                    <h5>Price: 950.00</h5>
+                                    <h5>Deal Code: DD115</h5>
+                                </strong>
+                            </div>
+                            <img src='ecommerce/ups/p/Garments & Fashion/Indian AC Cotton, Price- 950, Deal Code-DD115.JPG' alt='' />
+                            <div class='a2ca'>
+                                <dfn>
+                                    <div>Add To Shopping Bag</div>
+                                    <div class='fl icocart' onclick='_a2c(1115-1)' title='Remove From Shopping Bag'><i class='fa fa-minus-square'></i></div>
+                                    <div class='fl icocartq' id='cartqty115'>0</div>
+                                    <div class='fr icocart' onclick='_a2c(115)' title='Add To Shopping Bag'><i class='fa fa-plus-square'></i></div>
+                                    <div class='cb'><i class='fa fa-shopping-basket'></i></div>
+                                </dfn>
+                                <a href='Product.aspx?pid=115' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
+                            </div>
+                        </div>
+                        <div class='proditem'>
+                            <div class='a2ca'>
+                               <strong>
+                                    <h4>Indian AC Cotton</h4>
+                                    <h5>Price: 950.00</h5>
+                                    <h5>Deal Code: DD116</h5>
+                                </strong>
+                            </div>
+                            <img src='ecommerce/ups/p/Garments & Fashion/Indian AC Cotton, Price- 950, Deal Code-DD116.JPG' alt='' />
+                            <div class='a2ca'>
+                                <dfn>
+                                    <div>Add To Shopping Bag</div>
+                                    <div class='fl icocart' onclick='_a2c(116-1)' title='Remove From Shopping Bag'><i class='fa fa-minus-square'></i></div>
+                                    <div class='fl icocartq' id='cartqty116'>0</div>
+                                    <div class='fr icocart' onclick='_a2c(116)' title='Add To Shopping Bag'><i class='fa fa-plus-square'></i></div>
+                                    <div class='cb'><i class='fa fa-shopping-basket'></i></div>
+                                </dfn>
+                                <a href='Product.aspx?pid=116' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
+                            </div>
+                        </div>
+                        <div class='proditem'>
+                            <div class='a2ca'>
+                               <strong>
+                                    <h4>Indian AC Cotton</h4>
+                                    <h5>Price: 950.00</h5>
+                                    <h5>Deal Code: DD117</h5>
+                                </strong>
+                            </div>
+                            <img src='ecommerce/ups/p/Garments & Fashion/Indian AC Cotton, Price- 950, Deal Code-DD117.JPG' alt='' />
+                            <div class='a2ca'>
+                                <dfn>
+                                    <div>Add To Shopping Bag</div>
+                                    <div class='fl icocart' onclick='_a2c(117-1)' title='Remove From Shopping Bag'><i class='fa fa-minus-square'></i></div>
+                                    <div class='fl icocartq' id='cartqty117'>0</div>
+                                    <div class='fr icocart' onclick='_a2c(117)' title='Add To Shopping Bag'><i class='fa fa-plus-square'></i></div>
+                                    <div class='cb'><i class='fa fa-shopping-basket'></i></div>
+                                </dfn>
+                                <a href='Product.aspx?pid=117' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
+                            </div>
+                        </div>
+                        <div class='proditem'>
+                            <div class='a2ca'>
+                               <strong>
+                                    <h4>Indian AC Cotton</h4>
+                                    <h5>Price: 950.00</h5>
+                                    <h5>Deal Code: DD118</h5>
+                                </strong>
+                            </div>
+                            <img src='ecommerce/ups/p/Garments & Fashion/Indian AC Cotton, Price- 950, Deal Code-DD118.JPG' alt='' />
+                            <div class='a2ca'>
+                                <dfn>
+                                    <div>Add To Shopping Bag</div>
+                                    <div class='fl icocart' onclick='_a2c(118-1)' title='Remove From Shopping Bag'><i class='fa fa-minus-square'></i></div>
+                                    <div class='fl icocartq' id='cartqty118'>0</div>
+                                    <div class='fr icocart' onclick='_a2c(118)' title='Add To Shopping Bag'><i class='fa fa-plus-square'></i></div>
+                                    <div class='cb'><i class='fa fa-shopping-basket'></i></div>
+                                </dfn>
+                                <a href='Product.aspx?pid=118' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
+                            </div>
+                        </div>
+                        <div class='proditem'>
+                            <div class='a2ca'>
+                               <strong>
+                                    <h4>Indian AC Cotton</h4>
+                                    <h5>Price: 950.00</h5>
+                                    <h5>Deal Code: DD119</h5>
+                                </strong>
+                            </div>
+                            <img src='ecommerce/ups/p/Garments & Fashion/Indian AC Cotton, Price- 950, Deal Code-DD119.JPG' alt='' />
+                            <div class='a2ca'>
+                                <dfn>
+                                    <div>Add To Shopping Bag</div>
+                                    <div class='fl icocart' onclick='_a2c(119-1)' title='Remove From Shopping Bag'><i class='fa fa-minus-square'></i></div>
+                                    <div class='fl icocartq' id='cartqty119'>0</div>
+                                    <div class='fr icocart' onclick='_a2c(119)' title='Add To Shopping Bag'><i class='fa fa-plus-square'></i></div>
+                                    <div class='cb'><i class='fa fa-shopping-basket'></i></div>
+                                </dfn>
+                                <a href='Product.aspx?pid=119' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
+                            </div>
+                        </div>
+                        <div class='proditem'>
+                            <div class='a2ca'>
+                               <strong>
+                                    <h4>Indian AC Cotton</h4>
+                                    <h5>Price: 950.00</h5>
+                                    <h5>Deal Code: DD120</h5>
+                                </strong>
+                            </div>
+                            <img src='ecommerce/ups/p/Garments & Fashion/Indian AC Cotton, Price- 950, Deal Code-DD120.JPG' alt='' />
+                            <div class='a2ca'>
+                                <dfn>
+                                    <div>Add To Shopping Bag</div>
+                                    <div class='fl icocart' onclick='_a2c(120-1)' title='Remove From Shopping Bag'><i class='fa fa-minus-square'></i></div>
+                                    <div class='fl icocartq' id='cartqty120'>0</div>
+                                    <div class='fr icocart' onclick='_a2c(120)' title='Add To Shopping Bag'><i class='fa fa-plus-square'></i></div>
+                                    <div class='cb'><i class='fa fa-shopping-basket'></i></div>
+                                </dfn>
+                                <a href='Product.aspx?pid=120' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
                             </div>
                         </div>
                     </div>
@@ -1551,27 +1691,27 @@
         <div class="wrapper">
             <div id="footerl" class="fl">
                 <div class="text fl">
-                    <span class="texth fl">Delight</span>
+                    <span class="texth fl">Delight Discount</span>
                     <div class="textopt fl">
                         <a id="ctl00_HyperLink1" href="Default.aspx">Home</a>|
                     <a id="ctl00_HyperLink12" href="su/Login.aspx" target="_blank">Login</a>|
                     <a id="ctl00_HyperLink2" href="About.aspx">About Us</a>|
                     <a id="ctl00_HyperLink3" href="FAQ.aspx">FAQ</a>|
                     <a id="ctl00_HyperLink9" href="Contact.aspx">Contact Us</a>|
-                    <a id="ctl00_HyperLink4" href="http://www.Delightltd.com">How to buy</a>
+                    <a id="ctl00_HyperLink4" href="http://www.DelightDiscount.com">How to buy</a>
                     </div>
                 </div>
                 <div class="text fl">
                     <span class="texth fl">Payment</span>
                     <div class="textopt fl">
-                        <a id="ctl00_HyperLink5" href="http://www.Delightltd.com">Replacement policy</a>|
-                    <a id="ctl00_HyperLink6" href="http://www.Delightltd.com">Refund policy</a>
+                        <a id="ctl00_HyperLink5" href="http://www.DelightDiscount.com">Replacement policy</a>|
+                    <a id="ctl00_HyperLink6" href="http://www.DelightDiscount.com">Refund policy</a>
                     </div>
                 </div>
                 <div class="text fl">
                     <span class="texth fl">How to pay</span>
                     <div class="textopt fl">
-                        <a href="http://www.Delightltd.com">
+                        <a href="http://www.DelightDiscount.com">
                             <img id="ctl00_Image8" alt="dcash" src="Images/dcash.png" style="border-width: 0px; height: 34px" />
                         </a><a href="http://www.Delightltd.com">
                             <img id="ctl00_Image9" alt="bkash" src="Images/bkash.png" style="border-width: 0px; height: 34px" />
@@ -1601,13 +1741,13 @@
                 </div>
                 <div class="textopt">
                     <span class="fl">Email: </span>
-                    <span class="fl">info@Delightecommerce.com</span>
+                    <span class="fl">info@DelightDiscount.com</span>
                 </div>
                 <div class="textopt">
-                    <a href="http://www.facebook.com/Delightltd" target="_blank"><i class="fa fa-facebook-square"></i></a>
-                    <a href="http://twitter.com/Delight E-COMMERCE LTD" target="_blank"><i class="fa fa-twitter-square"></i></a>
-                    <a href="http://plus.google.com/u/0/Delightltd/posts" target="_blank"><i class="fa fa-google-plus-square"></i></a>
-                    <a href="http://www.linkedin.com/company/Delight E-COMMERCE LTD" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                    <a href="" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+                    <a href="" target="_blank"><i class="fa fa-linkedin-square"></i></a>
                 </div>
                 <div id="visitoronline">
                 </div>

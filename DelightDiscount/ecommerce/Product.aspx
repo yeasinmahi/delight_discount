@@ -23,7 +23,7 @@
                 </script>
                 <div id="submit" class="fl"><i class="fa fa-search" onclick="_chksrc()"></i></div>
             </div>
-            <marquee dir="ltr" behavior="alternate" scrollamount="3" class="contact">Please contact us for product purchase at +88 01952200800</marquee>
+            <marquee dir="ltr" behavior="alternate" scrollamount="3" class="contact">Please contact us for product purchase at +88 01939987950</marquee>
         </div>
         <div id="cartarea" class="fr" onclick="location.replace('/Cart.aspx');">
             <i class="fa fa-shopping-bag"></i>
@@ -445,7 +445,7 @@
             <div class="text fl">
                 <span class="texth fl">How to pay</span>
                 <div class="textopt fl">
-                    <a href="http://www.deshltd.com">
+                    <a href="http://www.delightdiscount.com">
                         <img id="ctl00_Image8" alt="dcash" src="images/dcash.png" style="border-width:0px;height:34px" />
                     </a><a href="http://www.deshltd.com">
                         <img id="ctl00_Image9" alt="bkash" src="images/bkash.png" style="border-width:0px;height:34px" />
@@ -475,13 +475,13 @@
             </div>
             <div class="textopt">
                 <span class="fl">Email: </span>
-                <span class="fl">info@deshecommerce.com</span>
+                <span class="fl">info@delightdiscount.com</span>
             </div>
             <div class="textopt">
-                <a href="http://www.facebook.com/deshltd" target="_blank"><i class="fa fa-facebook-square"></i></a>
-                <a href="http://twitter.com/DESH E-COMMERCE LTD" target="_blank"><i class="fa fa-twitter-square"></i></a>
-                <a href="http://plus.google.com/u/0/deshltd/posts" target="_blank"><i class="fa fa-google-plus-square"></i></a>
-                <a href="http://www.linkedin.com/company/DESH E-COMMERCE LTD" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                <a href="" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                <a href="" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+                <a href="" target="_blank"><i class="fa fa-linkedin-square"></i></a>
             </div>
             <div id="visitoronline">
                 Total Visitor: <a href="http://www.reliablecounter.com" target="_blank"><img src="http://www.reliablecounter.com/count.php?page=www.deshecommerce.com&digit=style/plain/31/&reloads=1" alt="" title="" border="0"></a><br /><a href="http://www.fabbly.com" target="_blank" style="font-family: Geneva, Arial; font-size: 9px; color: #330010; text-decoration: none;">3d Print Models</a>

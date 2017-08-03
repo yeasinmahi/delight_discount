@@ -8,7 +8,7 @@
 <div id="banner">
     <div class="wrapper">
         <div id="logo" class="fl">
-            <a id="ctl00_HyperLink8" href="Default.aspx"><img id="ctl00_Image1" alt="Logo" src="img/logo.png" style="height:80px;border-width:0px;" /></a>
+            <a id="ctl00_HyperLink8" href="Default.aspx"><img id="ctl00_Image1" alt="Logo" src="img/ddlogo.png" style="height:80px;border-width:0px;" /></a>
         </div>
         <div id="search" class="fl">
             <div id="search-box">
@@ -45,7 +45,7 @@
                 </script>
                 <div id="submit" class="fl"><i class="fa fa-search" onclick="_chksrc()"></i></div>
             </div>
-            <marquee dir="ltr" behavior="alternate" scrollamount="3" class="contact">Please contact us for product purchase at +88 01952200800</marquee>
+            <marquee dir="ltr" behavior="alternate" scrollamount="3" class="contact">Please contact us for product purchase at +88 01939987950</marquee>
         </div>
         <div id="cartarea" class="fr" onclick="location.replace('/Cart.aspx');">
             <i class="fa fa-shopping-bag"></i>
@@ -74,43 +74,43 @@
     <div class="wrapper">
         <div id="footerl" class="fl">
             <div class="text fl">
-                <span class="texth fl">DESH</span>
+                <span class="texth fl">Delight</span>
                 <div class="textopt fl">
                     <a id="ctl00_HyperLink1" href="Default.aspx">Home</a>|
                     <a id="ctl00_HyperLink12" href="su/Login.aspx" target="_blank">Login</a>|
                     <a id="ctl00_HyperLink2" href="About.aspx">About Us</a>|
                     <a id="ctl00_HyperLink3" href="FAQ.aspx">FAQ</a>|
                     <a id="ctl00_HyperLink9" href="Contact.aspx">Contact Us</a>|
-                    <a id="ctl00_HyperLink4" href="http://www.deshltd.com">How to buy</a>
+                    <a id="ctl00_HyperLink4" href="http://www.delightdiscount.com">How to buy</a>
                 </div>
             </div>
             <div class="text fl">
                 <span class="texth fl">Payment</span>
                 <div class="textopt fl">
-                    <a id="ctl00_HyperLink5" href="http://www.deshltd.com">Replacement policy</a>|
-                    <a id="ctl00_HyperLink6" href="http://www.deshltd.com">Refund policy</a>
+                    <a id="ctl00_HyperLink5" href="http://www.delightdiscount.com">Replacement policy</a>|
+                    <a id="ctl00_HyperLink6" href="http://www.delightdiscount.com">Refund policy</a>
                 </div>
             </div>
             <div class="text fl">
                 <span class="texth fl">How to pay</span>
                 <div class="textopt fl">
-                    <a href="http://www.deshltd.com">
+                    <a href="http://www.delightdiscount.com">
                         <img id="ctl00_Image8" alt="dcash" src="Images/dcash.png" style="border-width:0px;height:34px" />
-                    </a><a href="http://www.deshltd.com">
+                    </a><a href="http://www.delightdiscount.com">
                         <img id="ctl00_Image9" alt="bkash" src="Images/bkash.png" style="border-width:0px;height:34px" />
-                    </a><a href="http://www.deshltd.com">
+                    </a><a href="http://www.delightdiscount.com">
                         <img id="ctl00_Image10" alt="dbbl" src="Images/dbbl.png" style="border-width:0px;height:34px" />
-                    </a><a href="http://www.deshltd.com">
+                    </a><a href="http://www.delightdiscount.com">
                         <img id="ctl00_Image11" alt="mcash" src="Images/mcash.png" style="border-width:0px;height:34px" />
-                    </a><a href="http://www.deshltd.com">
+                    </a><a href="http://www.delightdiscount.com">
                         <img id="ctl00_Image12" alt="mycash" src="Images/mycash.png" style="border-width:0px;height:34px" />
-                    </a><a href="http://www.deshltd.com">
+                    </a><a href="http://www.delightdiscount.com">
                         <img id="ctl00_Image13" alt="qcash" src="Images/qcash.png" style="border-width:0px;height:34px" />
-                    </a><a href="http://www.deshltd.com">
+                    </a><a href="http://www.delightdiscount.com">
                         <img id="ctl00_Image14" alt="visa" src="Images/visa.png" style="border-width:0px;height:34px" />
-                    </a><a href="http://www.deshltd.com">
+                    </a><a href="http://www.delightdiscount.com">
                         <img id="ctl00_Image15" alt="master" src="Images/master.png" style="border-width:0px;height:34px" />
-                    </a><a href="http://www.deshltd.com">
+                    </a><a href="http://www.delightdiscount.com">
                         <img id="ctl00_Image16" alt="amex" src="Images/amex.png" style="border-width:0px;height:34px" />
                     </a>
                 </div>
@@ -124,13 +124,13 @@
             </div>
             <div class="textopt">
                 <span class="fl">Email: </span>
-                <span class="fl">info@deshecommerce.com</span>
+                <span class="fl">info@delightdiscount.com</span>
             </div>
             <div class="textopt">
-                <a href="http://www.facebook.com/deshltd" target="_blank"><i class="fa fa-facebook-square"></i></a>
-                <a href="http://twitter.com/DESH E-COMMERCE LTD" target="_blank"><i class="fa fa-twitter-square"></i></a>
-                <a href="http://plus.google.com/u/0/deshltd/posts" target="_blank"><i class="fa fa-google-plus-square"></i></a>
-                <a href="http://www.linkedin.com/company/DESH E-COMMERCE LTD" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-linkedin-square"></i></a>
             </div>
             <div id="visitoronline">
                 
