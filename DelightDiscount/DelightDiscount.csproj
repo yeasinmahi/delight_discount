@@ -141,6 +141,7 @@
     <Content Include="About.aspx" />
     <Content Include="AccountsInfo.aspx" />
     <Content Include="Admin\UserList.aspx" />
+    <Content Include="BalanceTransfer.aspx" />
     <Content Include="Category.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\animate.min.css" />
@@ -542,6 +543,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BalanceTransfer.aspx.cs">
+      <DependentUpon>BalanceTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BalanceTransfer.aspx.designer.cs">
+      <DependentUpon>BalanceTransfer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Category.aspx.cs">
       <DependentUpon>Category.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

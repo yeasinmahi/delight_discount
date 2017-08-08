@@ -32,9 +32,11 @@ namespace DelightDiscount
                       "~/Scripts/jquery.min.js",
                       "~/Scripts/bootstrap.min.js",
                       "~/Scripts/bootstrap-datepicker.min.js",
+                      "~/Scripts/jquery.validate.min.js",
                       "~/Scripts/fastclick.js",
                       "~/Scripts/nprogress.js",
                       "~/Scripts/custom.min.js"));
+
             bundles.Add(new StyleBundle("~/Content/myCss").Include(
                       "~/Content/bootstrap.min.css",
                       "~/Content/bootstrap-datepicker.min.css",

@@ -30,10 +30,10 @@
                 <div class="form-group">
                     <div class="">
                         <div id="miniforgot" style="display: none" class="loginPannel form-group">
-                            <div class="title text-primary">Enter your e-mail address below and we'll send you an e-mail message containing your new password.</div>
+                            <div class="title text-primary">Enter your CID and we'll send you an e-mail message containing your password.</div>
                             <ul class="list-group">
                                 <li class="inputbox list-group-item">
-                                    <input type="email" name="minilogin_username" class="username inputchang form-control" placeholder="Enter your email"/>
+                                    <input type="text" name="minilogin_username" class="username inputchang form-control" placeholder="Enter your CID" id="forgotPass" runat="server"/>
 
                                 </li>
                                 <li class="submit list-group-item">

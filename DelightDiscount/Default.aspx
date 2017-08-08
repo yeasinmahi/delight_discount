@@ -1713,21 +1713,21 @@
                     <div class="textopt fl">
                         <a href="http://www.DelightDiscount.com">
                             <img id="ctl00_Image8" alt="dcash" src="Images/dcash.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.Delightltd.com">
+                        </a><a href="http://www.DelightDiscount.com">
                             <img id="ctl00_Image9" alt="bkash" src="Images/bkash.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.Delightltd.com">
+                        </a><a href="http://www.DelightDiscount.com">
                             <img id="ctl00_Image10" alt="dbbl" src="Images/dbbl.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.Delightltd.com">
+                        </a><a href="http://www.DelightDiscount.com">
                             <img id="ctl00_Image11" alt="mcash" src="Images/mcash.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.Delightltd.com">
+                        </a><a href="http://www.DelightDiscount.com">
                             <img id="ctl00_Image12" alt="mycash" src="Images/mycash.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.Delightltd.com">
+                        </a><a href="http://www.DelightDiscount.com">
                             <img id="ctl00_Image13" alt="qcash" src="Images/qcash.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.Delightltd.com">
+                        </a><a href="http://www.DelightDiscount.com">
                             <img id="ctl00_Image14" alt="visa" src="Images/visa.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.Delightltd.com">
+                        </a><a href="http://www.DelightDiscount.com">
                             <img id="ctl00_Image15" alt="master" src="Images/master.png" style="border-width: 0px; height: 34px" />
-                        </a><a href="http://www.Delightltd.com">
+                        </a><a href="http://www.DelightDiscount.com">
                             <img id="ctl00_Image16" alt="amex" src="Images/amex.png" style="border-width: 0px; height: 34px" />
                         </a>
                     </div>
@@ -1741,7 +1741,7 @@
                 </div>
                 <div class="textopt">
                     <span class="fl">Email: </span>
-                    <span class="fl">info@DelightDiscount.com</span>
+                    <span class="fl">info@delightdiscount.com</span>
                 </div>
                 <div class="textopt">
                     <a href="" target="_blank"><i class="fa fa-facebook-square"></i></a>

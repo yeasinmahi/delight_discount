@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Net;
 using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
@@ -41,37 +42,57 @@ namespace DelightDiscount
 
         protected void ForgotPasswordSentClick(object sender, EventArgs e)
         {
-            SmtpClient client = new SmtpClient
+            var checkMail = db.tbl_UserInfo.FirstOrDefault(z => z.CID == forgotPass.Value.Trim());
+            if (checkMail!=null)
             {
-                DeliveryMethod = SmtpDeliveryMethod.Network,
-                EnableSsl = true,
-                Host = "smtp.gmail.com",
-                Port = 587
-            };
-
-            // setup Smtp authentication
-            System.Net.NetworkCredential credentials =
-                new System.Net.NetworkCredential("nalucky72@gmail.com", "lucky7218");
-            client.UseDefaultCredentials = false;
-            client.Credentials = credentials;
-
-            MailMessage msg = new MailMessage {From = new MailAddress("nalucky72@gmail.com")};
-            msg.To.Add(new MailAddress("yeasinmahi72@gmail.com"));
-
-            msg.Subject = "This is a test Email subject";
-            msg.IsBodyHtml = true;
-            msg.Body = "<html><head></head><body><b>Test HTML Email</b></body>";
-
-            try
-            {
-                client.Send(msg);
-                //lblMsg.Text = "Your message has been successfully sent.";
+                MailMessage Msg = new MailMessage();
+                Msg.From = new MailAddress("info@delightdiscount.com", "Delight Discount");
+                Msg.To.Add(checkMail.EmailAddress);
+                Msg.Subject = "Delight Discount Password Recovery";
+                Msg.Body = "Welcome To DelightDiscount \n DelightDiscount ID: " +checkMail.CID + "\n Password: " + checkMail.Password;
+                SmtpClient client = new SmtpClient();
+                client.Host = "mail.delightdiscount.com";
+                client.Port = 25;
+                client.Credentials = new NetworkCredential("info@delightdiscount.com", "dd@54321");
+                client.Send(Msg);
+                Response.Redirect("LogIn.aspx");
             }
-            catch (Exception ex)
+            else
             {
-                //lblMsg.ForeColor = Color.Red;
-                //lblMsg.Text = "Error occured while sending your message." + ex.Message;
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please Enter a valid CID!')", true);
+
             }
+            //SmtpClient client = new SmtpClient
+            //{
+            //    DeliveryMethod = SmtpDeliveryMethod.Network,
+            //    EnableSsl = true,
+            //    Host = "smtp.gmail.com",
+            //    Port = 587
+            //};
+
+            //// setup Smtp authentication
+            //System.Net.NetworkCredential credentials =
+            //    new System.Net.NetworkCredential("nalucky72@gmail.com", "lucky7218");
+            //client.UseDefaultCredentials = false;
+            //client.Credentials = credentials;
+
+            //MailMessage msg = new MailMessage {From = new MailAddress("nalucky72@gmail.com")};
+            //msg.To.Add(new MailAddress("yeasinmahi72@gmail.com"));
+
+            //msg.Subject = "This is a test Email subject";
+            //msg.IsBodyHtml = true;
+            //msg.Body = "<html><head></head><body><b>Test HTML Email</b></body>";
+
+            //try
+            //{
+            //    client.Send(msg);
+            //    //lblMsg.Text = "Your message has been successfully sent.";
+            //}
+            //catch (Exception ex)
+            //{
+            //    //lblMsg.ForeColor = Color.Red;
+            //    //lblMsg.Text = "Error occured while sending your message." + ex.Message;
+            //}
         }
     }
 }

@@ -1,4 +1,11 @@
-﻿$(function() {
+﻿$(document).ready(function() {
+    $("#MainContent_joinDateText").datepicker({
+        autoclose: true,
+        todayHighlight: true,
+        format: "dd/mm/yyyy"
+    });
+});
+$('#MainContent_saveButton').click(function () {
     $("#mainForm").validate({
         
         rules: {
@@ -10,9 +17,12 @@
             ctl00$MainContent$userNameText: "required",
             ctl00$MainContent$nameText: "required",
             ctl00$MainContent$mobileText: "required",
-            ctl00$MainContent$emailText: "required",
+            ctl00$MainContent$emailText: {
+                required: true,
+                email: true
+            }, 
             ctl00$MainContent$nomineeNameText: "required",
-            ctl00$MainContent$relationText: "required",
+            //ctl00$MainContent$relationText: "required",
             ctl00$MainContent$nomineePhoneText: "required",
             ctl00$MainContent$referenceCidText: "required",
             ctl00$MainContent$placementDropDownList: "required",
@@ -28,9 +38,12 @@
             ctl00$MainContent$userNameText: "Enter Your UserName",
             ctl00$MainContent$nameText: "Enter Your Name",
             ctl00$MainContent$mobileText: "Phone Number Required",
-            ctl00$MainContent$emailText: "Email Required",
+            ctl00$MainContent$emailText: {
+                required: "Email Required",
+                email: "Enter valid email."
+            }, 
             ctl00$MainContent$nomineeNameText: "Nominee name Required",
-            ctl00$MainContent$relationText: "required",
+            //ctl00$MainContent$relationText: "required",
             ctl00$MainContent$nomineePhoneText: "Nominee Phone Required",
             ctl00$MainContent$referenceCidText: "Reference CID Required",
             ctl00$MainContent$placementDropDownList: "Select Placement CID",

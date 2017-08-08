@@ -9,15 +9,17 @@
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
     <link href="../Content/custom.min.css" rel="stylesheet" />
     <link href="../Content/nprogress.css" rel="stylesheet" />
-
+    <script src="../Scripts/jquery.min.js"></script>
+    <script src="../Scripts/jquery.validate.min.js"></script>
+    <script src="../Scripts/bootstrap-datepicker.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#MainContent_joinDateText").datepicker({
-                autoclose: true,
-                todayHighlight: true,
-                format: "dd/mm/yyyy"
-            });
-        })
+        //$(document).ready(function () {
+        //    $("#MainContent_joinDateText").datepicker({
+        //        autoclose: true,
+        //        todayHighlight: true,
+        //        format: "dd/mm/yyyy"
+        //    });
+        //})
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -93,7 +95,7 @@
                                 </div>
                                 <div class="col-sm-1">
                                     <br />
-                                    <asp:Button ID="checkButton" runat="server" class="btn btn-primary" Text="Check" OnClick="checkButton_Click" />
+                                    <asp:Button ID="checkButton" runat="server" class="btn btn-primary" Text="Check" OnClick="checkButton_Click" CausesValidation="False"/>
                                 </div>
                                 <div class=" col-sm-3">
                                     <label>Placement CID & Position<span style="color: red">*</span></label>
@@ -129,7 +131,7 @@
             </div>
         </div>
     </div>
-
+    
 </asp:Content>
 <asp:Content  ContentPlaceHolderID="ScriptContentPlaceHolder" runat="server" >
     <%--<script src="../Scripts/jquery.min.js"></script>
@@ -139,6 +141,6 @@
     <script src="../Scripts/fastclick.js"></script>
     <script src="../Scripts/nprogress.js"></script>
     <script src="../Scripts/custom.min.js"></script>--%>
-   
+   <script src="../Scripts/jquery.validate.min.js"></script>
     <script src="../Scripts/MyScripts/registration.js"></script>
 </asp:Content>
