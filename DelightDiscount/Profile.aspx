@@ -22,6 +22,10 @@
             background-size: cover;
             height: 100vh;
         }
+        #imgDivC img {
+            width: 150px;
+            height: auto;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
@@ -34,14 +38,14 @@
                         <ul class="list-group">
                             <li class="form-group list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-12" style="text-align: left;">
-                                       <img src='Images/img.jpg' alt='' style="height: 100px; width: 100px" />
-
+                                    <div class="col-lg-12" style="text-align: left;" id="imgDivC">
+                                       <%--<img src='Images/img.jpg' alt='' style="height: 100px; width: 100px" />--%>
+                                        <asp:PlaceHolder ID="plProductImg" runat="server" />
                                     </div>
                                     
                                 </div>
                             </li>
-                            <li class="form-group list-group-item">
+                            <%--<li class="form-group list-group-item">
                                 <div class="row">
                                     <div class="col-lg-4" style="text-align: right;">
                                         <label>User Name:</label>
@@ -50,7 +54,7 @@
                                         <label runat="server" id="userNameLabel"></label>
                                     </div>
                                 </div>
-                            </li>
+                            </li>--%>
                             <li class="form-group list-group-item">
                                 <div class="row">
                                     <div class="col-lg-4" style="text-align: right;">

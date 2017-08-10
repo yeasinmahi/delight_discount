@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Linq;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -12,10 +14,11 @@ namespace DelightDiscount.Admin
 {
     public partial class RegistrationUI : System.Web.UI.Page
     {
-        DDDBEntities db=new DDDBEntities();
+        private static DDDBEntities db = new DDDBEntities();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void saveButton_Click(object sender, EventArgs e)
@@ -27,20 +30,23 @@ namespace DelightDiscount.Admin
         {
             string autoUseId = GenarateUserId();
             string password = CreatePassword();
-            
+
             var checkCid = db.tbl_UserInfo.FirstOrDefault(z => z.CID == cidText.Value.Trim());
-            if (checkCid==null)
+            if (checkCid == null)
             {
-                if (!String.IsNullOrEmpty(cidText.Value) && !String.IsNullOrEmpty(nameText.Value) && !String.IsNullOrEmpty(emailText.Value)
-                    && !String.IsNullOrEmpty(mobileText.Value) && !String.IsNullOrEmpty(nomineeNameText.Value) && !String.IsNullOrEmpty(referenceCidText.Value)
+                if (!String.IsNullOrEmpty(cidText.Value) && !String.IsNullOrEmpty(nameText.Value) &&
+                    !String.IsNullOrEmpty(emailText.Value)
+                    && !String.IsNullOrEmpty(mobileText.Value) && !String.IsNullOrEmpty(nomineeNameText.Value) &&
+                    !String.IsNullOrEmpty(referenceCidText.Value)
                     && !String.IsNullOrEmpty(joinDateText.Value))
                 {
+                    tbl_Operator oOperator = (tbl_Operator)Session["opAdmin"];
                     tbl_UserInfo userInfo = new tbl_UserInfo();
                     DateTime date = DateTime.ParseExact(joinDateText.Value, "dd/MM/yyyy", null);
                     userInfo.AutoUserID = autoUseId;
                     userInfo.CID = cidText.Value.Trim();
                     userInfo.Password = password;
-                    userInfo.UseName = userNameText.Value.Trim();
+                    //userInfo.UseName = userNameText.Value.Trim();
                     userInfo.FullName = nameText.Value;
                     userInfo.PresentAddress = presentAddressTextarea.Value;
                     userInfo.ParmanentAddress = parmanentAddressTextarea.Value;
@@ -53,8 +59,17 @@ namespace DelightDiscount.Admin
                     userInfo.JoinDate = date;
                     userInfo.CurrentLevel = 1;
                     userInfo.IsActive = "Y";
-                    userInfo.EntryBy = "Session";
+                    userInfo.EntryBy = oOperator.Name;
                     userInfo.EntryDate = DateTime.Now.Date;
+                    if (mainImageFileUpload.HasFile && mainImageFileUpload.PostedFile.ContentLength > 0)
+                    {
+
+                        string fileName = mainImageFileUpload.FileName;
+
+                        byte[] fileByte = mainImageFileUpload.FileBytes;
+                        var binaryObj = new Binary(fileByte);
+                        userInfo.UserPic = fileByte;
+                    }
                     db.tbl_UserInfo.Add(userInfo);
                     db.SaveChanges();
 
@@ -94,18 +109,19 @@ namespace DelightDiscount.Admin
                         account.DatDate = date;
                         account.TranType = 1;
                         account.TranCID = cidText.Value;
-                        account.Amount = 25;//25%
-                        account.DebitCredit = "Debit";
+                        account.Amount = 150; //25%
+                        account.DebitCredit = "Credit";
                         db.tbl_UserAccount.Add(account);
                         db.SaveChanges();
                     }
 
-                    
+
                     MailMessage Msg = new MailMessage();
                     Msg.From = new MailAddress("info@delightdiscount.com", "Delight Discount");
                     Msg.To.Add(emailText.Value);
                     Msg.Subject = "Delight Discount Account Confirmation";
-                    Msg.Body = "Welcome To DelightDiscount \n DelightDiscount ID: " + cidText.Value + "\n Password: " + password;
+                    Msg.Body = "Welcome To DelightDiscount \n DelightDiscount ID: " + cidText.Value + "\n Password: " +
+                               password;
                     SmtpClient client = new SmtpClient();
                     client.Host = "mail.delightdiscount.com";
                     client.Port = 25;
@@ -116,16 +132,19 @@ namespace DelightDiscount.Admin
                 }
                 else
                 {
-                    userLiterel.Text = "<span style='color:#A94464;background-color: #F2DEDE'>Please fill all required feild!";
+                    userLiterel.Text =
+                        "<span style='color:#A94464;background-color: #F2DEDE'>Please fill all required feild!";
                 }
-                
+
             }
             else
             {
-                userLiterel.Text = "<span style='color:#A94464;background-color: #F2DEDE'>This CID Number Already Exist!";
+                userLiterel.Text =
+                    "<span style='color:#A94464;background-color: #F2DEDE'>This CID Number Already Exist!";
             }
-            
+
         }
+
         //Generate AutoUserId
         private string GenarateUserId()
         {
@@ -135,8 +154,8 @@ namespace DelightDiscount.Admin
             char pads = '0';
             //string studentId = null;
             var getInvoId = from u in db.tbl_UserInfo
-                            where u.AutoUserID.Substring(3, 4) == year.ToString()
-                            select new { u.AutoUserID};
+                where u.AutoUserID.Substring(3, 4) == year.ToString()
+                select new {u.AutoUserID};
             string result = getInvoId.Max(element => element.AutoUserID);
             if (result != null)
             {
@@ -148,6 +167,7 @@ namespace DelightDiscount.Admin
             return ("DD-" + DateTime.Now.Year + "-" + seedNums.ToString().PadLeft(6, pads));
 
         }
+
         //Generate Password
         public string CreatePassword()
         {
@@ -162,33 +182,60 @@ namespace DelightDiscount.Admin
             return res.ToString();
         }
 
-        protected void checkButton_Click(object sender, EventArgs e)
+        //protected void checkButton_Click(object sender, EventArgs e)
+        //{
+        //    if (referenceCidText.Value.Trim() != "")
+        //    {
+        //        var getName = db.tbl_UserInfo.FirstOrDefault(c => c.CID == referenceCidText.Value.Trim());
+        //        if (getName != null)
+        //        {
+        //            refNameLabel.InnerText = getName.FullName;
+        //            var getRefIdSpot = db.tbl_UserSpotTrack.FirstOrDefault(c => c.CID == referenceCidText.Value.Trim());
+        //            if (getRefIdSpot != null)
+        //            {
+        //                int pidLength = getRefIdSpot.PID.Length;
+        //                var getAllPlacement = (from z in db.tbl_UserSpotTrack
+        //                    where z.PID.Substring(0, pidLength) == getRefIdSpot.PID && z.IsAvailable == "Y"
+        //                    select new {display = z.CID + "-" + z.SlTrk, value = z.SID}).ToList();
+        //                placementDropDownList.DataSource = getAllPlacement;
+        //                placementDropDownList.DataTextField = "display";
+        //                placementDropDownList.DataValueField = "value";
+        //                placementDropDownList.DataBind();
+        //            }
+        //        }
+        //        else
+        //        {
+        //            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage",
+        //                "alert('Invalid Reference CID!')", true);
+
+        //        }
+        //    }
+        //}
+
+        [WebMethod]
+        public static object CheckRefId(string refId)
         {
-            if (referenceCidText.Value.Trim() != "")
+            var getName = db.tbl_UserInfo.FirstOrDefault(c => c.CID == refId);
+            if (getName != null)
             {
-                var getName = db.tbl_UserInfo.FirstOrDefault(c => c.CID == referenceCidText.Value.Trim());
-                if (getName!=null)
+                //refNameLabel.InnerText = getName.FullName;
+                var getRefIdSpot = db.tbl_UserSpotTrack.FirstOrDefault(c => c.CID == refId.Trim());
+                if (getRefIdSpot != null)
                 {
-                    refNameLabel.InnerText = getName.FullName;
-                    var getRefIdSpot = db.tbl_UserSpotTrack.FirstOrDefault(c => c.CID == referenceCidText.Value.Trim());
-                    if (getRefIdSpot != null)
-                    {
-                        int pidLength = getRefIdSpot.PID.Length;
-                        var getAllPlacement = (from z in db.tbl_UserSpotTrack
-                            where z.PID.Substring(0, pidLength) == getRefIdSpot.PID && z.IsAvailable == "Y"
-                            select new {display=z.CID+"-"+z.SlTrk,value=z.SID}).ToList();
-                        placementDropDownList.DataSource = getAllPlacement;
-                        placementDropDownList.DataTextField = "display";
-                        placementDropDownList.DataValueField = "value";
-                        placementDropDownList.DataBind();
-                    }
-                }
-                else
-                {
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Invalid Reference CID!')", true);
-                    
+                    int pidLength = getRefIdSpot.PID.Length;
+                    //List<ListItem> getAllPlacement = new List<ListItem>();
+                   var getAllPlacement = (from z in db.tbl_UserSpotTrack
+                        where z.PID.Substring(0, pidLength) == getRefIdSpot.PID && z.IsAvailable == "Y"
+                        select new {display = (z.CID + "-" + z.SlTrk), value = z.SID}).ToList();
+                    //placementDropDownList.DataSource = getAllPlacement;
+                    //placementDropDownList.DataTextField = "display";
+                    //placementDropDownList.DataValueField = "value";
+                    //placementDropDownList.DataBind();
+                    return getAllPlacement;
                 }
             }
+           
+            return "Invalid CID!";
         }
     }
 }

@@ -22,15 +22,6 @@ namespace DelightDiscount.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlInputText cidText;
         
         /// <summary>
-        /// userNameText control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText userNameText;
-        
-        /// <summary>
         /// nameText control.
         /// </summary>
         /// <remarks>
@@ -47,6 +38,15 @@ namespace DelightDiscount.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText mobileText;
+        
+        /// <summary>
+        /// emailText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText emailText;
         
         /// <summary>
         /// presentAddressTextarea control.
@@ -67,13 +67,22 @@ namespace DelightDiscount.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlTextArea parmanentAddressTextarea;
         
         /// <summary>
-        /// emailText control.
+        /// mainImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText emailText;
+        protected global::System.Web.UI.HtmlControls.HtmlImage mainImage;
+        
+        /// <summary>
+        /// mainImageFileUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload mainImageFileUpload;
         
         /// <summary>
         /// nomineeNameText control.
@@ -110,15 +119,6 @@ namespace DelightDiscount.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText referenceCidText;
-        
-        /// <summary>
-        /// checkButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button checkButton;
         
         /// <summary>
         /// placementDropDownList control.

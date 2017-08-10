@@ -84,6 +84,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
@@ -681,21 +682,6 @@
     <Compile Include="SPJoypurhat.aspx.designer.cs">
       <DependentUpon>SPJoypurhat.aspx</DependentUpon>
     </Compile>
-    <Compile Include="tbl_Operator.cs">
-      <DependentUpon>DDDBContex.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tbl_ShopInfo.cs">
-      <DependentUpon>DDDBContex.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tbl_ShopLocation.cs">
-      <DependentUpon>DDDBContex.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tbl_UserAccount.cs">
-      <DependentUpon>DDDBContex.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tbl_UserInfo.cs">
-      <DependentUpon>DDDBContex.tt</DependentUpon>
-    </Compile>
     <Compile Include="Admin\LoginUI.aspx.cs">
       <DependentUpon>LoginUI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -716,6 +702,27 @@
     </Compile>
     <Compile Include="Admin\ShopEntry.aspx.designer.cs">
       <DependentUpon>ShopEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_AutoTransferId.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_BalanceTransferHistory.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Operator.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_ShopInfo.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_ShopLocation.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_UserAccount.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_UserInfo.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_UserSpotTrack.cs">
       <DependentUpon>DDDBContex.tt</DependentUpon>

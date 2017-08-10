@@ -5,6 +5,26 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DDDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_AutoTransferId">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_BalanceTransferHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TransferId" Type="varchar" MaxLength="50" />
+          <Property Name="CID" Type="varchar" MaxLength="50" />
+          <Property Name="TransferDate" Type="date" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="ApproveBy" Type="varchar" MaxLength="50" />
+          <Property Name="ApproveDate" Type="date" />
+        </EntityType>
         <EntityType Name="tbl_Operator">
           <Key>
             <PropertyRef Name="Id" />
@@ -77,7 +97,7 @@
           <Property Name="AutoIncome" Type="float" />
           <Property Name="CurrentLevel" Type="int" />
           <Property Name="IsActive" Type="varchar" MaxLength="1" />
-          <Property Name="UserPic" Type="varbinary(max)" />
+          <Property Name="UserPic" Type="image" />
           <Property Name="EntryBy" Type="varchar" MaxLength="50" />
           <Property Name="EntryDate" Type="date" />
         </EntityType>
@@ -94,6 +114,8 @@
           <Property Name="SlTrk" Type="int" />
         </EntityType>
         <EntityContainer Name="DDDBModelStoreContainer">
+          <EntitySet Name="tbl_AutoTransferId" EntityType="Self.tbl_AutoTransferId" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_BalanceTransferHistory" EntityType="Self.tbl_BalanceTransferHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Operator" EntityType="Self.tbl_Operator" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_ShopInfo" EntityType="Self.tbl_ShopInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_ShopLocation" EntityType="Self.tbl_ShopLocation" Schema="dbo" store:Type="Tables" />
@@ -105,6 +127,30 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DDDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DDDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Operator" EntityType="DDDBModel.tbl_Operator" />
+          <EntitySet Name="tbl_ShopInfo" EntityType="DDDBModel.tbl_ShopInfo" />
+          <EntitySet Name="tbl_ShopLocation" EntityType="DDDBModel.tbl_ShopLocation" />
+          <EntitySet Name="tbl_UserAccount" EntityType="DDDBModel.tbl_UserAccount" />
+          <EntitySet Name="tbl_UserInfo" EntityType="DDDBModel.tbl_UserInfo" />
+          <EntitySet Name="tbl_UserSpotTrack" EntityType="DDDBModel.tbl_UserSpotTrack" />
+          <EntitySet Name="tbl_BalanceTransferHistory" EntityType="DDDBModel.tbl_BalanceTransferHistory" />
+          <EntitySet Name="tbl_AutoTransferId" EntityType="DDDBModel.tbl_AutoTransferId" />
+        </EntityContainer>
+        <EntityType Name="tbl_Operator">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="tbl_ShopInfo">
           <Key>
             <PropertyRef Name="Id" />
@@ -119,14 +165,6 @@
           <Property Name="EntryBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EntryDate" Type="DateTime" Precision="0" />
         </EntityType>
-        <EntityContainer Name="DDDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="tbl_ShopInfo" EntityType="Self.tbl_ShopInfo" />
-          <EntitySet Name="tbl_ShopLocation" EntityType="DDDBModel.tbl_ShopLocation" />
-          <EntitySet Name="tbl_UserAccount" EntityType="DDDBModel.tbl_UserAccount" />
-          <EntitySet Name="tbl_UserInfo" EntityType="DDDBModel.tbl_UserInfo" />
-          <EntitySet Name="tbl_Operator" EntityType="DDDBModel.tbl_Operator" />
-          <EntitySet Name="tbl_UserSpotTrack" EntityType="DDDBModel.tbl_UserSpotTrack" />
-        </EntityContainer>
         <EntityType Name="tbl_ShopLocation">
           <Key>
             <PropertyRef Name="Id" />
@@ -175,20 +213,6 @@
           <Property Name="EntryBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EntryDate" Type="DateTime" Precision="0" />
         </EntityType>
-        <EntityType Name="tbl_Operator">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="CID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="tbl_UserSpotTrack">
           <Key>
             <PropertyRef Name="Id" />
@@ -201,24 +225,59 @@
           <Property Name="UCID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="SlTrk" Type="Int32" />
         </EntityType>
-      </Schema>
+        <EntityType Name="tbl_BalanceTransferHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TransferId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TransferDate" Type="DateTime" Precision="0" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproveBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApproveDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="tbl_AutoTransferId">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="DDDBModelStoreContainer" CdmEntityContainer="DDDBEntities">
+          <EntitySetMapping Name="tbl_Operator">
+            <EntityTypeMapping TypeName="DDDBModel.tbl_Operator">
+              <MappingFragment StoreEntitySet="tbl_Operator">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="CID" ColumnName="CID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tbl_ShopInfo">
             <EntityTypeMapping TypeName="DDDBModel.tbl_ShopInfo">
               <MappingFragment StoreEntitySet="tbl_ShopInfo">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="ShopName" ColumnName="ShopName" />
-                <ScalarProperty Name="ShopLocation" ColumnName="ShopLocation" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Rank" ColumnName="Rank" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="ShopLogo" ColumnName="ShopLogo" />
-                <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
                 <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
+                <ScalarProperty Name="ShopLogo" ColumnName="ShopLogo" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="ShopLocation" ColumnName="ShopLocation" />
+                <ScalarProperty Name="ShopName" ColumnName="ShopName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -273,21 +332,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tbl_Operator">
-            <EntityTypeMapping TypeName="DDDBModel.tbl_Operator">
-              <MappingFragment StoreEntitySet="tbl_Operator">
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
-                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="CID" ColumnName="CID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tbl_UserSpotTrack">
             <EntityTypeMapping TypeName="DDDBModel.tbl_UserSpotTrack">
               <MappingFragment StoreEntitySet="tbl_UserSpotTrack">
@@ -297,6 +341,28 @@
                 <ScalarProperty Name="SID" ColumnName="SID" />
                 <ScalarProperty Name="PID" ColumnName="PID" />
                 <ScalarProperty Name="CID" ColumnName="CID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_BalanceTransferHistory">
+            <EntityTypeMapping TypeName="DDDBModel.tbl_BalanceTransferHistory">
+              <MappingFragment StoreEntitySet="tbl_BalanceTransferHistory">
+                <ScalarProperty Name="ApproveDate" ColumnName="ApproveDate" />
+                <ScalarProperty Name="ApproveBy" ColumnName="ApproveBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+                <ScalarProperty Name="CID" ColumnName="CID" />
+                <ScalarProperty Name="TransferId" ColumnName="TransferId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_AutoTransferId">
+            <EntityTypeMapping TypeName="DDDBModel.tbl_AutoTransferId">
+              <MappingFragment StoreEntitySet="tbl_AutoTransferId">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
