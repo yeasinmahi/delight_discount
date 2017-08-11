@@ -142,6 +142,8 @@
                                     <ul class="dropdown-menu">
                                         <li><a runat="server" href="Profile.aspx">Profile</a></li>
                                         <li><a runat="server" href="AccountsInfo.aspx">Account</a></li>
+                                        <li><a runat="server" href="BalanceTransfer.aspx">Balance Transfer</a></li>
+                                        <li><a runat="server" href="ChangePassword.aspx">Change Password</a></li>
                                         <li><a id="signOut" runat="server" onserverclick="OnServerClick" onclick="__doPostBack('signOut','')">Sign out</a></li>
                                     </ul>
                                 </li>

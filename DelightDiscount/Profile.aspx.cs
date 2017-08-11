@@ -23,6 +23,7 @@ namespace DelightDiscount
                 var getAll = db.tbl_UserInfo.FirstOrDefault(z => z.CID == cid);
                 if (getAll != null)
                 {
+                    int count = db.tbl_UserInfo.Count(x => x .ReferenceCid==getAll.CID); 
                     //userNameLabel.InnerText = getAll.UseName;
                     fullNameLabel.InnerText = getAll.FullName;
                     presentAddressLabel.InnerText = getAll.PresentAddress;
@@ -32,13 +33,57 @@ namespace DelightDiscount
                     nomineeLabel.InnerText = getAll.NomineeName;
                     relationLabel.InnerText = getAll.Relation;
                     nomineePhoneLabel.InnerText = getAll.NomineeMobile;
+                    sponsorLabel.InnerText = count.ToString();
+                    if (count<10)
+                    {
+                        businessLevelLabel.InnerText = "Level-0";
+                    }
+                    else if (count>=10 && count<100)
+                    {
+                        businessLevelLabel.InnerText = "Level-1";
+                    }
+                    else if (count>=100 && count<1000)
+                    {
+                        businessLevelLabel.InnerText = "Level-2";
+                    }
+                    else if (count >= 1000 && count < 10000)
+                    {
+                        businessLevelLabel.InnerText = "Level-3";
+                    }
+                    else if (count >= 10000 && count < 100000)
+                    {
+                        businessLevelLabel.InnerText = "Level-4";
+                    }
+                    else if (count >= 100000 && count < 1000000)
+                    {
+                        businessLevelLabel.InnerText = "Level-5";
+                    }
+                    else if (count >= 1000000 && count < 10000000)
+                    {
+                        businessLevelLabel.InnerText = "Level-6";
+                    }
+                    else
+                    {
+                        businessLevelLabel.InnerText = "Level-7";
+                    }
+                    var getAllIncome = (from z in db.tbl_UserAccount
+                                        where z.CID == cid
+                                        select new { z.DatDate, z.Amount, z.TranCID, z.DebitCredit }).ToList();
+                    var creditIncome = getAllIncome.Where(x => x.DebitCredit == "Credit").Select(x => x.Amount).Sum();
+                    var debitIncome = getAllIncome.Where(x => x.DebitCredit == "Debit").Select(x => x.Amount).Sum();
+                    traBalanceLabel.InnerText = debitIncome.ToString();
+                    activeBalanceLabel.InnerText = (creditIncome-debitIncome).ToString();
                     //var getImage = dbEntities.tbl_ImageStores.FirstOrDefault(x => x.FinalItemCode == finalProductId);
                     System.Web.UI.WebControls.Image imgBarCode = new System.Web.UI.WebControls.Image();
-                    byte[] byteImage = getAll.UserPic.ToArray();
-                    Convert.ToBase64String(byteImage);
-                    imgBarCode.ImageUrl = "data:image/png;base64," + Convert.ToBase64String(byteImage);
-                    //mainImage.Style.Add("display", "none");
-                    plProductImg.Controls.Add(imgBarCode);
+                    if (getAll.UserPic!=null)
+                    {
+                        byte[] byteImage = getAll.UserPic.ToArray();
+                        Convert.ToBase64String(byteImage);
+                        imgBarCode.ImageUrl = "data:image/png;base64," + Convert.ToBase64String(byteImage);
+                        //mainImage.Style.Add("display", "none");
+                        plProductImg.Controls.Add(imgBarCode);    
+                    }
+                    
                 }
                 else
                 {

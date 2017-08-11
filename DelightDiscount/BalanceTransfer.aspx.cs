@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -76,6 +78,17 @@ namespace DelightDiscount
                     passTextBox.Text = String.Empty;
                     LoadUserInfo();
                     LoadGrid(userInfo.CID);
+
+                    MailMessage Msg = new MailMessage();
+                    Msg.From = new MailAddress("info@delightdiscount.com", "Delight Discount");
+                    Msg.To.Add("info@delightdiscount.com");
+                    Msg.Subject = "Delight Discount Balance Transfer";
+                    Msg.Body = "Withdraw request from DelightDiscount ID: " + userInfo.CID + "\n Amount: " +transferAmountTextBox.Text;
+                    SmtpClient client = new SmtpClient();
+                    client.Host = "mail.delightdiscount.com";
+                    client.Port = 25;
+                    client.Credentials = new NetworkCredential("info@delightdiscount.com", "dd@54321");
+                    client.Send(Msg);
                 }
                 else
                 {
@@ -112,14 +125,14 @@ namespace DelightDiscount
             int seedNums = 1;
             char pads = '0';
             //string studentId = null;
-            var getInvoId = from u in db.tbl_BalanceTransferHistory
-                            where u.TransferId.Substring(3, 4) == year.ToString()
-                            select new { u.TransferId};
+            //var getInvoId = from u in db.tbl_BalanceTransferHistory
+            //                where u.TransferId.Substring(3, 4) == year.ToString()
+            //                select new { u.TransferId};
             int result = (int) db.tbl_AutoTransferId.Where(x => x.UserId == userInfo.CID).Max(element => element.Id);
             
                 seedNums = result;
-                seedNums = seedNums + 1;
-                return ("BT-" + DateTime.Now.Year + "-" + seedNums.ToString().PadLeft(6, pads));
+                //seedNums = seedNums + 1;
+                return ("BT-" + seedNums.ToString().PadLeft(6, pads));
            
             //return ("BT-" + DateTime.Now.Year + "-" + seedNums.ToString().PadLeft(6, pads));
 

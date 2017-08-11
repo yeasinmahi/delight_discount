@@ -66,7 +66,7 @@
                                         <ul class="nav child_menu">
                                             <li><a href="../Admin/RegistrationUI.aspx">User Registration</a></li>
                                             <li><a href="../Admin/UserList.aspx">User List</a></li>
-                                            <li><a href="index3.html">Dashboard3</a></li>
+                                            <li><a href="../Admin/TransactionApprove.aspx">Transaction Approve</a></li>
                                         </ul>
                                     </li>
                                     <%-- <li>

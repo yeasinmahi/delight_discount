@@ -39,11 +39,11 @@
             <div id="leftmenu" class="fl">
                 <ul id="ctl00_ContentPlaceHolder1_left_mn">
                     <li><i class='fa fa-modx fa3' aria-hidden='true'></i><a target='_blank' onclick='setCat(1)' href='Category.aspx?cat=18'>Garments & Fashion</a></li>
-                    <li><i class='fa fa-female fa7' aria-hidden='true'></i><a target='_blank' onclick='setCat(2)' href='Category.aspx?cat=2'>Cosmetic & Beauty Care </a></li>
-                    <li><i class='fa fa-user-plus fa0' aria-hidden='true'></i><a target='_blank' onclick='setCat(3)' href='Category.aspx?cat=3'>Consumer & Daily Needs</a></li>
+                    <%--<li><i class='fa fa-female fa7' aria-hidden='true'></i><a target='_blank' onclick='setCat(2)' href='Category.aspx?cat=2'>Cosmetic & Beauty Care </a></li>
+                    <li><i class='fa fa-user-plus fa0' aria-hidden='true'></i><a target='_blank' onclick='setCat(3)' href='Category.aspx?cat=3'>Consumer & Daily Needs</a></li>--%>
                     <li><i class='fa fa-ambulance fa7' aria-hidden='true'></i><a target='_blank' onclick='setCat(4)' href='Category.aspx?cat=5'>Health & Nutrition</a></li>
-                    <li><i class='fa fa-male fa1' aria-hidden='true'></i><a target='_blank' onclick='setCat(5)' href='Category.aspx?cat=27'>Gents Gallery</a></li>
-                    <li><i class='fa fa-tv fa5' aria-hidden='true'></i><a target='_blank' onclick='setCat(6)' href='Category.aspx?cat=7'>Electric & Electronic</a></li>
+                    <%--<li><i class='fa fa-male fa1' aria-hidden='true'></i><a target='_blank' onclick='setCat(5)' href='Category.aspx?cat=27'>Gents Gallery</a></li>
+                    <li><i class='fa fa-tv fa5' aria-hidden='true'></i><a target='_blank' onclick='setCat(6)' href='Category.aspx?cat=7'>Electric & Electronic</a></li>--%>
                 </ul>
 
             </div>
@@ -193,7 +193,7 @@
                             <div class='a2ca'>
                                 <strong>
                                     <h4>Indian AC Cotton</h4>
-                                    <h5>Price: 950.00</h5>
+                                    <h5>Price: 1150.00</h5>
                                     <h5>Deal Code: DD111</h5>
                                 </strong>
                             </div>
@@ -213,7 +213,7 @@
                             <div class='a2ca'>
                                <strong>
                                     <h4>Indian AC Cotton</h4>
-                                    <h5>Price: 950.00</h5>
+                                    <h5>Price: 1150.00</h5>
                                     <h5>Deal Code: DD112</h5>
                                 </strong>
                             </div>
@@ -233,7 +233,7 @@
                             <div class='a2ca'>
                                <strong>
                                     <h4>Indian AC Cotton</h4>
-                                    <h5>Price: 950.00</h5>
+                                    <h5>Price: 1150.00</h5>
                                     <h5>Deal Code: DD113</h5>
                                 </strong>
                             </div>
@@ -253,7 +253,7 @@
                             <div class='a2ca'>
                                <strong>
                                     <h4>Indian AC Cotton</h4>
-                                    <h5>Price: 950.00</h5>
+                                    <h5>Price: 1150.00</h5>
                                     <h5>Deal Code: DD114</h5>
                                 </strong>
                             </div>
@@ -273,7 +273,7 @@
                             <div class='a2ca'>
                                <strong>
                                     <h4>Indian AC Cotton</h4>
-                                    <h5>Price: 950.00</h5>
+                                    <h5>Price: 1150.00</h5>
                                     <h5>Deal Code: DD115</h5>
                                 </strong>
                             </div>
@@ -293,7 +293,7 @@
                             <div class='a2ca'>
                                <strong>
                                     <h4>Indian AC Cotton</h4>
-                                    <h5>Price: 950.00</h5>
+                                    <h5>Price: 1150.00</h5>
                                     <h5>Deal Code: DD116</h5>
                                 </strong>
                             </div>
@@ -313,7 +313,7 @@
                             <div class='a2ca'>
                                <strong>
                                     <h4>Indian AC Cotton</h4>
-                                    <h5>Price: 950.00</h5>
+                                    <h5>Price: 1150.00</h5>
                                     <h5>Deal Code: DD117</h5>
                                 </strong>
                             </div>
@@ -333,7 +333,7 @@
                             <div class='a2ca'>
                                <strong>
                                     <h4>Indian AC Cotton</h4>
-                                    <h5>Price: 950.00</h5>
+                                    <h5>Price: 1150.00</h5>
                                     <h5>Deal Code: DD118</h5>
                                 </strong>
                             </div>
@@ -353,7 +353,7 @@
                             <div class='a2ca'>
                                <strong>
                                     <h4>Indian AC Cotton</h4>
-                                    <h5>Price: 950.00</h5>
+                                    <h5>Price: 1150.00</h5>
                                     <h5>Deal Code: DD119</h5>
                                 </strong>
                             </div>
@@ -373,7 +373,7 @@
                             <div class='a2ca'>
                                <strong>
                                     <h4>Indian AC Cotton</h4>
-                                    <h5>Price: 950.00</h5>
+                                    <h5>Price: 1150.00</h5>
                                     <h5>Deal Code: DD120</h5>
                                 </strong>
                             </div>

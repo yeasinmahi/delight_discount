@@ -63,11 +63,20 @@ $("#checkButton").click(function () {
         dataType: 'json',
         data: JSON.stringify({ refId: refId }),
         async: false,
-        success: function (response) {
-            if (response.d.length > 0) {
-                alert("Success");
+        success: function (data) {
+            $("#MainContent_placementDropDownList").val("");
+            if (data.d.length > 0) {
+                for (var i = 0; i < data.d.length; i++) {
+                    $("#MainContent_placementDropDownList").append('<option value="' + data.d[i].value + '">' + data.d[i].display + '</option>');
+                }
+                
+                //$("#MainContent_placementDropDownList").val(data.d[0].display);
+                //alert("Success");
+            } else {
+                alert("This CID not found.");
+                $("#MainContent_referenceCidText").val("");
             } 
-            //$("#MainContent_messageLabel").addClass('label-success');
+            
         },
         error: function () {
             alert("Invalid DDID Card!");

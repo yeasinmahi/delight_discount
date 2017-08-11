@@ -141,9 +141,11 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AccountsInfo.aspx" />
+    <Content Include="Admin\TransactionApprove.aspx" />
     <Content Include="Admin\UserList.aspx" />
     <Content Include="BalanceTransfer.aspx" />
     <Content Include="Category.aspx" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\animate.min.css" />
     <Content Include="Content\bootstrap-datepicker.css" />
@@ -527,6 +529,13 @@
     <Compile Include="AccountsInfo.aspx.designer.cs">
       <DependentUpon>AccountsInfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\TransactionApprove.aspx.cs">
+      <DependentUpon>TransactionApprove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TransactionApprove.aspx.designer.cs">
+      <DependentUpon>TransactionApprove.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\UserList.aspx.cs">
       <DependentUpon>UserList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -557,6 +566,13 @@
     </Compile>
     <Compile Include="Category.aspx.designer.cs">
       <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

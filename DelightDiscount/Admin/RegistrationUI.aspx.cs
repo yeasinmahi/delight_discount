@@ -227,15 +227,11 @@ namespace DelightDiscount.Admin
                    var getAllPlacement = (from z in db.tbl_UserSpotTrack
                         where z.PID.Substring(0, pidLength) == getRefIdSpot.PID && z.IsAvailable == "Y"
                         select new {display = (z.CID + "-" + z.SlTrk), value = z.SID}).ToList();
-                    //placementDropDownList.DataSource = getAllPlacement;
-                    //placementDropDownList.DataTextField = "display";
-                    //placementDropDownList.DataValueField = "value";
-                    //placementDropDownList.DataBind();
                     return getAllPlacement;
                 }
             }
-           
-            return "Invalid CID!";
+            var s = new List<string>();
+            return s;
         }
     }
 }

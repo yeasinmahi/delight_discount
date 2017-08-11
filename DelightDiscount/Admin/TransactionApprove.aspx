@@ -1,7 +1,16 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Mobile.Master" AutoEventWireup="true" CodeBehind="BalanceTransfer.aspx.cs" Inherits="DelightDiscount.BalanceTransfer" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TransactionApprove.aspx.cs" Inherits="DelightDiscount.Admin.TransactionApprove" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <style>
+    <link href="../Content/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../Content/animate.min.css" rel="stylesheet" />
+    <link href="../Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="../Content/custom.min.css" rel="stylesheet" />
+    <link href="../Content/nprogress.css" rel="stylesheet" />
+    <script src="../Scripts/jquery.min.js"></script>
+    <script src="../Scripts/jquery.validate.min.js"></script>
+    <script src="../Scripts/bootstrap-datepicker.min.js"></script>
+     <style>
         .panel-primary > .panel-heading {
             color: #ffffff;
             background-color: #4CAF50;
@@ -13,34 +22,18 @@
             margin-top: 0px;
         }
     </style>
-     <style>
-        .title {
-            font-size: 150%;
-            font-weight: bolder;
-        }
-
-        body {
-            background-image: url(img/ss.jpg);
-            background-size: cover;
-            height: 100vh;
-        }
-        #imgDivC img {
-            width: 150px;
-            height: auto;
-        }
-    </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
-    <div class="col-sm-8 col-sm-offset-2">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="col-sm-10 col-sm-offset-1">
         <div class="panel panel-primary" style="margin-top: 12px;">
             <div class="panel-heading">
-                <h3>Balance Transfer</h3>
+                <h4>Transaction Approve</h4>
             </div>
             <div class="panel-body">
                 <div class="form-horizontal">
                     <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
+                        <%--<div class="col-sm-12">--%>
+                           <%-- <div class="form-group">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4">
                                     <h4>Active Balance:</h4>
@@ -48,9 +41,7 @@
 
                                 <div class="col-sm-4">
                                     <label class="form-control" id="activeBalanceTextBox" runat="server"></label>
-                                    <%--                                    <asp:Label ID="Label1" runat="server" Text="Label" CssClass="form-control "></asp:Label>
-                                    <asp:TextBox runat="server" ID="activeBalanceTextBox" CssClass="form-control input-sm " />--%>
-                                </div>
+                                   </div>
                                 <div class="col-sm-2"></div>
                             </div>
                             <div class="form-group">
@@ -74,26 +65,38 @@
                                     <asp:TextBox runat="server" ID="passTextBox" CssClass="form-control input-sm " TextMode="Password" />
                                 </div>
                                 <div class="col-sm-2"></div>
-                            </div>
-                            <div class="form-group">
+                            </div>--%>
+                            <%--<div class="form-group">
                                 <div class="col-sm-8"></div>
                                 <div class="col-sm-4">
                                     <asp:Button ID="confirmButton" runat="server" Text="Confirm" CssClass="btn btn-round" OnClick="confirmButton_Click" />
                                 </div>
 
 
-                            </div>
-                            <div class="col-sm-12">
+                            </div>--%>
+                           <%-- <div class="col-sm-12">
                                 <br />
                                 <asp:Literal ID="balanceTransferLiteral" runat="server" Text="_"> </asp:Literal>
                                 <br />
+                            </div>--%>
+                        <%--</div>--%>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <h4>Transaction Status:</h4>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <asp:DropDownList ID="statusDropDownList" CssClass="form-control input-sm" runat="server" OnSelectedIndexChanged="statusDropDownList_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
+                                </div>
+                                <div class="col-sm-4"></div>
                             </div>
                         </div>
 
                         <div class="col-sm-12">
-                            <div style="border: 1px solid #ededed; padding: 5px;height:225px; width:100%; overflow:auto;">
-                                <asp:GridView ID="transferHistoryGridView" runat="server" CellPadding="2" AutoGenerateColumns="False"
-                                    CssClass="table table-striped table-bordered table-hover"
+                            <div style="border: 1px solid #ededed; padding: 5px;height:480px; width:100%; overflow:auto;">
+                                <asp:GridView ID="transferApproveGridView" runat="server" CellPadding="2" AutoGenerateColumns="False"
+                                    CssClass="table table-striped table-bordered table-hover" OnRowCommand="transferApproveGridView_RowCommand"
                                     ForeColor="#333333" GridLines="Both" Width="100%"
                                     HorizontalAlign="Center" ShowHeaderWhenEmpty="true">
                                     <AlternatingRowStyle BackColor="White" />
@@ -104,9 +107,19 @@
                                             </ItemTemplate>
                                             <ItemStyle Width="2%" />
                                         </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Transfer ID" Visible="True">
+                                            <ItemTemplate>
+                                                <asp:Label ID="transferIdLabel" runat="server" Text='<%# Eval("TransferId") %>'></asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
                                         <asp:TemplateField HeaderText="Date" Visible="True">
                                             <ItemTemplate>
                                                 <asp:Label ID="dateLabel" runat="server" Text='<%# Eval("TransferDate","{0:dd-MMM-yyyy}") %>'></asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="CID" Visible="True">
+                                            <ItemTemplate>
+                                                <asp:Label ID="cidLabel" runat="server" Text='<%# Eval("CID") %>'></asp:Label>
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                         <asp:TemplateField HeaderText="Amount" Visible="True">
@@ -114,11 +127,12 @@
                                                 <asp:Label ID="amountLabel" runat="server" Text='<%# Eval("Amount") %>'></asp:Label>
                                             </ItemTemplate>
                                         </asp:TemplateField>
-                                        <asp:TemplateField HeaderText="Status" Visible="True">
-                                            <ItemTemplate>
-                                                <asp:Label ID="statusLabel" runat="server" Text='<%# Eval("Status") %>'></asp:Label>
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Action">
+                                                <ItemTemplate>
+                                                    <asp:Button ID="btnApprove" runat="server" Width="100%" Text="Approve" CssClass="btn btn-warning"
+                                                        CommandName="ApproveButton" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" />
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
                                     </Columns>
                                     <EditRowStyle BackColor="#7C6F57" />
                                     <FooterStyle BackColor="#4286F4" Font-Bold="True" ForeColor="White" />
@@ -141,4 +155,6 @@
             </div>
         </div>
     </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ScriptContentPlaceHolder" runat="server">
 </asp:Content>
