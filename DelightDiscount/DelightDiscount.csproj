@@ -141,6 +141,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AccountsInfo.aspx" />
+    <Content Include="Admin\LevelWiseList.aspx" />
     <Content Include="Admin\TransactionApprove.aspx" />
     <Content Include="Admin\UserList.aspx" />
     <Content Include="BalanceTransfer.aspx" />
@@ -235,6 +236,24 @@
     <Content Include="ecommerce\js\slick.js" />
     <Content Include="ecommerce\Product.aspx" />
     <Content Include="ecommerce\ServicePartner.aspx" />
+    <Content Include="ecommerce\ups\Health\Cardy Expart, Price-1550, Deal Code-DD201 %28V%29.JPG" />
+    <Content Include="ecommerce\ups\Health\Cardy Expart, Price-1550, Deal Code-DD201.jpg" />
+    <Content Include="ecommerce\ups\Health\Diabetic Control, Price-1190, Deal Code-DD202 %28V%29.JPG" />
+    <Content Include="ecommerce\ups\Health\Diabetic Control, Price-1190, Deal Code-DD202.jpg" />
+    <Content Include="ecommerce\ups\Health\Hair Treatment Gold, Price-950, Deal Code-DD203 %28V%29.JPG" />
+    <Content Include="ecommerce\ups\Health\Hair Treatment Gold, Price-950, Deal Code-DD203.jpg" />
+    <Content Include="ecommerce\ups\Health\Herbalife Soya Protin,  Price- 600, Deal Code-DD204 %28F%29.jpg" />
+    <Content Include="ecommerce\ups\Health\Herbalife Soya Protin,  Price- 600, Deal Code-DD204 %28V%29.JPG" />
+    <Content Include="ecommerce\ups\Health\Max Power-100, Price-1050, Deal Code-DD205 %28V%29.JPG" />
+    <Content Include="ecommerce\ups\Health\Max Power-100, Price-1050, Deal Code-DD205.jpg" />
+    <Content Include="ecommerce\ups\Health\Proteino, Price-810, Deal Code-DD206 %28V%29.JPG" />
+    <Content Include="ecommerce\ups\Health\Proteino, Price-810, Deal Code-DD206.jpg" />
+    <Content Include="ecommerce\ups\Health\Slim n Fit, Price-1550, Deal Code-DD207 %28V%29.JPG" />
+    <Content Include="ecommerce\ups\Health\Slim n Fit, Price-1550, Deal Code-DD207.jpg" />
+    <Content Include="ecommerce\ups\Health\Total Effect, Price-750, Deal Code-DD208 %28V%29.JPG" />
+    <Content Include="ecommerce\ups\Health\Total Effect, Price-750, Deal Code-DD208.JPG" />
+    <Content Include="ecommerce\ups\Health\Wait Loss, Price-1500, Deal Code-209 %28V%29.JPG" />
+    <Content Include="ecommerce\ups\Health\Wait Loss, Price-1500, Deal Code-209.JPG" />
     <Content Include="ecommerce\ups\p\Consumer &amp; Daily Needs\Dettol Antiseptic Liquid 500ml - Price 140.00 - Code DD012.jpg" />
     <Content Include="ecommerce\ups\p\Consumer &amp; Daily Needs\Diploma Full Cream Milk Powder 500gm - Price 2850.00 - Code DD013.jpg" />
     <Content Include="ecommerce\ups\p\Consumer &amp; Daily Needs\Fresh Refined Ssugar 1kg - Price 75.00 - Code DD015.jpg" />
@@ -280,13 +299,24 @@
     <Content Include="ecommerce\ups\r\1.jpg" />
     <Content Include="ecommerce\ups\r\2.jpg" />
     <Content Include="ecommerce\ups\r\3.jpg" />
+    <Content Include="ecommerce\ups\Special\Bio Energy Card, Price-650, Deal Coad-501.jpg" />
+    <Content Include="ecommerce\ups\Special\Digital Therapy Mechine, Price-1000, Deal Coad-502.jpg" />
+    <Content Include="ecommerce\ups\Special\Electronic Pest Repellent, Price-950, Deal Coad-503.jpg" />
+    <Content Include="ecommerce\ups\Special\RADIATION-CHIP, Price-690, Deal Coad-504.jpg" />
+    <Content Include="ecommerce\ups\Special\Toxin Cleanser, Price-700, Deal Coad-505.jpg" />
+    <Content Include="ecommerce\ups\Special\Water Purifier, Price-1150, Deal Coad-506.jpg" />
     <Content Include="ecommerce\ups\s\1.jpg" />
-    <Content Include="ecommerce\ups\s\15.jpg" />
-    <Content Include="ecommerce\ups\s\16.jpg" />
     <Content Include="ecommerce\ups\s\2.jpg" />
     <Content Include="ecommerce\ups\s\3.jpg" />
-    <Content Include="ecommerce\ups\s\4.jpg" />
-    <Content Include="ecommerce\ups\s\5.jpg" />
+    <Content Include="ecommerce\ups\Tour\DHAKA - COX-BAZAR - SAINTMARTIN- DHAKA, Price 5500, Deal Code-994.jpg" />
+    <Content Include="ecommerce\ups\Tour\DHAKA - COX-BAZAR - SAINTMARTIN- DHAKA, Price 6250, Deal Code-995.jpg" />
+    <Content Include="ecommerce\ups\Tour\DHAKA - KHAGRACHORI - DHAKA, Price 4900, Deal Code-996.jpg" />
+    <Content Include="ecommerce\ups\Tour\DHAKA - KUAKATA - DHAKA, Price-5000, Deal Code-997.jpg" />
+    <Content Include="ecommerce\ups\Tour\DHAKA - SYLET - DHAKA, Price 2000, Deal Code-998.jpg" />
+    <Content Include="ecommerce\ups\Tour\DHAKA-COX-BAZAR-DHAKA, Price 3150, Deal Code-993.jpg" />
+    <Content Include="ecommerce\ups\Tour\DHAKA-COX-BAZAR-DHAKA, Price 4000, Deal Code-990.jpg" />
+    <Content Include="ecommerce\ups\Tour\DHAKA-COX-BAZAR-DHAKA, Price 4850, Deal Code-992.jpg" />
+    <Content Include="ecommerce\ups\Tour\DHAKA-COX-BAZAR-DHAKA, Price 7500, Deal Code-991.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -529,6 +559,13 @@
     <Compile Include="AccountsInfo.aspx.designer.cs">
       <DependentUpon>AccountsInfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\LevelWiseList.aspx.cs">
+      <DependentUpon>LevelWiseList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LevelWiseList.aspx.designer.cs">
+      <DependentUpon>LevelWiseList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\TransactionApprove.aspx.cs">
       <DependentUpon>TransactionApprove.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -725,6 +762,12 @@
     <Compile Include="tbl_BalanceTransferHistory.cs">
       <DependentUpon>DDDBContex.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbl_LevelCount.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_LevelIncomePaid.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_Operator.cs">
       <DependentUpon>DDDBContex.tt</DependentUpon>
     </Compile>
@@ -738,6 +781,9 @@
       <DependentUpon>DDDBContex.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_UserInfo.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_UserLevel.cs">
       <DependentUpon>DDDBContex.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_UserSpotTrack.cs">

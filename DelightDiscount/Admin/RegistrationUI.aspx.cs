@@ -74,6 +74,8 @@ namespace DelightDiscount.Admin
                     db.SaveChanges();
 
                     //Insert into User Spot
+                    //var a = placementDropDownList.DataValueField;
+                    //var b = placementDropDownList.DataTextField;
                     int sl = Convert.ToInt32(placementDropDownList.SelectedItem.Text.Substring(8));
                     var isAvailable =
                         db.tbl_UserSpotTrack.FirstOrDefault(
@@ -129,6 +131,7 @@ namespace DelightDiscount.Admin
                     client.Send(Msg);
 
                     userLiterel.Text = "<span style='color:#3C763D;background-color: #DFF0D8'>Save Successfully";
+                    ClearPage();
                 }
                 else
                 {
@@ -182,56 +185,83 @@ namespace DelightDiscount.Admin
             return res.ToString();
         }
 
-        //protected void checkButton_Click(object sender, EventArgs e)
+        protected void checkButton_Click(object sender, EventArgs e)
+        {
+            if (referenceCidText.Value.Trim() != "")
+            {
+                var getName = db.tbl_UserInfo.FirstOrDefault(c => c.CID == referenceCidText.Value.Trim());
+                if (getName != null)
+                {
+                    refNameLabel.InnerText = getName.FullName;
+                    var getRefIdSpot = db.tbl_UserSpotTrack.FirstOrDefault(c => c.CID == referenceCidText.Value.Trim());
+                    if (getRefIdSpot != null)
+                    {
+                        int pidLength = getRefIdSpot.PID.Length;
+                        var getAllPlacement = (from z in db.tbl_UserSpotTrack
+                                               where z.PID.Substring(0, pidLength) == getRefIdSpot.PID && z.IsAvailable == "Y"
+                                               select new { display = z.CID + "-" + z.SlTrk, value = z.SID }).ToList();
+                        placementDropDownList.DataSource = getAllPlacement;
+                        placementDropDownList.DataTextField = "display";
+                        placementDropDownList.DataValueField = "value";
+                        placementDropDownList.DataBind();
+                    }
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage",
+                        "alert('Invalid Reference CID!')", true);
+
+                }
+            }
+        }
+
+        public void ClearPage()
+        {
+            referenceCidText.Value = String.Empty;
+            placementDropDownList.DataSource = null;
+            placementDropDownList.DataBind();
+            joinDateText.Value = String.Empty;
+            refNameLabel.InnerText = "";
+            cidText.Value = String.Empty;
+            nameText.Value = String.Empty;
+            mobileText.Value = String.Empty;
+            emailText.Value = String.Empty;
+            presentAddressTextarea.Value = String.Empty;
+            parmanentAddressTextarea.Value = String.Empty;
+            nomineeNameText.Value = String.Empty;
+            relationText.Value = String.Empty;
+            nomineePhoneText.Value = String.Empty;
+        }
+
+        protected void clearButton_Click(object sender, EventArgs e)
+        {
+            ClearPage();
+        }
+
+        //[WebMethod]
+        //public static object CheckRefId(string refId)
         //{
-        //    if (referenceCidText.Value.Trim() != "")
+        //    var getName = db.tbl_UserInfo.FirstOrDefault(c => c.CID == refId);
+        //    if (getName != null)
         //    {
-        //        var getName = db.tbl_UserInfo.FirstOrDefault(c => c.CID == referenceCidText.Value.Trim());
-        //        if (getName != null)
+                
+        //        //refNameLabel.InnerText = getName.FullName;
+        //        var getRefIdSpot = db.tbl_UserSpotTrack.FirstOrDefault(c => c.CID == refId.Trim());
+        //        if (getRefIdSpot != null)
         //        {
-        //            refNameLabel.InnerText = getName.FullName;
-        //            var getRefIdSpot = db.tbl_UserSpotTrack.FirstOrDefault(c => c.CID == referenceCidText.Value.Trim());
-        //            if (getRefIdSpot != null)
-        //            {
-        //                int pidLength = getRefIdSpot.PID.Length;
-        //                var getAllPlacement = (from z in db.tbl_UserSpotTrack
-        //                    where z.PID.Substring(0, pidLength) == getRefIdSpot.PID && z.IsAvailable == "Y"
-        //                    select new {display = z.CID + "-" + z.SlTrk, value = z.SID}).ToList();
-        //                placementDropDownList.DataSource = getAllPlacement;
-        //                placementDropDownList.DataTextField = "display";
-        //                placementDropDownList.DataValueField = "value";
-        //                placementDropDownList.DataBind();
-        //            }
-        //        }
-        //        else
-        //        {
-        //            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage",
-        //                "alert('Invalid Reference CID!')", true);
+        //            int pidLength = getRefIdSpot.PID.Length;
+        //            //List<ListItem> getAllPlacement = new List<ListItem>();
+        //           var getAllPlacement = (from z in db.tbl_UserSpotTrack
+        //                where z.PID.Substring(0, pidLength) == getRefIdSpot.PID && z.IsAvailable == "Y"
+        //                select new {display = (z.CID + "-" + z.SlTrk), value = z.SID}).ToList();
+        //            return getAllPlacement;
 
         //        }
         //    }
+        //    var s = new List<string>();
+        //    return s;
         //}
 
-        [WebMethod]
-        public static object CheckRefId(string refId)
-        {
-            var getName = db.tbl_UserInfo.FirstOrDefault(c => c.CID == refId);
-            if (getName != null)
-            {
-                //refNameLabel.InnerText = getName.FullName;
-                var getRefIdSpot = db.tbl_UserSpotTrack.FirstOrDefault(c => c.CID == refId.Trim());
-                if (getRefIdSpot != null)
-                {
-                    int pidLength = getRefIdSpot.PID.Length;
-                    //List<ListItem> getAllPlacement = new List<ListItem>();
-                   var getAllPlacement = (from z in db.tbl_UserSpotTrack
-                        where z.PID.Substring(0, pidLength) == getRefIdSpot.PID && z.IsAvailable == "Y"
-                        select new {display = (z.CID + "-" + z.SlTrk), value = z.SID}).ToList();
-                    return getAllPlacement;
-                }
-            }
-            var s = new List<string>();
-            return s;
-        }
+        
     }
 }

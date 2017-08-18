@@ -33,5 +33,8 @@ namespace DelightDiscount
         public virtual DbSet<tbl_UserSpotTrack> tbl_UserSpotTrack { get; set; }
         public virtual DbSet<tbl_BalanceTransferHistory> tbl_BalanceTransferHistory { get; set; }
         public virtual DbSet<tbl_AutoTransferId> tbl_AutoTransferId { get; set; }
+        public virtual DbSet<tbl_UserLevel> tbl_UserLevel { get; set; }
+        public virtual DbSet<tbl_LevelIncomePaid> tbl_LevelIncomePaid { get; set; }
+        public virtual DbSet<tbl_LevelCount> tbl_LevelCount { get; set; }
     }
 }

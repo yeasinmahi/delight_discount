@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistrationUI.aspx.cs" Inherits="DelightDiscount.Admin.RegistrationUI" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistrationUI.aspx.cs" Inherits="DelightDiscount.Admin.RegistrationUI" EnableEventValidation="false"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 
@@ -50,13 +50,46 @@
     <div class="col-sm-12">
         <div class="panel panel-primary" style="margin-top: 12px; text-align: center">
             <div class="panel-heading">
-                Register As A New Member
+               <h4>User Registration</h4>
             </div>
             <div class="panel-body">
                 <div class="form-horizontal">
 
                     <div class="row">
                         <%--<div class="col-sm-12">--%>
+                         <fieldset style="margin-top: 10px">
+                            <legend><b>Business Information
+                            </b></legend>
+                            <div class="form-group">
+                                <div class=" col-sm-2">
+                                    <label>Reference CID<span style="color: red">*</span></label>
+
+                                    <input type="text" runat="server" class="form-control input-sm" id="referenceCidText" />
+                                </div>
+                                <div class="col-sm-1">
+                                    <br />
+                                   <%-- OnClick="checkButton_Click"--%>
+                                   <%-- <button type="button" id="checkButton" class="btn btn-sm btn-success">Check</button>--%>
+                                    <asp:Button ID="checkButton" runat="server" class="btn btn-primary" Text="Check" OnClick="checkButton_Click"/>
+                                </div>
+                                <div class=" col-sm-3">
+                                    <label>Placement CID & Position<span style="color: red">*</span></label>
+                                    <%--<select id="placementDropDownList" runat="server" Class="form-control input-sm"></select>--%>
+                                    <asp:DropDownList ID="placementDropDownList" runat="server" CssClass="form-control input-sm"></asp:DropDownList>
+                                </div>
+                                <div class=" col-sm-3">
+                                    <label>Joining Date<span style="color: red">*</span></label>
+                                    <input type="text" runat="server" class="form-control input-sm" id="joinDateText" placeholder="Like:-DD/MM/YYYY" />
+                                </div>
+                                <div class=" col-sm-3">
+                                    <label>ReferenceName</label><br />
+                                    <label runat="server" id="refNameLabel" style=""></label>
+                                    <%--<input type="text" runat="server" class="form-control input-sm" id="referenceNameText" />--%>
+                                </div>
+                            </div>
+
+                            
+                        </fieldset>
                         <fieldset>
                             <legend><b>
                                 <h2>Personal Information</h2>
@@ -120,48 +153,21 @@
                                 <label>Phone<span style="color: red">*</span></label>
                                 <input type="text" runat="server" class="form-control input-sm" id="nomineePhoneText" />
                             </div>
-                        </fieldset>
-                        <fieldset style="margin-top: 10px">
-                            <legend><b>Business Information
-                            </b></legend>
-                            <div class="form-group">
-                                <div class=" col-sm-2">
-                                    <label>Reference CID<span style="color: red">*</span></label>
-
-                                    <input type="text" runat="server" class="form-control input-sm" id="referenceCidText" />
-                                </div>
-                                <div class="col-sm-1">
-                                    <br />
-                                   <%-- OnClick="checkButton_Click"--%>
-                                    <button type="button" id="checkButton" class="btn btn-sm btn-success">Check</button>
-                                    <%--<asp:Button ID="checkButton" runat="server" class="btn btn-primary" Text="Check" />--%>
-                                </div>
-                                <div class=" col-sm-3">
-                                    <label>Placement CID & Position<span style="color: red">*</span></label>
-                                    <asp:DropDownList ID="placementDropDownList" runat="server" CssClass="form-control input-sm"></asp:DropDownList>
-                                </div>
-                                <div class=" col-sm-3">
-                                    <label>Joining Date<span style="color: red">*</span></label>
-                                    <input type="text" runat="server" class="form-control input-sm" id="joinDateText" placeholder="Like:-DD/MM/YYYY" />
-                                </div>
-                                <div class=" col-sm-3">
-                                    <label>ReferenceName</label><br />
-                                    <label runat="server" id="refNameLabel" style=""></label>
-                                    <%--<input type="text" runat="server" class="form-control input-sm" id="referenceNameText" />--%>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4">
+                            <div class="col-sm-1">
                                 <br />
                                 <asp:Button ID="saveButton" runat="server" class="btn btn-success" Text="Save" OnClick="saveButton_Click" />
                             </div>
-                            <div class="col-sm-8">
+                             <div class="col-sm-1">
+                                <br />
+                                <asp:Button ID="clearButton" runat="server" class="btn btn-danger" Text="Clear" OnClick="clearButton_Click"  />
+                            </div>
+                            <div class="col-sm-10">
                                 <br />
                                 <asp:Literal ID="userLiterel" runat="server" Text="_"> </asp:Literal>
                                 <br />
                             </div>
                         </fieldset>
-
+                       
 
 
                     </div>

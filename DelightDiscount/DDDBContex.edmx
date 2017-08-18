@@ -25,6 +25,26 @@
           <Property Name="ApproveBy" Type="varchar" MaxLength="50" />
           <Property Name="ApproveDate" Type="date" />
         </EntityType>
+        <EntityType Name="tbl_LevelCount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CID" Type="varchar" MaxLength="50" />
+          <Property Name="TotalSpot" Type="int" />
+          <Property Name="LevelStatus" Type="int" />
+          <Property Name="IsComplete" Type="varchar" MaxLength="50" />
+          <Property Name="IsPaid" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="tbl_LevelIncomePaid">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CID" Type="varchar" MaxLength="50" />
+          <Property Name="CompleteLevel" Type="int" />
+          <Property Name="Ispaid" Type="varchar" MaxLength="1" />
+        </EntityType>
         <EntityType Name="tbl_Operator">
           <Key>
             <PropertyRef Name="Id" />
@@ -97,9 +117,30 @@
           <Property Name="AutoIncome" Type="float" />
           <Property Name="CurrentLevel" Type="int" />
           <Property Name="IsActive" Type="varchar" MaxLength="1" />
-          <Property Name="UserPic" Type="image" />
+          <Property Name="UserPic" Type="varbinary(max)" />
           <Property Name="EntryBy" Type="varchar" MaxLength="50" />
           <Property Name="EntryDate" Type="date" />
+        </EntityType>
+        <EntityType Name="tbl_UserLevel">
+          <Key>
+            <PropertyRef Name="CID" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LEVEL1" Type="int" />
+          <Property Name="LEVEL1STATUS" Type="varchar" MaxLength="50" />
+          <Property Name="LEVEL2" Type="int" />
+          <Property Name="LEVEL2STATUS" Type="varchar" MaxLength="50" />
+          <Property Name="LEVEL3" Type="int" />
+          <Property Name="LEVEL3STATUS" Type="varchar" MaxLength="50" />
+          <Property Name="LEVEL4" Type="int" />
+          <Property Name="LEVEL4STATUS" Type="varchar" MaxLength="50" />
+          <Property Name="LEVEL5" Type="int" />
+          <Property Name="LEVEL5STATUS" Type="varchar" MaxLength="50" />
+          <Property Name="LEVEL6" Type="int" />
+          <Property Name="LEVEL6STATUS" Type="varchar" MaxLength="50" />
+          <Property Name="LEVEL7" Type="int" />
+          <Property Name="LEVEL7STATUS" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tbl_UserSpotTrack">
           <Key>
@@ -116,11 +157,14 @@
         <EntityContainer Name="DDDBModelStoreContainer">
           <EntitySet Name="tbl_AutoTransferId" EntityType="Self.tbl_AutoTransferId" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_BalanceTransferHistory" EntityType="Self.tbl_BalanceTransferHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_LevelCount" EntityType="Self.tbl_LevelCount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_LevelIncomePaid" EntityType="Self.tbl_LevelIncomePaid" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Operator" EntityType="Self.tbl_Operator" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_ShopInfo" EntityType="Self.tbl_ShopInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_ShopLocation" EntityType="Self.tbl_ShopLocation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_UserAccount" EntityType="Self.tbl_UserAccount" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_UserInfo" EntityType="Self.tbl_UserInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_UserLevel" EntityType="Self.tbl_UserLevel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_UserSpotTrack" EntityType="Self.tbl_UserSpotTrack" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -136,6 +180,9 @@
           <EntitySet Name="tbl_UserSpotTrack" EntityType="DDDBModel.tbl_UserSpotTrack" />
           <EntitySet Name="tbl_BalanceTransferHistory" EntityType="DDDBModel.tbl_BalanceTransferHistory" />
           <EntitySet Name="tbl_AutoTransferId" EntityType="DDDBModel.tbl_AutoTransferId" />
+          <EntitySet Name="tbl_UserLevel" EntityType="DDDBModel.tbl_UserLevel" />
+          <EntitySet Name="tbl_LevelIncomePaid" EntityType="DDDBModel.tbl_LevelIncomePaid" />
+          <EntitySet Name="tbl_LevelCount" EntityType="DDDBModel.tbl_LevelCount" />
         </EntityContainer>
         <EntityType Name="tbl_Operator">
           <Key>
@@ -244,6 +291,47 @@
           </Key>
           <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_UserLevel">
+          <Key>
+            <PropertyRef Name="CID" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LEVEL1" Type="Int32" />
+          <Property Name="LEVEL1STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LEVEL2" Type="Int32" />
+          <Property Name="LEVEL2STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LEVEL3" Type="Int32" />
+          <Property Name="LEVEL3STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LEVEL4" Type="Int32" />
+          <Property Name="LEVEL4STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LEVEL5" Type="Int32" />
+          <Property Name="LEVEL5STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LEVEL6" Type="Int32" />
+          <Property Name="LEVEL6STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LEVEL7" Type="Int32" />
+          <Property Name="LEVEL7STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_LevelIncomePaid">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompleteLevel" Type="Int32" />
+          <Property Name="Ispaid" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_LevelCount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TotalSpot" Type="Int32" />
+          <Property Name="LevelStatus" Type="Int32" />
+          <Property Name="IsComplete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsPaid" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -363,6 +451,50 @@
             <EntityTypeMapping TypeName="DDDBModel.tbl_AutoTransferId">
               <MappingFragment StoreEntitySet="tbl_AutoTransferId">
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_UserLevel">
+            <EntityTypeMapping TypeName="DDDBModel.tbl_UserLevel">
+              <MappingFragment StoreEntitySet="tbl_UserLevel">
+                <ScalarProperty Name="LEVEL7STATUS" ColumnName="LEVEL7STATUS" />
+                <ScalarProperty Name="LEVEL7" ColumnName="LEVEL7" />
+                <ScalarProperty Name="LEVEL6STATUS" ColumnName="LEVEL6STATUS" />
+                <ScalarProperty Name="LEVEL6" ColumnName="LEVEL6" />
+                <ScalarProperty Name="LEVEL5STATUS" ColumnName="LEVEL5STATUS" />
+                <ScalarProperty Name="LEVEL5" ColumnName="LEVEL5" />
+                <ScalarProperty Name="LEVEL4STATUS" ColumnName="LEVEL4STATUS" />
+                <ScalarProperty Name="LEVEL4" ColumnName="LEVEL4" />
+                <ScalarProperty Name="LEVEL3STATUS" ColumnName="LEVEL3STATUS" />
+                <ScalarProperty Name="LEVEL3" ColumnName="LEVEL3" />
+                <ScalarProperty Name="LEVEL2STATUS" ColumnName="LEVEL2STATUS" />
+                <ScalarProperty Name="LEVEL2" ColumnName="LEVEL2" />
+                <ScalarProperty Name="LEVEL1STATUS" ColumnName="LEVEL1STATUS" />
+                <ScalarProperty Name="LEVEL1" ColumnName="LEVEL1" />
+                <ScalarProperty Name="CID" ColumnName="CID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_LevelIncomePaid">
+            <EntityTypeMapping TypeName="DDDBModel.tbl_LevelIncomePaid">
+              <MappingFragment StoreEntitySet="tbl_LevelIncomePaid">
+                <ScalarProperty Name="Ispaid" ColumnName="Ispaid" />
+                <ScalarProperty Name="CompleteLevel" ColumnName="CompleteLevel" />
+                <ScalarProperty Name="CID" ColumnName="CID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_LevelCount">
+            <EntityTypeMapping TypeName="DDDBModel.tbl_LevelCount">
+              <MappingFragment StoreEntitySet="tbl_LevelCount">
+                <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+                <ScalarProperty Name="IsComplete" ColumnName="IsComplete" />
+                <ScalarProperty Name="LevelStatus" ColumnName="LevelStatus" />
+                <ScalarProperty Name="TotalSpot" ColumnName="TotalSpot" />
+                <ScalarProperty Name="CID" ColumnName="CID" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

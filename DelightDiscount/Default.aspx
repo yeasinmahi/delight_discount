@@ -39,9 +39,9 @@
             <div id="leftmenu" class="fl">
                 <ul id="ctl00_ContentPlaceHolder1_left_mn">
                     <li><i class='fa fa-modx fa3' aria-hidden='true'></i><a target='_blank' onclick='setCat(1)' href='Category.aspx?cat=18'>Garments & Fashion</a></li>
-                    <%--<li><i class='fa fa-female fa7' aria-hidden='true'></i><a target='_blank' onclick='setCat(2)' href='Category.aspx?cat=2'>Cosmetic & Beauty Care </a></li>
-                    <li><i class='fa fa-user-plus fa0' aria-hidden='true'></i><a target='_blank' onclick='setCat(3)' href='Category.aspx?cat=3'>Consumer & Daily Needs</a></li>--%>
-                    <li><i class='fa fa-ambulance fa7' aria-hidden='true'></i><a target='_blank' onclick='setCat(4)' href='Category.aspx?cat=5'>Health & Nutrition</a></li>
+                    <li><i class='fa fa-female fa7' aria-hidden='true'></i><a target='_blank' onclick='setCat(2)' href='Category.aspx?cat=2'>Health & Nutrition</a></li>
+                    <li><i class='fa fa-user-plus fa0' aria-hidden='true'></i><a target='_blank' onclick='setCat(3)' href='Category.aspx?cat=3'>Tour Package</a></li>
+                    <li><i class='fa fa-ambulance fa7' aria-hidden='true'></i><a target='_blank' onclick='setCat(4)' href='Category.aspx?cat=5'>Special Product</a></li>
                     <%--<li><i class='fa fa-male fa1' aria-hidden='true'></i><a target='_blank' onclick='setCat(5)' href='Category.aspx?cat=27'>Gents Gallery</a></li>
                     <li><i class='fa fa-tv fa5' aria-hidden='true'></i><a target='_blank' onclick='setCat(6)' href='Category.aspx?cat=7'>Electric & Electronic</a></li>--%>
                 </ul>
@@ -51,34 +51,34 @@
     <ul id="ctl00_ContentPlaceHolder1_mn_slider" class="sb-slider">
         <li>
             <img src='ecommerce/ups/s/1.jpg' alt='' />
-            <div class='sb-description'>
+           <%-- <div class='sb-description'>
                 <h3>We All Are Together</h3>
                 <h5>A,B,C,D </h5>
-            </div>
+            </div>--%>
         </li>
         <li>
             <img src='ecommerce/ups/s/2.jpg' alt='' />
-            <div class='sb-description'>
+            <%--<div class='sb-description'>
                 <h3>A Cultural Program</h3>
                 <h5>
                     Award Giving Ceremony
                 </h5>
-            </div>
+            </div>--%>
         </li>
         <li>
             <img src='ecommerce/ups/s/3.jpg' alt='' />
-            <div class='sb-description'>
+            <%--<div class='sb-description'>
                 <h3>Picnic</h3>
                 <h5>With Family</h5>
-            </div>
+            </div>--%>
         </li>
-        <li>
+        <%--<li>
             <img src='ecommerce/ups/s/4.jpg' alt='' />
             <div class='sb-description'>
                 <h3>Unofficial Meating</h3>
                 <h5>With marketing Executive</h5>
             </div>
-        </li>
+        </li>--%>
         <%--<li>
             <img src='ups/s/4.jpg' alt='' />
             <div class='sb-description'>
@@ -99,10 +99,10 @@
         <a href="#">Next</a>
         <a href="#">Previous</a>
     </div>
-    <div id="nav-options" class="nav-options">
+    <%--<div id="nav-options" class="nav-options">
         <span id="navPlay">Play</span>
         <span id="navPause">Pause</span>
-    </div>
+    </div>--%>
     <link rel="stylesheet" type="text/css" href="css/slicebox.css" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
@@ -157,15 +157,15 @@
                 <div id="ctl00_ContentPlaceHolder1_mn_recent">
                     <div class='recent'>
                         <img src='ecommerce/ups/r/1.jpg' alt='' />
-                        <h5>Cosmetics</h5>
+                        <h5>UPCOMING</h5>
                     </div>
                     <div class='recent'>
                         <img src='ecommerce/ups/r/2.jpg' alt='' />
-                        <h5>Garments</h5>
+                        <h5>UPCOMING</h5>
                     </div>
                     <div class='recent'>
                         <img src='ecommerce/ups/r/3.jpg' alt='' />
-                        <h5>Leather Goods</h5>
+                        <h5>UPCOMING</h5>
                     </div>
                 </div>
             </div>
@@ -394,19 +394,19 @@
                 </div>
                 <div class='category' id="2">
                     <div class='catmenu fl'>
-                        <div class='cathead'><i class='fa fa-female fa5' aria-hidden='true'></i><a href='Category.aspx?cat=2' target='_blank'>Cosmetic & Beauty Care </a></div>
-                        <div class='catsub'><a href='Category.aspx?cat=2&sub=22' target='_blank'><i class='fa fa-heart fa6' aria-hidden='true'></i>Parfume</a><a href='Category.aspx?cat=2&sub=33' target='_blank'><i class='fa fa-bathtub fa6' aria-hidden='true'></i>Gents Skin Care</a><a href='Category.aspx?cat=2&sub=34' target='_blank'><i class='fa fa-chrome fa3' aria-hidden='true'></i>Hair Care</a><a href='Category.aspx?cat=2&sub=35' target='_blank'><i class='fa fa-american-sign-language-interpreting fa7' aria-hidden='true'></i>Skin Care</a><a href='Category.aspx?cat=2&sub=31' target='_blank'><i class='fa fa-envira fa5' aria-hidden='true'></i>Ladies Skin Care</a></div>
+                        <div class='cathead'><i class='fa fa-female fa5' aria-hidden='true'></i><a href='Category.aspx?cat=2' target='_blank'>Health & Nutrition</a></div>
+                        <%--<div class='catsub'><a href='Category.aspx?cat=2&sub=22' target='_blank'><i class='fa fa-heart fa6' aria-hidden='true'></i>Parfume</a><a href='Category.aspx?cat=2&sub=33' target='_blank'><i class='fa fa-bathtub fa6' aria-hidden='true'></i>Gents Skin Care</a><a href='Category.aspx?cat=2&sub=34' target='_blank'><i class='fa fa-chrome fa3' aria-hidden='true'></i>Hair Care</a><a href='Category.aspx?cat=2&sub=35' target='_blank'><i class='fa fa-american-sign-language-interpreting fa7' aria-hidden='true'></i>Skin Care</a><a href='Category.aspx?cat=2&sub=31' target='_blank'><i class='fa fa-envira fa5' aria-hidden='true'></i>Ladies Skin Care</a></div>--%>
                     </div>
                     <div class='catprod fl'>
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Dove Shampoo(Thai) 375ml</h4>
-                                    <h5>Price: 270.00</h5>
-                                    <h5>Deal Code: DD021</h5>
+                                    <h4>Cardy Expart</h4>
+                                    <h5>Price: 1550.00</h5>
+                                    <h5>Deal Code: DD201</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Dove Shampoo(Thailand) 375ml - Price 270.00 - Code DD021.jpg' alt='' />
+                            <img src='ecommerce/ups/Health/Cardy Expart, Price-1550, Deal Code-DD201.jpg' alt='ecommerce/ups/Health/Cardy Expart, Price-1550, Deal Code-DD201 (V).JPG' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -421,12 +421,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Himsagar Oil 350ml</h4>
-                                    <h5>Price: 175.00</h5>
-                                    <h5>Deal Code: DD022</h5>
+                                    <h4>Diabetic Control</h4>
+                                    <h5>Price: 1190.00</h5>
+                                    <h5>Deal Code: DD202</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Himsagar Oil 350ml - Price175.00 - Code DD022.jpg' alt='' />
+                            <img src='ecommerce/ups/Health/Diabetic Control, Price-1190, Deal Code-DD202.jpg' alt='ecommerce/ups/Health/Diabetic Control, Price-1190, Deal Code-DD202 (V).JPG' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -441,12 +441,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Makup Box</h4>
-                                    <h5>Price: 700.00</h5>
-                                    <h5>Deal Code: DD023</h5>
+                                    <h4>Hair Treatment Gold</h4>
+                                    <h5>Price: 950.00</h5>
+                                    <h5>Deal Code: DD203</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Makup Box Price 700.00 - Code DD023.jpg' alt='' />
+                            <img src='ecommerce/ups/Health/Hair Treatment Gold, Price-950, Deal Code-DD203.jpg' alt='ecommerce/ups/Health/Hair Treatment Gold, Price-950, Deal Code-DD203 (V).JPG' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -461,12 +461,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Mashroom Toothpaste</h4>
-                                    <h5>Price: 150.00</h5>
-                                    <h5>Deal Code: DD024</h5>
+                                    <h4>Herbalife Soya Protin</h4>
+                                    <h5>Price: 600.00</h5>
+                                    <h5>Deal Code: DD204</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Mushroom Toothpaste - Price 150.00 - Code DD024.jpg' alt='' />
+                            <img src='ecommerce/ups/Health/Herbalife Soya Protin,  Price- 600, Deal Code-DD204 (F).jpg' alt='ecommerce/ups/Health/Herbalife Soya Protin,  Price- 600, Deal Code-DD204 (V).JPG' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -481,12 +481,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Neem Face Wash</h4>
-                                    <h5>Price: 150.00</h5>
-                                    <h5>Deal Code: DD025</h5>
+                                    <h4>Max Power-100</h4>
+                                    <h5>Price: 1050.00</h5>
+                                    <h5>Deal Code: DD205</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Neem Face Wash 150ml - Price 1760.00 - Code DD025.jpg' alt='' />
+                            <img src='ecommerce/ups/Health/Max Power-100, Price-1050, Deal Code-DD205.jpg' alt='ecommerce/ups/Health/Max Power-100, Price-1050, Deal Code-DD205 (V).JPG' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -501,12 +501,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Ponds Beauty White 250ml</h4>
-                                    <h5>Price: 400.00</h5>
-                                    <h5>Deal Code: DD026</h5>
+                                    <h4>Proteino</h4>
+                                    <h5>Price: 810.00</h5>
+                                    <h5>Deal Code: DD206</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Ponds Beauty White 250ml - Price 400.00 - Code DD026.jpg' alt='' />
+                            <img src='ecommerce/ups/Health/Proteino, Price-810, Deal Code-DD206.jpg' alt='ecommerce/ups/Health/Proteino, Price-810, Deal Code-DD206 (V).JPG' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -521,12 +521,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                <strong>
-                                    <h4>Dove Shampoo(Thai) 375ml</h4>
-                                    <h5>Price: 270.00</h5>
-                                    <h5>Deal Code: DD021</h5>
+                                    <h4>Slim n Fit</h4>
+                                    <h5>Price: 1550.00</h5>
+                                    <h5>Deal Code: DD207</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Dove Shampoo(Thailand) 375ml - Price 270.00 - Code DD021.jpg' alt='' />
+                            <img src='ecommerce/ups/Health/Slim n Fit, Price-1550, Deal Code-DD207.jpg' alt='ecommerce/ups/Health/Slim n Fit, Price-1550, Deal Code-DD207 (V).JPG' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -541,12 +541,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Himsagar Oil 350ml</h4>
-                                    <h5>Price: 175.00</h5>
-                                    <h5>Deal Code: DD022</h5>
+                                    <h4>Total Effect</h4>
+                                    <h5>Price: 750.00</h5>
+                                    <h5>Deal Code: DD208</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Himsagar Oil 350ml - Price175.00 - Code DD022.jpg' alt='' />
+                            <img src='ecommerce/ups/Health/Total Effect, Price-750, Deal Code-DD208.JPG' alt='ecommerce/ups/Health/Total Effect, Price-750, Deal Code-DD208 (V).JPG' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -561,12 +561,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Makup Box</h4>
-                                    <h5>Price: 700.00</h5>
-                                    <h5>Deal Code: DD023</h5>
+                                    <h4>Wait Loss</h4>
+                                    <h5>Price: 1500.00</h5>
+                                    <h5>Deal Code: DD209</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Cosmetic & Beauty Care/Makup Box Price 700.00 - Code DD023.jpg' alt='' />
+                            <img src='ecommerce/ups/Health/Wait Loss, Price-1500, Deal Code-209.JPG' alt='ecommerce/ups/Health/Wait Loss, Price-1500, Deal Code-209 (V).JPG' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -578,7 +578,7 @@
                                 <a href='Product.aspx?pid=61' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
                             </div>
                         </div>
-                        <div class='proditem'>
+                        <%--<div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
                                     <h4>Mashroom Toothpaste</h4>
@@ -637,25 +637,25 @@
                                 </dfn>
                                 <a href='Product.aspx?pid=57' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
                             </div>
-                        </div>
+                        </div>--%>
                     </div>
                     <div class='cb'></div>
                 </div>
                 <div class='category' id="3">
                     <div class='catmenu fl'>
-                        <div class='cathead'><i class='fa fa-user-plus fa1' aria-hidden='true'></i><a href='Category.aspx?cat=3' target='_blank'>Consumer & Daily Needs</a></div>
-                        <div class='catsub'><a href='Category.aspx?cat=3&sub=16' target='_blank'><i class='fa fa-shopping-basket fa6' aria-hidden='true'></i>Masala</a><a href='Category.aspx?cat=3&sub=21' target='_blank'><i class='fa fa-beer fa7' aria-hidden='true'></i>Toiletries</a><a href='Category.aspx?cat=3&sub=23' target='_blank'><i class='fa fa-flask fa6' aria-hidden='true'></i>Cleaning Meterials</a></div>
+                        <div class='cathead'><i class='fa fa-user-plus fa1' aria-hidden='true'></i><a href='Category.aspx?cat=3' target='_blank'>Tour Package</a></div>
+                        <%--<div class='catsub'><a href='Category.aspx?cat=3&sub=16' target='_blank'><i class='fa fa-shopping-basket fa6' aria-hidden='true'></i>Masala</a><a href='Category.aspx?cat=3&sub=21' target='_blank'><i class='fa fa-beer fa7' aria-hidden='true'></i>Toiletries</a><a href='Category.aspx?cat=3&sub=23' target='_blank'><i class='fa fa-flask fa6' aria-hidden='true'></i>Cleaning Meterials</a></div>--%>
                     </div>
                     <div class='catprod fl'>
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Ifad Instant  Noodles- 8pcs  </h4>
-                                    <h5>Price: 125.00</h5>
-                                    <h5>Deal Code: DD017</h5>
+                                    <h4>Daka -  Cox's Bazar  - Dhaka<br/><br/></h4>
+                                    <h5>Price: 7500.00</h5>
+                                    <h5>Deal Code: DD991</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Ifad Instant Noodles 8pcs - Price 125.00 - Code DD017.jpg' alt='' />
+                            <img src='ecommerce/ups/Tour/DHAKA-COX-BAZAR-DHAKA, Price 7500, Deal Code-991.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -670,12 +670,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Dettol Antiseptic Liquid 500ml</h4>
-                                    <h5>Price: 140.00</h5>
-                                    <h5>Deal Code: DD012</h5>
+                                    <h4>Daka - Cox's Bazar - Dhaka<br/><br/></h4>
+                                    <h5>Price: 4850.00</h5>
+                                    <h5>Deal Code: DD992</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Dettol Antiseptic Liquid 500ml - Price 140.00 - Code DD012.jpg' alt='' />
+                            <img src='ecommerce/ups/Tour/DHAKA-COX-BAZAR-DHAKA, Price 4850, Deal Code-992.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -690,12 +690,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Diploma Full Cream Milk Powder 500gm</h4>
-                                    <h5>Price: 280.00</h5>
-                                    <h5>Deal Code: DD013</h5>
+                                    <h4>Daka - Cox's Bazar - Dhaka<br/><br/></h4>
+                                    <h5>Price: 4000.00</h5>
+                                    <h5>Deal Code: DD990</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Diploma Full Cream Milk Powder 500gm - Price 2850.00 - Code DD013.jpg' alt='' />
+                            <img src='ecommerce/ups/Tour/DHAKA-COX-BAZAR-DHAKA, Price 4000, Deal Code-990.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -710,12 +710,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Fresh Refined Sugar 1kg - Price 75.00</h4>
-                                    <h5>Price: 75.00</h5>
-                                    <h5>Deal Code: DD015</h5>
+                                    <h4>Daka - Cox's Bazar - Dhaka<br/><br/></h4>
+                                    <h5>Price: 3150.00</h5>
+                                    <h5>Deal Code: DD993</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Fresh Refined Ssugar 1kg - Price 75.00 - Code DD015.jpg' alt='' />
+                            <img src='ecommerce/ups/Tour/DHAKA-COX-BAZAR-DHAKA, Price 3150, Deal Code-993.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -730,12 +730,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Fresh Soyabean Oil 5ltr  </h4>
-                                    <h5>Price: 505.00</h5>
-                                    <h5>Deal Code: DD014</h5>
+                                    <h4>Dhaka-Cox's-St.Martin-Dhaka</h4>
+                                    <h5>Price: 5500.00</h5>
+                                    <h5>Deal Code: DD994</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Fresh Soyabean Oil 5ltr - Price 505.00 - Code DD014.jpg' alt='' />
+                            <img src='ecommerce/ups/Tour/DHAKA - COX-BAZAR - SAINTMARTIN- DHAKA, Price 5500, Deal Code-994.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -750,12 +750,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Ispahani Mirzapore Tea 400gm</h4>
-                                    <h5>Price: 160.00</h5>
-                                    <h5>Deal Code: DD11</h5>
+                                    <h4>Dhaka-Cox's-St.Martin-Dhaka</h4>
+                                    <h5>Price: 6250.00</h5>
+                                    <h5>Deal Code: DD995</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Ispahani Mirzapore Tea 400gm Price 160.00 - Code DD011.jpg' alt='' />
+                            <img src='ecommerce/ups/Tour/DHAKA - COX-BAZAR - SAINTMARTIN- DHAKA, Price 6250, Deal Code-995.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -770,12 +770,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h4>Nestle Nescafe Classic Coffee Jar 100gm</h4>
-                                    <h5>Price: 2800.00</h5>
-                                    <h5>Deal Code: DD016</h5>
+                                    <h4>Dhaka -Khagrachori- Dhaka<br/></h4>
+                                    <h5>Price: 4900.00</h5>
+                                    <h5>Deal Code: DD996</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Nestle Nescafe Classic Instant Coffee Jar 100gm - Price - 2800.00 - Code DD016.jpg' alt='' />
+                            <img src='ecommerce/ups/Tour/DHAKA - KHAGRACHORI - DHAKA, Price 4900, Deal Code-996.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -787,15 +787,15 @@
                                 <a href='Product.aspx?pid=44' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
                             </div>
                         </div>
-<%--                        <div class='proditem'>
+                        <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Oral-B Tooth Brash</h3>
-                                    <h5>Price: 0.00</h5>
-                                    <h5>Deal Code: DC000</h5>
+                                    <h4>Dhaka - Kuakata - Dhaka<br/></h4>
+                                    <h5>Price: 5000.00</h5>
+                                    <h5>Deal Code: DD997</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Nestle Nescafe Classic Instant Coffee Jar 100gm - Price - 2800.00 - Code DD016.jpg' alt='' />
+                            <img src='ecommerce/ups/Tour/DHAKA - KUAKATA - DHAKA, Price-5000, Deal Code-997.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -810,12 +810,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Vim Bar</h3>
-                                    <h5>Price: 0.00</h5>
-                                    <h5>Deal Code: DC100</h5>
+                                    <h4>Dhaka - Sylhet - Dhaka<br/><br/></h4>
+                                    <h5>Price: 2000.00</h5>
+                                    <h5>Deal Code: DD998</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Consumer & Daily Needs/Dettol Antiseptic Liquid 500ml - Price 140.00 - Code DD012.jpg' alt='' />
+                            <img src='ecommerce/ups/Tour/DHAKA - SYLET - DHAKA, Price 2000, Deal Code-998.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -827,7 +827,8 @@
                                 <a href='Product.aspx?pid=42' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
                             </div>
                         </div>
-                        <div class='proditem'>
+
+                       <%-- <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
                                     <h3>Family Needs</h3>
@@ -1012,19 +1013,19 @@
                 </div>
                 <div class='category' id="4">
                     <div class='catmenu fl'>
-                        <div class='cathead'><i class='fa fa-ambulance fa6' aria-hidden='true'></i><a href='Category.aspx?cat=5' target='_blank'>Health & Nutrition</a></div>
-                        <div class='catsub'><a href='Category.aspx?cat=5&sub=17' target='_blank'><i class='fa fa-coffee fa4' aria-hidden='true'></i>Beverage</a><a href='Category.aspx?cat=5&sub=19' target='_blank'><i class='fa fa-apple fa9' aria-hidden='true'></i>Fruits</a><a href='Category.aspx?cat=5&sub=20' target='_blank'><i class='fa fa-reddit-alien fa6' aria-hidden='true'></i>Foods</a><a href='Category.aspx?cat=5&sub=24' target='_blank'><i class='fa fa-angellist fa3' aria-hidden='true'></i>Food Suppliment</a><a href='Category.aspx?cat=5&sub=37' target='_blank'><i class='fa fa-beer fa4' aria-hidden='true'></i>Juice</a><a href='Category.aspx?cat=5&sub=29' target='_blank'><i class='fa fa-child fa5' aria-hidden='true'></i>Fitness</a></div>
+                        <div class='cathead'><i class='fa fa-ambulance fa6' aria-hidden='true'></i><a href='Category.aspx?cat=5' target='_blank'>Special Product</a></div>
+                        <%--<div class='catsub'><a href='Category.aspx?cat=5&sub=17' target='_blank'><i class='fa fa-coffee fa4' aria-hidden='true'></i>Beverage</a><a href='Category.aspx?cat=5&sub=19' target='_blank'><i class='fa fa-apple fa9' aria-hidden='true'></i>Fruits</a><a href='Category.aspx?cat=5&sub=20' target='_blank'><i class='fa fa-reddit-alien fa6' aria-hidden='true'></i>Foods</a><a href='Category.aspx?cat=5&sub=24' target='_blank'><i class='fa fa-angellist fa3' aria-hidden='true'></i>Food Suppliment</a><a href='Category.aspx?cat=5&sub=37' target='_blank'><i class='fa fa-beer fa4' aria-hidden='true'></i>Juice</a><a href='Category.aspx?cat=5&sub=29' target='_blank'><i class='fa fa-child fa5' aria-hidden='true'></i>Fitness</a></div>--%>
                     </div>
                     <div class='catprod fl'>
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Toxin Cleanser</h3>
-                                    <h5>Price: 6250.00</h5>
-                                    <h5>Deal Code: DH326</h5>
+                                    <h4>Bio Energy Card<br/><br/></h4>
+                                    <h5>Price: 650.00</h5>
+                                    <h5>Deal Code: DD501</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Health & Nutrition/Chaban Prash - Price 300.00 - Code DD061.jpg' alt='' />
+                            <img src='ecommerce/ups/Special/Bio Energy Card, Price-650, Deal Coad-501.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1039,12 +1040,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Toxin Cleanser</h3>
-                                    <h5>Price: 6250.00</h5>
-                                    <h5>Deal Code: DH326</h5>
+                                    <h4>Digital Therapy Mechine</h4>
+                                    <h5>Price: 1000.00</h5>
+                                    <h5>Deal Code: DD502</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Health & Nutrition/Herbalife 250gr - Price 500.00 - Code DD062.jpg' alt='' />
+                            <img src='ecommerce/ups/Special/Digital Therapy Mechine, Price-1000, Deal Coad-502.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1059,12 +1060,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>FAIR & LOVE (Green)</h3>
-                                    <h5>Price: 7950.00</h5>
-                                    <h5>Deal Code: DH318</h5>
+                                    <h4>Electronic Pest Repellent<br/><br/></h4>
+                                    <h5>Price: 950.00</h5>
+                                    <h5>Deal Code: DD503</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Health & Nutrition/Kalozira Oil 250ml - Price 400.00 - Code DD063.jpg' alt='' />
+                            <img src='ecommerce/ups/Special/Electronic Pest Repellent, Price-950, Deal Coad-503.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1079,12 +1080,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Grace Queen</h3>
-                                    <h5>Price: 1490.00</h5>
-                                    <h5>Deal Code: DH324</h5>
+                                    <h4>Radiation-Chip<br/><br/><br/></h4>
+                                    <h5>Price: 690.00</h5>
+                                    <h5>Deal Code: DD504</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Health & Nutrition/Soya Protein - Price 450.00 - Code DD064.jpg' alt='' />
+                            <img src='ecommerce/ups/Special/RADIATION-CHIP, Price-690, Deal Coad-504.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1099,12 +1100,12 @@
                         <div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
-                                    <h3>Spirulina</h3>
-                                    <h5>Price: 1290.00</h5>
-                                    <h5>Deal Code: DH323</h5>
+                                    <h4>Toxin Cleanser<br/><br/><br/></h4>
+                                    <h5>Price: 700.00</h5>
+                                    <h5>Deal Code: DD505</h5>
                                 </strong>
                             </div>
-                            <img src='ecommerce/ups/p/Health & Nutrition/Toxin Cleanser - Price 650.00 - Code DD065.jpg' alt='' />
+                            <img src='ecommerce/ups/Special/Toxin Cleanser, Price-700, Deal Coad-505.jpg' alt='' />
                             <div class='a2ca'>
                                 <dfn>
                                     <div>Add To Shopping Bag</div>
@@ -1114,30 +1115,30 @@
                                     <div class='cb'><i class='fa fa-shopping-basket'></i></div>
                                 </dfn>
                                 <a href='Product.aspx?pid=95' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
+                            </div>
+                        </div>
+                        <div class='proditem'>
+                            <div class='a2ca'>
+                                <strong>
+                                    <h4>Water Purifier<br/><br/><br/></h4>
+                                    <h5>Price: 1150.00</h5>
+                                    <h5>Deal Code: DD506</h5>
+                                </strong>
+                            </div>
+                            <img src='ecommerce/ups/Special/Water Purifier, Price-1150, Deal Coad-506.jpg' alt='' />
+                            <div class='a2ca'>
+                                <dfn>
+                                    <div>Add To Shopping Bag</div>
+                                    <div class='fl icocart' onclick='_a2c(26-1)' title='Remove From Shopping Bag'><i class='fa fa-minus-square'></i></div>
+                                    <div class='fl icocartq' id='cartqty26'>0</div>
+                                    <div class='fr icocart' onclick='_a2c(261)' title='Add To Shopping Bag'><i class='fa fa-plus-square'></i></div>
+                                    <div class='cb'><i class='fa fa-shopping-basket'></i></div>
+                                </dfn>
+                                <a href='Product.aspx?pid=26' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
                             </div>
                         </div>
 
-                        <div class='proditem'>
-                            <div class='a2ca'>
-                                <strong>
-                                    <h3>Toxin Cleanser</h3>
-                                    <h5>Price: 6250.00</h5>
-                                    <h5>Deal Code: DH326</h5>
-                                </strong>
-                            </div>
-                            <img src='ecommerce/ups/p/Health & Nutrition/Chaban Prash - Price 300.00 - Code DD061.jpg' alt='' />
-                            <div class='a2ca'>
-                                <dfn>
-                                    <div>Add To Shopping Bag</div>
-                                    <div class='fl icocart' onclick='_a2c(26-1)' title='Remove From Shopping Bag'><i class='fa fa-minus-square'></i></div>
-                                    <div class='fl icocartq' id='cartqty26'>0</div>
-                                    <div class='fr icocart' onclick='_a2c(261)' title='Add To Shopping Bag'><i class='fa fa-plus-square'></i></div>
-                                    <div class='cb'><i class='fa fa-shopping-basket'></i></div>
-                                </dfn>
-                                <a href='Product.aspx?pid=26' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
-                            </div>
-                        </div>
-                        <div class='proditem'>
+                        <%--<div class='proditem'>
                             <div class='a2ca'>
                                 <strong>
                                     <h3>Toxin Cleanser</h3>
@@ -1216,12 +1217,12 @@
                                 </dfn>
                                 <a href='Product.aspx?pid=95' target='_blank' title='View Details'><i class='fa fa-external-link-square'></i>View Details</a>
                             </div>
-                        </div>
+                        </div>--%>
 
                     </div>
                     <div class='cb'></div>
                 </div>
-                <div class='category' id="5">
+                <%--<div class='category' id="5">
                     <div class='catmenu fl'>
                         <div class='cathead'><i class='fa fa-male fa1' aria-hidden='true'></i><a href='Category.aspx?cat=27' target='_blank'>Gents Gallery</a></div>
                         <div class='catsub'><a href='Category.aspx?cat=27&sub=38' target='_blank'><i class='fa fa-briefcase fa3' aria-hidden='true'></i>Professional Goods</a><a href='Category.aspx?cat=27&sub=28' target='_blank'><i class='fa fa-columns fa5' aria-hidden='true'></i>Leather Goods</a></div>
@@ -1680,7 +1681,7 @@
                         </div>
                     </div>
                     <div class='cb'></div>
-                </div>
+                </div>--%>
             </div>
             <script type="text/javascript" src="js/cart.js">
             </script>
@@ -1694,9 +1695,9 @@
                     <span class="texth fl">Delight Discount</span>
                     <div class="textopt fl">
                         <a id="ctl00_HyperLink1" href="Default.aspx">Home</a>|
-                    <a id="ctl00_HyperLink12" href="su/Login.aspx" target="_blank">Login</a>|
+                    <a id="ctl00_HyperLink12" href="Login.aspx" target="_blank">Login</a>|
                     <a id="ctl00_HyperLink2" href="About.aspx">About Us</a>|
-                    <a id="ctl00_HyperLink3" href="FAQ.aspx">FAQ</a>|
+                    <a id="ctl00_HyperLink3" href="#">FAQ</a>|
                     <a id="ctl00_HyperLink9" href="Contact.aspx">Contact Us</a>|
                     <a id="ctl00_HyperLink4" href="http://www.DelightDiscount.com">How to buy</a>
                     </div>
@@ -1708,7 +1709,7 @@
                     <a id="ctl00_HyperLink6" href="http://www.DelightDiscount.com">Refund policy</a>
                     </div>
                 </div>
-                <div class="text fl">
+                <%--<div class="text fl">
                     <span class="texth fl">How to pay</span>
                     <div class="textopt fl">
                         <a href="http://www.DelightDiscount.com">
@@ -1731,7 +1732,7 @@
                             <img id="ctl00_Image16" alt="amex" src="Images/amex.png" style="border-width: 0px; height: 34px" />
                         </a>
                     </div>
-                </div>
+                </div>--%>
             </div>
             <div id="footerr" class="fr">
                 <div class="textopt">

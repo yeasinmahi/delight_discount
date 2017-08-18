@@ -37,7 +37,7 @@ namespace DelightDiscount.Admin
                 {
                     checkUser.Password = password;
                     db.SaveChanges();
-                    userLiteral.Text = "User information updated successfully.";
+                    userLiteral.Text = "<span style='color:#3C763D;background-color: #DFF0D8'>User information updated successfully.";
                     GetAllUser();
                 }
             }

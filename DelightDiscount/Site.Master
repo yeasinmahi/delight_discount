@@ -67,6 +67,7 @@
                                             <li><a href="../Admin/RegistrationUI.aspx">User Registration</a></li>
                                             <li><a href="../Admin/UserList.aspx">User List</a></li>
                                             <li><a href="../Admin/TransactionApprove.aspx">Transaction Approve</a></li>
+                                            <li><a href="../Admin/LevelWiseList.aspx">Level Income Distribute</a></li>
                                         </ul>
                                     </li>
                                     <%-- <li>
