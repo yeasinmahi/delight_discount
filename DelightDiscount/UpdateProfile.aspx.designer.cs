@@ -10,132 +10,132 @@
 namespace DelightDiscount {
     
     
-    public partial class Profile {
+    public partial class UpdateProfile {
         
         /// <summary>
-        /// plProductImg control.
+        /// cidText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder plProductImg;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText cidText;
         
         /// <summary>
-        /// editButton control.
+        /// nameText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button editButton;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText nameText;
         
         /// <summary>
-        /// fullNameLabel control.
+        /// mobileText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fullNameLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText mobileText;
         
         /// <summary>
-        /// presentAddressLabel control.
+        /// emailText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl presentAddressLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText emailText;
         
         /// <summary>
-        /// permanentAddressLabel control.
+        /// presentAddressTextarea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl permanentAddressLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea presentAddressTextarea;
         
         /// <summary>
-        /// emailLabel control.
+        /// parmanentAddressTextarea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl emailLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea parmanentAddressTextarea;
         
         /// <summary>
-        /// mobileLabel control.
+        /// mainImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mobileLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlImage mainImage;
         
         /// <summary>
-        /// nomineeLabel control.
+        /// mainImageFileUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl nomineeLabel;
+        protected global::System.Web.UI.WebControls.FileUpload mainImageFileUpload;
         
         /// <summary>
-        /// relationLabel control.
+        /// nomineeNameText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl relationLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText nomineeNameText;
         
         /// <summary>
-        /// nomineePhoneLabel control.
+        /// relationText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl nomineePhoneLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText relationText;
         
         /// <summary>
-        /// sponsorLabel control.
+        /// nomineePhoneText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl sponsorLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText nomineePhoneText;
         
         /// <summary>
-        /// businessLevelLabel control.
+        /// passwordText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl businessLevelLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword passwordText;
         
         /// <summary>
-        /// traBalanceLabel control.
+        /// updateButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl traBalanceLabel;
+        protected global::System.Web.UI.WebControls.Button updateButton;
         
         /// <summary>
-        /// activeBalanceLabel control.
+        /// userLiterel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl activeBalanceLabel;
+        protected global::System.Web.UI.WebControls.Literal userLiterel;
     }
 }

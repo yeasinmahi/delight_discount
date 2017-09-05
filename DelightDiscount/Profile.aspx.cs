@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Web.Services.Protocols;
 
 namespace DelightDiscount
 {
@@ -34,38 +35,50 @@ namespace DelightDiscount
                     relationLabel.InnerText = getAll.Relation;
                     nomineePhoneLabel.InnerText = getAll.NomineeMobile;
                     sponsorLabel.InnerText = count.ToString();
-                    if (count<10)
+                    var getLevel = from c in db.tbl_LevelCount
+                        where c.CID == userInfo.CID && c.IsComplete == "Y"
+                        select new{c.LevelStatus};
+                    if ( getLevel.Any())
                     {
-                        businessLevelLabel.InnerText = "Level-0";
-                    }
-                    else if (count>=10 && count<100)
-                    {
-                        businessLevelLabel.InnerText = "Level-1";
-                    }
-                    else if (count>=100 && count<1000)
-                    {
-                        businessLevelLabel.InnerText = "Level-2";
-                    }
-                    else if (count >= 1000 && count < 10000)
-                    {
-                        businessLevelLabel.InnerText = "Level-3";
-                    }
-                    else if (count >= 10000 && count < 100000)
-                    {
-                        businessLevelLabel.InnerText = "Level-4";
-                    }
-                    else if (count >= 100000 && count < 1000000)
-                    {
-                        businessLevelLabel.InnerText = "Level-5";
-                    }
-                    else if (count >= 1000000 && count < 10000000)
-                    {
-                        businessLevelLabel.InnerText = "Level-6";
+                        int result = (int)getLevel.Max(element => element.LevelStatus);
+                        if (getLevel.FirstOrDefault() != null)
+                        {
+                            businessLevelLabel.InnerText = "Level-" + result;
+                        }
                     }
                     else
                     {
-                        businessLevelLabel.InnerText = "Level-7";
+                        businessLevelLabel.InnerText = "Level-0";
                     }
+                    
+                    //else if (count>=10 && count<100)
+                    //{
+                    //    businessLevelLabel.InnerText = "Level-1";
+                    //}
+                    //else if (count>=100 && count<1000)
+                    //{
+                    //    businessLevelLabel.InnerText = "Level-2";
+                    //}
+                    //else if (count >= 1000 && count < 10000)
+                    //{
+                    //    businessLevelLabel.InnerText = "Level-3";
+                    //}
+                    //else if (count >= 10000 && count < 100000)
+                    //{
+                    //    businessLevelLabel.InnerText = "Level-4";
+                    //}
+                    //else if (count >= 100000 && count < 1000000)
+                    //{
+                    //    businessLevelLabel.InnerText = "Level-5";
+                    //}
+                    //else if (count >= 1000000 && count < 10000000)
+                    //{
+                    //    businessLevelLabel.InnerText = "Level-6";
+                    //}
+                    //else
+                    //{
+                    //    businessLevelLabel.InnerText = "Level-7";
+                    //}
                     var getAllIncome = (from z in db.tbl_UserAccount
                                         where z.CID == cid
                                         select new { z.DatDate, z.Amount, z.TranCID, z.DebitCredit }).ToList();
@@ -92,6 +105,11 @@ namespace DelightDiscount
 
 
             }
+        }
+
+        protected void editButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UpdateProfile.aspx");
         }
     }
 }

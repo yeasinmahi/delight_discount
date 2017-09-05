@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistrationUI.aspx.cs" Inherits="DelightDiscount.Admin.RegistrationUI" EnableEventValidation="false"%>
+﻿<%@ Page Title="Registration" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistrationUI.aspx.cs" Inherits="DelightDiscount.Admin.RegistrationUI" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 
@@ -12,7 +12,7 @@
     <script src="../Scripts/jquery.min.js"></script>
     <script src="../Scripts/jquery.validate.min.js"></script>
     <script src="../Scripts/bootstrap-datepicker.min.js"></script>
-   <%-- <script>
+    <%-- <script>
         $("#MainContent_checkButton").click(function () {
 
             var refId = $("#MainContent_referenceCidText");
@@ -50,14 +50,14 @@
     <div class="col-sm-12">
         <div class="panel panel-primary" style="margin-top: 12px; text-align: center">
             <div class="panel-heading">
-               <h4>User Registration</h4>
+                <h4>User Registration</h4>
             </div>
             <div class="panel-body">
                 <div class="form-horizontal">
 
                     <div class="row">
                         <%--<div class="col-sm-12">--%>
-                         <fieldset style="margin-top: 10px">
+                        <fieldset style="margin-top: 10px">
                             <legend><b>Business Information
                             </b></legend>
                             <div class="form-group">
@@ -68,9 +68,9 @@
                                 </div>
                                 <div class="col-sm-1">
                                     <br />
-                                   <%-- OnClick="checkButton_Click"--%>
-                                   <%-- <button type="button" id="checkButton" class="btn btn-sm btn-success">Check</button>--%>
-                                    <asp:Button ID="checkButton" runat="server" class="btn btn-primary" Text="Check" OnClick="checkButton_Click"/>
+                                    <%-- OnClick="checkButton_Click"--%>
+                                    <%-- <button type="button" id="checkButton" class="btn btn-sm btn-success">Check</button>--%>
+                                    <asp:Button ID="checkButton" runat="server" class="btn btn-primary" Text="Check" OnClick="checkButton_Click" />
                                 </div>
                                 <div class=" col-sm-3">
                                     <label>Placement CID & Position<span style="color: red">*</span></label>
@@ -88,7 +88,7 @@
                                 </div>
                             </div>
 
-                            
+
                         </fieldset>
                         <fieldset>
                             <legend><b>
@@ -97,7 +97,7 @@
                             <div class="col-sm-9">
                                 <div class=" col-sm-4">
                                     <label for="cidText">CID<span style="color: red">*</span></label>
-                                    <input type="text" runat="server" class="form-control input-sm" id="cidText" placeholder="Like:-DD00001" />
+                                    <input type="text" runat="server" class="form-control input-sm" id="cidText" placeholder="Like:-DD000001" />
                                 </div>
                                 <div class=" col-sm-4">
                                     <label>Full Name<span style="color: red">*</span></label>
@@ -123,20 +123,17 @@
                             </div>
                             <div class="col-sm-3">
                                 <div class=" col-sm-12">
-                                <div class="imgDiv" id="imgDivC">
-                                    <img id="mainImage" runat="server" class="img img-thumbnail img-responsive" src="~/Images/user.png" style="width: 150px;height: 150px"/>
-                                    <asp:FileUpload ID="mainImageFileUpload" runat="server" CssClass="imageUploadBtn" />
+                                    <div class="imgDiv" id="imgDivC">
+                                        <img id="mainImage" runat="server" class="img img-thumbnail img-responsive" src="~/Images/user.png" style="width: 150px; height: 150px" />
+                                        <asp:FileUpload ID="mainImageFileUpload" runat="server" CssClass="imageUploadBtn" />
+                                    </div>
                                 </div>
-                            </div>
                             </div>
 
                             <%-- <div class=" col-sm-3">
                                 <label>User Name<span style="color: red">*</span></label>
                                 <input type="text" runat="server" class="form-control input-sm" id="userNameText" />
                             </div>--%>
-
-                            
-
                         </fieldset>
                         <fieldset style="margin-top: 10px">
                             <legend><b>Nominee's Information
@@ -157,9 +154,9 @@
                                 <br />
                                 <asp:Button ID="saveButton" runat="server" class="btn btn-success" Text="Save" OnClick="saveButton_Click" />
                             </div>
-                             <div class="col-sm-1">
+                            <div class="col-sm-1">
                                 <br />
-                                <asp:Button ID="clearButton" runat="server" class="btn btn-danger" Text="Clear" OnClick="clearButton_Click"  />
+                                <asp:Button ID="clearButton" runat="server" class="btn btn-danger" Text="Clear" OnClick="clearButton_Click" />
                             </div>
                             <div class="col-sm-10">
                                 <br />
@@ -167,7 +164,7 @@
                                 <br />
                             </div>
                         </fieldset>
-                       
+
 
 
                     </div>

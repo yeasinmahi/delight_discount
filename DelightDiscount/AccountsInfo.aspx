@@ -20,7 +20,7 @@
                 <div class="form-horizontal">
 
                     <div class="row">
-                        <div class=" col-sm-4" style="border: 10px solid #F2DEDE; padding: 5px; height: 130px; background-color: #DFF0D8;">
+                        <div class=" col-sm-4" style="border: 10px solid #F2DEDE; padding: 5px; height: 280px; background-color: #DFF0D8;">
                             <div class="col-lg-4">
                                 <img src='Images/img.jpg' alt='' style="height: 100px; width: 100px" />
                             </div>
@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4" style="border: 10px solid #F2DEDE; padding: 5px; height: 130px; background-color: #D9EDF7;">
+                        <div class="col-sm-4" style="border: 10px solid #F2DEDE; padding: 5px; height: 280px; background-color: #D9EDF7;">
                             <div class=" col-sm-6" style="text-align: right">
                                 <label>Spot Income:</label>
                             </div>
@@ -58,8 +58,14 @@
                             <div class=" col-sm-6" style="text-align: left">
                                 <label runat="server" id="rewardLabel"></label>
                             </div>
+                            <div class=" col-sm-6" style="text-align: right">
+                                <label>Generation Income:</label>
+                            </div>
+                            <div class=" col-sm-6" style="text-align: left">
+                                <label runat="server" id="generationLabel"></label>
+                            </div>
                         </div>
-                        <div class=" col-sm-4" style="border: 10px solid #F2DEDE; padding: 5px; height: 130px; background-color: #D9EDF7;">
+                        <div class=" col-sm-4" style="border: 10px solid #F2DEDE; padding: 5px; height: 280px; background-color: #D9EDF7;">
                             <div class=" col-sm-6" style="text-align: right">
                                 <label>Total Income:</label>
                             </div>

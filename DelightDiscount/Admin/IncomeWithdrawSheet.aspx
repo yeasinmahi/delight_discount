@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UserList.aspx.cs" Inherits="DelightDiscount.Admin.UserList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="IncomeWithdrawSheet.aspx.cs" Inherits="DelightDiscount.Admin.IncomeWithdrawSheet" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <link href="../Content/bootstrap-datepicker.min.css" rel="stylesheet" />
@@ -16,16 +16,28 @@
     <div class="col-sm-12">
         <div class="panel panel-primary" style="margin-top: 12px; text-align: center">
             <div class="panel-heading">
-                Registered User List
+                Income/Withdraw Statement
             </div>
             <div class="panel-body">
                 <div class="form-horizontal">
                     <div class="row">
+                        <div class="col-sm-12" style="margin-bottom: 5px">
+                            <div class="col-sm-4">
+                                <label>CID<span style="color: red">*</span></label>
+                                    <input type="text" runat="server" class="form-control input-sm" id="cidText" />
+                            </div>
+                            <div class="col-sm-4"><br/>
+                                <asp:Button ID="showButton" runat="server" class="btn btn-info" Text="Statement of CID" OnClick="showButton_Click" />
+                            </div>
+                            <div class="col-sm-4"><br/>
+                                <asp:Button ID="oppositeCidButton" runat="server" class="btn btn-warning" Text="Income Againest a CID" OnClick="oppositeCidButton_Click" />
+                            </div>
+                        </div>
                         <div class="col-sm-12">
                             <div style="border: 1px solid #ededed; padding: 5px; height: 560px; overflow-y: auto;">
                                 <div class="col-lg-12">
                                     <%--OnSelectedIndexChanged="itemGridView_SelectedIndexChanged" OnRowDataBound="ItemOnRowDataBound"--%>
-                                    <asp:GridView ID="userGridView" runat="server" UseAccessibleHeader="true"
+                                    <asp:GridView ID="userAccountGridView" runat="server" UseAccessibleHeader="true"
                                         CssClass="table-hover table-striped table table-bordered" GridLines="None"
                                         AutoGenerateColumns="False">
                                         <Columns>
@@ -39,46 +51,34 @@
                                                     <asp:Label ID="idLabel" runat="server" Text='<%# Eval("CID") %>'></asp:Label>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Name">
+                                            <asp:TemplateField HeaderText="Date">
                                                 <ItemTemplate>
-                                                    <asp:Label ID="nameLabel" runat="server" Text='<%# Eval("FullName") %>'></asp:Label>
+                                                    <asp:Label ID="nameLabel" runat="server" Text='<%# Eval("DatDate","{0:dd-MMM-yyyy}") %>'></asp:Label>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Email">
+                                            <asp:TemplateField HeaderText="Type">
                                                 <ItemTemplate>
-                                                    <asp:Label ID="emailLabel" runat="server" Text='<%# Eval("EmailAddress") %>'></asp:Label>
+                                                    <asp:Label ID="emailLabel" runat="server" Text='<%# Eval("TypeName") %>'></asp:Label>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Mobile">
+                                            <asp:TemplateField HeaderText="Opposite CID">
                                                 <ItemTemplate>
-                                                    <asp:Label ID="mobileLabel" runat="server" Text='<%# Eval("Mobile") %>'></asp:Label>
+                                                    <asp:Label ID="mobileLabel" runat="server" Text='<%# Eval("TranCID") %>'></asp:Label>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Reference CID">
+                                            <asp:TemplateField HeaderText="Amount">
                                                 <ItemTemplate>
-                                                    <asp:Label ID="refCidLabel" runat="server" Text='<%# Eval("ReferenceCid") %>'></asp:Label>
+                                                    <asp:Label ID="refCidLabel" runat="server" Text='<%# Eval("Amount") %>'></asp:Label>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Password">
-                                                <ItemTemplate>
-                                                    <asp:TextBox ID="passwordTextBox" runat="server" CssClass="form-control input-sm" Text='<%# Eval("Password") %>'></asp:TextBox>
-
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
+                                           
                                         </Columns>
                                         <HeaderStyle CssClass="GridviewScrollHeader" />
                                         <RowStyle CssClass="GridviewScrollItem" />
                                         <PagerStyle CssClass="GridviewScrollPager" />
                                     </asp:GridView>
                                 </div>
-
                             </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <asp:Button ID="saveButton" runat="server" class="btn btn-success" Text="Save" OnClick="saveButton_Click" />
-                        </div>
-                        <div class="col-lg-10" style="text-align: left">
-                            <asp:Literal ID="userLiteral" runat="server" Text="_"> </asp:Literal>
                         </div>
                     </div>
                 </div>

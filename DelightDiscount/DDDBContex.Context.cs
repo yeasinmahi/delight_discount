@@ -36,5 +36,6 @@ namespace DelightDiscount
         public virtual DbSet<tbl_UserLevel> tbl_UserLevel { get; set; }
         public virtual DbSet<tbl_LevelIncomePaid> tbl_LevelIncomePaid { get; set; }
         public virtual DbSet<tbl_LevelCount> tbl_LevelCount { get; set; }
+        public virtual DbSet<tbl_TransactionType> tbl_TransactionType { get; set; }
     }
 }

@@ -80,6 +80,13 @@
           <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LocationName" Type="varchar" MaxLength="500" />
         </EntityType>
+        <EntityType Name="tbl_TransactionType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeName" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="tbl_UserAccount">
           <Key>
             <PropertyRef Name="Id" />
@@ -162,6 +169,7 @@
           <EntitySet Name="tbl_Operator" EntityType="Self.tbl_Operator" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_ShopInfo" EntityType="Self.tbl_ShopInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_ShopLocation" EntityType="Self.tbl_ShopLocation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_TransactionType" EntityType="Self.tbl_TransactionType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_UserAccount" EntityType="Self.tbl_UserAccount" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_UserInfo" EntityType="Self.tbl_UserInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_UserLevel" EntityType="Self.tbl_UserLevel" Schema="dbo" store:Type="Tables" />
@@ -183,6 +191,7 @@
           <EntitySet Name="tbl_UserLevel" EntityType="DDDBModel.tbl_UserLevel" />
           <EntitySet Name="tbl_LevelIncomePaid" EntityType="DDDBModel.tbl_LevelIncomePaid" />
           <EntitySet Name="tbl_LevelCount" EntityType="DDDBModel.tbl_LevelCount" />
+          <EntitySet Name="tbl_TransactionType" EntityType="DDDBModel.tbl_TransactionType" />
         </EntityContainer>
         <EntityType Name="tbl_Operator">
           <Key>
@@ -332,6 +341,13 @@
           <Property Name="LevelStatus" Type="Int32" />
           <Property Name="IsComplete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IsPaid" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_TransactionType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -495,6 +511,14 @@
                 <ScalarProperty Name="LevelStatus" ColumnName="LevelStatus" />
                 <ScalarProperty Name="TotalSpot" ColumnName="TotalSpot" />
                 <ScalarProperty Name="CID" ColumnName="CID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_TransactionType">
+            <EntityTypeMapping TypeName="DDDBModel.tbl_TransactionType">
+              <MappingFragment StoreEntitySet="tbl_TransactionType">
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

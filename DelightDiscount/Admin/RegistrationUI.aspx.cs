@@ -23,7 +23,14 @@ namespace DelightDiscount.Admin
 
         protected void saveButton_Click(object sender, EventArgs e)
         {
-            SaveInfo();
+            if (cidText.Value.Trim().Length==8)
+            {
+                SaveInfo();
+            }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('CID must be 8 digit length and like (DD******)')", true);
+            }
         }
 
         protected void SaveInfo()
@@ -117,7 +124,7 @@ namespace DelightDiscount.Admin
                         db.SaveChanges();
                     }
 
-
+                    ProvideGenerationBonus();
                     MailMessage Msg = new MailMessage();
                     Msg.From = new MailAddress("info@delightdiscount.com", "Delight Discount");
                     Msg.To.Add(emailText.Value);
@@ -235,6 +242,7 @@ namespace DelightDiscount.Admin
 
         protected void clearButton_Click(object sender, EventArgs e)
         {
+            //ProvideGenerationBonus();
             ClearPage();
         }
 
@@ -262,6 +270,55 @@ namespace DelightDiscount.Admin
         //    return s;
         //}
 
-        
+        public void ProvideGenerationBonus()
+        {
+            var getPid = db.tbl_UserSpotTrack.FirstOrDefault(z => z.CID == referenceCidText.Value);
+            if (getPid!=null)
+            {
+                string pid = getPid.PID.Remove(getPid.PID.Length-1);
+                int generation = 1;
+                for (int i = pid.Length; i > 0; i--)
+                {
+                    if (generation<6)
+                    {
+                        tbl_UserAccount userAccount = new tbl_UserAccount();
+                        var getCid = db.tbl_UserSpotTrack.FirstOrDefault(z => z.PID == pid);
+                        if (getCid != null)
+                        {
+                            //userAccount.UserId = GenarateUserId();
+                            userAccount.CID = getCid.CID;
+                            userAccount.DatDate = DateTime.Now.Date;
+                            userAccount.TranType = 5;//Generation Income ID=5
+                            userAccount.TranCID = referenceCidText.Value.Trim();
+                            if (generation == 1)
+                            {
+                                userAccount.Amount = 10;
+                            }
+                            else if (generation == 2)
+                            {
+                                userAccount.Amount = 8;
+                            }
+                            else if (generation == 3)
+                            {
+                                userAccount.Amount = 6;
+                            }
+                            else if (generation == 4)
+                            {
+                                userAccount.Amount = 4;
+                            }
+                            else if (generation == 5)
+                            {
+                                userAccount.Amount = 2;
+                            }
+                            userAccount.DebitCredit = "Credit";
+                            db.tbl_UserAccount.Add(userAccount);
+                            db.SaveChanges();
+                            pid = pid.Remove(pid.Length - 1);
+                            generation += 1;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -141,6 +141,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AccountsInfo.aspx" />
+    <Content Include="Admin\IncomeWithdrawSheet.aspx" />
     <Content Include="Admin\LevelWiseList.aspx" />
     <Content Include="Admin\TransactionApprove.aspx" />
     <Content Include="Admin\UserList.aspx" />
@@ -484,6 +485,7 @@
     <Content Include="Admin\RegistrationUI.aspx" />
     <Content Include="Admin\ShopEntry.aspx" />
     <Content Include="SPJoypurhat.aspx" />
+    <Content Include="UpdateProfile.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -558,6 +560,13 @@
     </Compile>
     <Compile Include="AccountsInfo.aspx.designer.cs">
       <DependentUpon>AccountsInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IncomeWithdrawSheet.aspx.cs">
+      <DependentUpon>IncomeWithdrawSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IncomeWithdrawSheet.aspx.designer.cs">
+      <DependentUpon>IncomeWithdrawSheet.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\LevelWiseList.aspx.cs">
       <DependentUpon>LevelWiseList.aspx</DependentUpon>
@@ -777,6 +786,9 @@
     <Compile Include="tbl_ShopLocation.cs">
       <DependentUpon>DDDBContex.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbl_TransactionType.cs">
+      <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_UserAccount.cs">
       <DependentUpon>DDDBContex.tt</DependentUpon>
     </Compile>
@@ -788,6 +800,13 @@
     </Compile>
     <Compile Include="tbl_UserSpotTrack.cs">
       <DependentUpon>DDDBContex.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

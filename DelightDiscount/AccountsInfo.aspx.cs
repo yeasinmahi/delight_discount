@@ -42,11 +42,13 @@ namespace DelightDiscount
             var lvlIncome = getAllIncome.Where(x => x.TranType == 2).Select(x => x.Amount).Sum();
             var autoIncome = getAllIncome.Where(x => x.TranType == 3).Select(x => x.Amount).Sum();
             var rewardIncome = getAllIncome.Where(x => x.TranType == 4).Select(x => x.Amount).Sum();
+            var generationIncome = getAllIncome.Where(x => x.TranType == 5).Select(x => x.Amount).Sum();
             var transferIncome = getAllIncome.Where(x => x.TranType == 6).Select(x => x.Amount).Sum();
             spotIncomeLabel.InnerText = spotIncome.ToString();
             levelIncome.InnerText = lvlIncome.ToString();
             autoLabel.InnerText = autoIncome.ToString();
             rewardLabel.InnerText = rewardIncome.ToString();
+            generationLabel.InnerText = generationIncome.ToString();
             blanceTransferLabel.InnerText = transferIncome.ToString();
             totalIncomeLabel.InnerText = (spotIncome + lvlIncome + autoIncome + rewardIncome).ToString();
             currentBalanceLabel.InnerText = (spotIncome + lvlIncome + autoIncome + rewardIncome-transferIncome).ToString();

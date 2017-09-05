@@ -11,8 +11,8 @@ $('#MainContent_saveButton').click(function () {
         rules: {
             ctl00$MainContent$cidText: {
                 required: true,
-                minlength: 7,
-                maxlength: 7
+                minlength: 8,
+                maxlength: 8
             },
 
             ctl00$MainContent$nameText: "required",
@@ -32,8 +32,8 @@ $('#MainContent_saveButton').click(function () {
             ctl00$MainContent$cidText: {
                 required: "CID can not be empty",
 
-                minlength: "Length Must Be 7 Digit",
-                maxlength: "Length Can Not More Than 7 Digit"
+                minlength: "Length Must Be 8 Digit",
+                maxlength: "Length Can Not More Than 8 Digit"
             },
 
             ctl00$MainContent$nameText: "Enter Your Name",
